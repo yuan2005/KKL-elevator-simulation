@@ -7,7 +7,7 @@
   4. 推进每台电梯：开门上下客 / 选择下一站（集选 + LOOK 逻辑）/ 运动学
 """
 import config as C
-from building import Car, HEIGHT, ENTRANCE_IDX, N_FLOORS
+from building import Car, HEIGHT, ENTRANCE_IDX, N_FLOORS, advance_to_stop
 
 
 class HallCall:
@@ -34,6 +34,7 @@ class Sim:
         self.next_ctrl = 0.0
         self.next_reassign = 0.0
         self.combo_log = []         # (时刻, 组合名)
+        self.last_alight_time = 0.0
 
     # ---------- 策略组合 ----------
     def set_combo(self, combo):
@@ -104,7 +105,8 @@ class Sim:
         t_stop = max(self.gen_end, last_arrival) + C.DRAIN_TIME
         while self.t < t_stop:
             if (self.i_next >= len(self.pax) and self.t > self.gen_end and not self.calls
-                    and all(c.load == 0 for c in self.cars)):
+                    and all(c.load == 0 for c in self.cars)
+                    and self.t >= self.last_alight_time):
                 break
             self.step()
         return self
@@ -235,44 +237,37 @@ class Sim:
         d = car.dir
         tgt_h = HEIGHT[car.target]
         rem = (tgt_h - car.x) * d
-        if rem <= 1e-6:
-            self.arrive(car)
-            return
-        v = car.v
-        if rem <= v * v / (2 * C.ACCEL) + v * C.DT * 0.5 + 1e-9:
-            v_new = v - (v * v / (2 * rem)) * C.DT
-        else:
-            v_new = min(C.RATED_SPEED, v + C.ACCEL * C.DT)
-        step = max((v + max(v_new, 0.0)) / 2 * C.DT, 0.0)
-        if v_new <= 0 or step >= rem:
-            car.distance += rem
+        distance, velocity, elapsed, arrived = advance_to_stop(rem, car.v, C.DT)
+        car.distance += distance
+        if arrived:
             car.x = tgt_h
-            self.arrive(car)
+            self.arrive(car, elapsed)
             return
-        car.x += d * step
-        car.v = v_new
-        car.distance += step
+        car.x += d * distance
+        car.v = velocity
 
-    def arrive(self, car):
+    def arrive(self, car, elapsed=0.0):
         car.v = 0.0
         car.floor = car.target
         car.x = HEIGHT[car.floor]
         car.state = "idle"
-        self.stop_here(car, forced=False)
+        self.stop_here(car, forced=False, event_time=self.t + elapsed)
 
     def requests_ahead(self, car, f, d):
         if any((c - f) * d > 0 for c in car.car_calls):
             return True
         return any((k[0] - f) * d > 0 for k in car.assigned)
 
-    def stop_here(self, car, forced):
+    def stop_here(self, car, forced, event_time=None):
         """电梯停在 car.floor：先下客，再决定方向，再上客。"""
         f = car.floor
+        event_time = self.t if event_time is None else event_time
         alight = [p for p in car.passengers if p.d == f]
-        t_open = self.t + C.T_DOOR_OPEN
+        t_open = event_time + C.T_DOOR_OPEN
         for k, p in enumerate(alight):
             p.t_alight = t_open + (k + 1) * C.T_PASSENGER
         if alight:
+            self.last_alight_time = max(self.last_alight_time, alight[-1].t_alight)
             car.passengers = [p for p in car.passengers if p.d != f]
         car.car_calls.discard(f)
         had_call_here = forced or any(k[0] == f for k in car.assigned)
@@ -293,7 +288,7 @@ class Sim:
         else:
             d = 0
         car.dir = d
-        n_board = self.board(car, f, extra=False, offset=len(alight))
+        n_board = self.board(car, f, extra=False, offset=len(alight), event_time=event_time)
         for k in [k for k in car.assigned if k[0] == f]:
             self.unassign(k)                # 停了但没接走（方向不对或满载）：交回重新分配
         if forced and not alight and not n_board:
@@ -301,11 +296,11 @@ class Sim:
         if alight or n_board or had_call_here:
             car.state = "doors"
             car.dwell_left = (C.T_DOOR_OPEN + (len(alight) + n_board) * C.T_PASSENGER
-                              + C.T_DOOR_CLOSE)
+                              + C.T_DOOR_CLOSE + event_time - self.t)
         if car.parking == f:
             car.parking = None
 
-    def board(self, car, f, extra, offset=0):
+    def board(self, car, f, extra, offset=0, event_time=None):
         if car.dir == 0:
             cand = [k for k in self.calls if k[0] == f and self.allowed(car, k)]
             if not cand:
@@ -313,7 +308,8 @@ class Sim:
             car.dir = min(cand, key=lambda k: self.calls[k].t_reg)[1]
         if not car.active:
             return 0
-        t0 = self.t + (0.0 if extra else C.T_DOOR_OPEN)
+        event_time = self.t if event_time is None else event_time
+        t0 = event_time + (0.0 if extra else C.T_DOOR_OPEN)
         n = 0
         for key in [k for k in self.calls if k[0] == f and k[1] == car.dir and self.allowed(car, k)]:
             call = self.calls[key]

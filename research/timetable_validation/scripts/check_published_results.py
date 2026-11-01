@@ -130,7 +130,7 @@ def main():
     assert actual==third_verification['service_anomalies']
     minimal=load('timestep_third_grid_v2/minimal_reproducer.json')['results']
     assert all(r['alight'] is not None for r in minimal[:2]) and minimal[2]['alight'] is None
-    print(f'PASS: 135 third-grid archived runs, three-grid contrasts and {len(actual)} anomaly records verified. KNOWN FAILURE: single-floor fine-grid trip remains incomplete.')
+    print(f'PASS: 135 third-grid archived runs, three-grid contrasts and {len(actual)} anomaly records verified. HISTORICAL FAILURE: original single-floor fine-grid trip incomplete; this check does not rerun the current simulator.')
 
 
 if __name__ == '__main__':

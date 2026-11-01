@@ -23,6 +23,12 @@ def worker(task):
     return result
 
 def main():
+    archived = json.loads((ROOT/'published_results/s1_s6_original_2026-11-01/manifest.json').read_text(encoding='utf-8'))['source_sha256']
+    changed = [name for name,digest in archived.items()
+               if hashlib.sha256((REPO/name).read_bytes()).hexdigest() != digest]
+    if changed:
+        raise RuntimeError('Historical reproduction requires the original simulator (checkout 419c1b6 in a separate worktree). '
+                           'Changed files: '+', '.join(changed)+'. Use a separately labelled experiment for repaired-model results.')
     OUT.mkdir(parents=True, exist_ok=True)
     resume = '--summarize-existing' in sys.argv
     if (OUT/'raw.json').exists() and not resume:

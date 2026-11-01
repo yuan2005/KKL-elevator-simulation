@@ -1,6 +1,16 @@
 # Reproducible missed-stop loop at the 0.0625-second grid
 
-Status: observed in the unchanged simulator during the third-grid investigation. This is a simulator numerical/target-selection defect, not a demonstrated defect in real KKL dispatch or a reason to adjust the D10 threshold. No fix has been applied to the base simulator in this experiment.
+Status: confirmed on the historical simulator, then repaired on this branch. The original third-grid experiment below used unchanged source; its evidence remains intact. This is a simulator numerical/target-selection defect, not a demonstrated defect in real KKL dispatch or a reason to adjust the D10 threshold.
+
+## Candidate repair and bounded validation
+
+`building.py` now integrates acceleration, cruise and braking phase boundaries within each tick, using the same physical stopping-distance constraint as new-call acceptance. It does not force acceptance of genuinely unreachable new calls. `sim.py` carries the within-tick arrival time into boarding/alighting timestamps and prevents early completion before scheduled alighting. The outer arrival/dispatch/door/control loop remains discretized.
+
+Five new motion tests cover short and long journeys in both directions, analytic flight times, acceleration/speed constraints, reachable versus late new calls, and a seeded multi-passenger workload. The fifteen research tests and original hand-calculation smoke test also pass.
+
+The unchanged one-passenger diagnostic now completes at all three grids: alighting at 13.244733 s, simulation ending at 13.25 s, no target drops. A separate, predeclared 135-run check uses five explored dates, three backgrounds, original seed 4000, three grids and C1/C7/D10. Passenger inputs, demand audits and D10 logs match the original archive. On the identical 45 fine-grid runs, service/chain anomalies fall from 42 runs to zero; all 135 repaired runs have zero recorded service, transfer-chain, lateness or event-time anomalies.
+
+See [repair results](published_results/motion_repair_v1/结果说明.md). This is a one-seed repair check, not an independent policy evaluation or proof of convergence. Per-input waiting and contrast shifts remain; do not reuse the old 0.140-second effect as a validated repaired-model result.
 
 ## Minimal reproduction (no timetable data)
 
@@ -8,7 +18,7 @@ Status: observed in the unchanged simulator during the third-grid investigation.
 python research/timetable_validation/scripts/reproduce_short_trip_grid_issue.py --output research/timetable_validation/local_runs/single_floor_issue.json
 ```
 
-On the recorded base simulator this diagnostic deliberately exits **1**, indicating an incomplete trip. It is separate from the ordinary unittest suite; a passing unit suite does not resolve this known failure.
+On historical commit `419c1b6`, this diagnostic exits **1**, indicating an incomplete trip. On this repaired branch it exits **0**. It is separate from unittest discovery and records source hashes in new outputs. The table below describes the preserved original-model evidence.
 
 One car starts at LG2, with C0 nearest-car dispatch and no parking; one passenger arrives at time zero and wants LG1, one 3.6 m floor above. The simulation has a 10-second generation horizon and the original 900-second drain limit.
 
@@ -46,4 +56,4 @@ This explanation is supported by the concrete rejection trace and the code paths
 - Preserve the historical results as reproducible outputs of the original simulator. They should not be presented as numerically validated effect sizes; re-evaluate relevant policy claims after fixing and checking the simulator.
 - First add a repair regression for completed single-floor journeys, both directions and multiple floor distances/grids, with appropriate physical travel-time checks. Check consistent treatment of a committed destination versus a new request, braking constraints and event times. Then rerun paired fixed/dynamic comparisons on the corrected model in a separate archive.
 
-The third-grid protocol, input demands and thresholds remain frozen. Repair is the next task; threshold tuning should wait.
+The historical third-grid protocol, input demands and thresholds remain frozen. Review the candidate repair and broaden baseline revalidation before threshold tuning.

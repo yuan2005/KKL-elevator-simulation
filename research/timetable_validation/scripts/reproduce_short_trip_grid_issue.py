@@ -1,12 +1,14 @@
 """Diagnostic: one passenger, one car, one floor; exits 1 if a trip is incomplete.
 
-This intentionally exposes a defect in the unchanged base simulator. It is not
-part of unittest discovery, and no classroom data is needed.
+This exposes a defect on the historical simulator and checks the repair on the
+current simulator. It is not part of unittest discovery; no classroom data is needed.
 """
 import argparse
 import json
+import hashlib
 from pathlib import Path
 from run_linked_pilot import init_worker
+from study_paths import REPO
 
 
 def main():
@@ -42,7 +44,8 @@ def main():
         C.DT=original
     out.parent.mkdir(parents=True,exist_ok=True)
     out.write_text(json.dumps(dict(case='Single C0 car: LG2 to LG1, 3.6 m, passenger at t=0, 10 s generation horizon plus original 900 s drain',
-        original_source_edited=False,results=results),indent=2),encoding='utf-8')
+        source_hashes={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in REPO.glob('*.py')},
+        results=results),indent=2),encoding='utf-8')
     print(json.dumps(results,indent=2))
     return 1 if any(r['alight'] is None for r in results) else 0
 

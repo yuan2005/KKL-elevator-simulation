@@ -1,12 +1,12 @@
 # S1–S6 reproduction and timetable-informed demand experiments
 
-> **Numerical validation finding:** a one-car, one-passenger, one-floor test fails to deliver its passenger at dt=0.0625 s in the unchanged base simulator. See [the reproducible missed-stop issue](KNOWN_NUMERICAL_ISSUE.md). Finer-grid results must not be treated as ground truth, and threshold tuning should wait for a separately validated simulator repair. Historical results remain reproducible records, not numerically validated real-world effect sizes.
+> **Numerical repair:** the historical simulator missed a requested adjacent-floor stop at dt=0.0625 s. This branch repairs motion integration and event timestamps; see [the issue and repair scope](KNOWN_NUMERICAL_ISSUE.md). Historical results remain records of the old model and do not establish the repaired model's policy benefit. Thresholds stay frozen during repair validation.
 
-2026-11-01 research extension, based on simulator commit `f6c9ca4af440cff4a258237e1214c8dc0266fb50`. The original simulator and its E0–E3 results are unchanged. This extension was developed with AI assistance; it is a reproducible exploration, not a calibrated model of actual KKL operations.
+2026-11-01 research extension, initially based on simulator commit `f6c9ca4af440cff4a258237e1214c8dc0266fb50`. Historical E0–E3 and research outputs are preserved. The current `building.py` and `sim.py` contain a candidate numerical repair; use historical commit `419c1b6` to reproduce the pre-repair model. This extension was developed with AI assistance; it is a reproducible exploration, not a calibrated model of actual KKL operations.
 
 ## What is included
 
-- Portable demand and experiment scripts, with nine tests covering demand conservation, overlap exclusion, reproducibility, transfer chains and past-only switching.
+- Portable demand and experiment scripts, with fifteen research tests and five motion tests covering demand conservation, overlap exclusion, reproducibility, transfer chains, past-only switching and physical motion constraints.
 - Published **per-run aggregate metrics**, summaries and original protocol hashes for 1,605 completed simulations: 360 S1–S6 reproductions, 120 single-day comparisons, 675 five-day sensitivity runs, and 225 development + 225 evaluation runs for a switching candidate.
 - A post-hoc diagnosis of the frozen switching candidate, clearly separated from its original evaluation.
 
@@ -18,15 +18,16 @@ From the repository root, use Python with the packages in the root `requirements
 
 ```sh
 python -m unittest discover -s research/timetable_validation/scripts -p "test_*.py"
+python -m unittest test_motion
+python experiments.py smoke
 python research/timetable_validation/scripts/check_published_results.py
-python research/timetable_validation/scripts/reproduce_s1_s6.py
 ```
 
-The first two commands check nine behavioral tests and archived result claims. The third actually reruns 360 S1–S6 simulations against the existing `results/e1_raw.csv`; it writes into ignored `local_runs/`, never into `published_results/`. A completed output is protected against accidental overwrite. These checks do not establish real-world calibration.
+These commands check current behavior and historical aggregate claims separately. To reproduce the original 360 S1–S6 runs, use a separate checkout at `419c1b6` and run `python research/timetable_validation/scripts/reproduce_s1_s6.py`; the current script rejects changed simulator hashes to avoid labelling repaired results as an original-model reproduction. Outputs go to ignored `local_runs/`, never `published_results/`. These checks do not establish real-world calibration.
 
 ## Timetable experiments with local authorized inputs
 
-Point `KKL_DATA_DIR` at a local directory containing `semester1_kkl_dated_candidates.json` and `room_registry.json`. The data contract and provenance are in [DATA.md](DATA.md). These files were generated separately from the user's official source downloads; this package does not currently include the workbook extraction pipeline. Without them, tests and S1–S6 reproduction work, but exact timetable reruns do not.
+Point `KKL_DATA_DIR` at a local directory containing `semester1_kkl_dated_candidates.json` and `room_registry.json`. The data contract and provenance are in [DATA.md](DATA.md). These files were generated separately from the user's official source downloads; this package does not currently include the workbook extraction pipeline. Without them, public checks work, but exact timetable reruns do not. The earlier timetable runners below are historical recipes: run them at `419c1b6` to reproduce archived results. Running them with the repaired model is a new experiment and requires a fresh, clearly labelled output directory.
 
 PowerShell example:
 
@@ -88,6 +89,20 @@ The third grid is complete: **135 new archived runs**, for 2,145 total archived 
 See [third-grid tables](published_results/timestep_third_grid_v2/结果说明.md), [interpretation](published_results/timestep_third_grid_v2/interpretation_zh.md), [failure-labelled figure](published_results/timestep_third_grid_v2/three_grid_check.png), and [minimal reproduction evidence](published_results/timestep_third_grid_v2/minimal_reproducer.json). Fifteen routine tests pass; the separate diagnostic script intentionally fails on the unmodified simulator. The first third-grid attempt was aborted because native tuple logs and archived JSON lists were compared directly; regression tests reproduced this bookkeeping error and verified the format-only fix. The completed v2 experiment uses unchanged simulator algorithms and separately frozen provenance.
 
 ## Results and interpretation
+
+### Current motion-repair check
+
+The candidate repair passed five new motion tests, fifteen existing research tests and the original hand-calculation smoke test. A predeclared 135-run check uses the original seed 4000 on five development dates, three backgrounds, three grids and C1/C7/D10. All input fingerprints, demand audits and D10 decisions match the old archive. The matched fine-grid subset goes from 42/45 anomalous runs to 0/45; all 135 repaired runs have zero recorded service, chain, lateness or event-time anomalies.
+
+```powershell
+python research/timetable_validation/scripts/run_repair_validation.py --prior path/to/local/timestep_sensitivity_v1 --output path/to/new/motion_repair_v1
+python research/timetable_validation/scripts/reproduce_short_trip_grid_issue.py --output path/to/new/motion_repair_v1/minimal_reproducer.json
+python research/timetable_validation/scripts/report_repair_validation.py path/to/new/motion_repair_v1
+```
+
+The runner verifies unchanged demand/control code and saves model/script snapshots locally. Only aggregate outputs are published. See [the report](published_results/motion_repair_v1/结果说明.md): D10−C1 is −0.1802/−0.1365/−0.1383 seconds across the three grids. These one-seed development means have no Monte Carlo confidence interval and are not a re-evaluation of the historical result below. Per-input shifts persist, so convergence is not established. The repository now contains 2,145 historical runs plus 135 repaired-model validation runs, kept separate.
+
+### Historical evaluation on the original simulator
 
 | Evaluation background | Fixed C1 | Fixed C7 | Frozen D10 | D10 minus C1 |
 |---|---:|---:|---:|---:|

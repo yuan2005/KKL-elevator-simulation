@@ -2,6 +2,8 @@
 
 This is a post-hoc research diagnosis, not a newly validated controller. The original D10 rule, success screen, and evaluation results remain frozen.
 
+**Update after numerical investigation:** a missed-stop loop was confirmed and a candidate motion repair added. Twenty tests and 135 fixed-input repaired runs pass their checks, but this does not revalidate the old effect size or prove convergence. See [repair evidence](published_results/motion_repair_v1/结果说明.md). The immediate priority is model-owner review, then separately archived S1–S6/baseline and original evaluation reruns on the corrected model. The policy-development ideas below remain proposals; do not tune thresholds to the diagnostic outputs.
+
 ## New inspection of saved decision logs
 
 `published_results/adaptive_v1/switching_diagnosis.json` is recomputed from 75 saved evaluation runs, using `scripts/diagnose_switching.py`. No simulations or thresholds were changed for this diagnosis.
