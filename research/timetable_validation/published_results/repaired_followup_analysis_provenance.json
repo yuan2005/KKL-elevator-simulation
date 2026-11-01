@@ -1,0 +1,20 @@
+{
+  "model_commit": "dd06745a66eb2c21f3cd2ae6ead75220eb4dbfcc",
+  "analysis_script_hashes": {
+    "report_repaired_studies.py": "15f4793d5d1d3518532202dc57fae7b44817819a97a066d1c81dafb69c45123a",
+    "plot_repaired_studies.py": "3a7e8b94001c69ce59928d8c220e31b2bc9efbe9b96181237dfaac245bc16557",
+    "check_repaired_results.py": "55ada4d0518751b8ab65d852252b4e3d6d3aa4ad9548221a45f288b48b999c17",
+    "repair_study_utils.py": "eeb6ab2310024a49a13df58b28fb12db90333ac8969734c0be163c30e05c955b",
+    "test_repaired_studies.py": "e4f4b495dd3668527f3ea30c50b80fa74aa9397a411917883e3fe3e9ea2d4e04"
+  },
+  "completed_new_runs": 1080,
+  "total_unique_repaired_runs": 1215,
+  "total_original_historical_runs": 2145,
+  "note": "Combined grid analysis adds no simulations; aborted attempts excluded. Aggregate artifacts only.",
+  "raw_hashes": {
+    "motion_repair_v1": "31b7af6b8591428d9ab749cf3d890ded869058f8b3924161138aa5435df9e4c1",
+    "motion_repair_extra_seeds_v1": "fed507d6c1a6ce232cf7bf1c3e8125ad30db0208ba6ba121f4ab63d89d4896b9",
+    "s1_s6_repaired_v2": "72eff2a5b753d49f93caeff26676a40497f18140d908810dc0ee847a794e2359",
+    "adaptive_repaired_evaluation_v1": "4eca7e370250d86c5a65fe0d0278a8a436acee43cb9190c8323b48aeb6dd3786"
+  }
+}

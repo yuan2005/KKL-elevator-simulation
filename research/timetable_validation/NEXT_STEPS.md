@@ -1,5 +1,7 @@
 # Why the switching gain is small, and what to test next
 
+**2026-11-02 status:** [the repaired-model follow-up](REPAIRED_FOLLOWUP.md) has completed the three-seed grid check, all original S1–S6 baselines and the original evaluation conditions at two time steps. The rule still fails the unchanged 0.25-second benefit screen. Predeclared subgroup/window summaries and local passenger traces are available. Next, obtain model-owner review and use those summaries to frame one controlled development-only rule revision or one demand/physical sensitivity question; do not repeat already completed baseline runs without a code change or unresolved issue. Keep the old-model diagnosis below labelled historical.
+
 This is a post-hoc research diagnosis, not a newly validated controller. The original D10 rule, success screen, and evaluation results remain frozen.
 
 **Update after numerical investigation:** a missed-stop loop was confirmed and a candidate motion repair added. Twenty tests and 135 fixed-input repaired runs pass their checks, but this does not revalidate the old effect size or prove convergence. See [repair evidence](published_results/motion_repair_v1/结果说明.md). The immediate priority is model-owner review, then separately archived S1–S6/baseline and original evaluation reruns on the corrected model. The policy-development ideas below remain proposals; do not tune thresholds to the diagnostic outputs.

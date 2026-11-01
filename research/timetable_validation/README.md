@@ -1,5 +1,7 @@
 # S1–S6 reproduction and timetable-informed demand experiments
 
+> **2026-11-02 completed follow-up:** 1,080 new runs extend the repaired model to three development seeds, all six S1–S6 fixed strategies, and both predeclared grids on the original evaluation dates. D10 saves 0.1309/0.1522 seconds versus C1, still below the original 0.25-second screen. See [complete follow-up, figures and reproduction commands](REPAIRED_FOLLOWUP.md). There are 1,215 unique repaired-model runs and 2,145 separate historical runs; the combined grid summary is not an extra simulation batch. Model-owner review remains pending.
+
 > **Numerical repair:** the historical simulator missed a requested adjacent-floor stop at dt=0.0625 s. This branch repairs motion integration and event timestamps; see [the issue and repair scope](KNOWN_NUMERICAL_ISSUE.md). Historical results remain records of the old model and do not establish the repaired model's policy benefit. Thresholds stay frozen during repair validation.
 
 2026-11-01 research extension, initially based on simulator commit `f6c9ca4af440cff4a258237e1214c8dc0266fb50`. Historical E0–E3 and research outputs are preserved. The current `building.py` and `sim.py` contain a candidate numerical repair; use historical commit `419c1b6` to reproduce the pre-repair model. This extension was developed with AI assistance; it is a reproducible exploration, not a calibrated model of actual KKL operations.
@@ -21,6 +23,7 @@ python -m unittest discover -s research/timetable_validation/scripts -p "test_*.
 python -m unittest test_motion
 python experiments.py smoke
 python research/timetable_validation/scripts/check_published_results.py
+python research/timetable_validation/scripts/check_repaired_results.py
 ```
 
 These commands check current behavior and historical aggregate claims separately. To reproduce the original 360 S1–S6 runs, use a separate checkout at `419c1b6` and run `python research/timetable_validation/scripts/reproduce_s1_s6.py`; the current script rejects changed simulator hashes to avoid labelling repaired results as an original-model reproduction. Outputs go to ignored `local_runs/`, never `published_results/`. These checks do not establish real-world calibration.

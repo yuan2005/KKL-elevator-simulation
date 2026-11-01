@@ -4,6 +4,8 @@ Status: confirmed on the historical simulator, then repaired on this branch. The
 
 ## Candidate repair and bounded validation
 
+**Follow-up completed 2026-11-02:** the same candidate now has 405 three-grid development runs, 360 original-setting S1–S6 runs and 450 frozen-rule evaluation runs. All recorded completion/event checks pass; the latter two batches also instrument motion constraints. The matched fine-grid anomaly count is now 128/135 original versus 0/135 repaired. D10's re-evaluated saving remains small and fails the original benefit screen. See [follow-up evidence](REPAIRED_FOLLOWUP.md). The earlier 135-run account below remains the first repair milestone, not the latest total; review and real calibration are still pending.
+
 `building.py` now integrates acceleration, cruise and braking phase boundaries within each tick, using the same physical stopping-distance constraint as new-call acceptance. It does not force acceptance of genuinely unreachable new calls. `sim.py` carries the within-tick arrival time into boarding/alighting timestamps and prevents early completion before scheduled alighting. The outer arrival/dispatch/door/control loop remains discretized.
 
 Five new motion tests cover short and long journeys in both directions, analytic flight times, acceleration/speed constraints, reachable versus late new calls, and a seeded multi-passenger workload. The fifteen research tests and original hand-calculation smoke test also pass.

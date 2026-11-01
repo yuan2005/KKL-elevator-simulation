@@ -1,0 +1,14 @@
+{
+  "runs": 360,
+  "seconds": 13.634339570999146,
+  "protocol_hash": "2b79c872579efec481805d749ba99e25afe4801f9c7b4672f06651d2714b9507",
+  "original_input_matches": 360,
+  "source_unchanged": true,
+  "anomaly_totals": {
+    "unserved_all": 0,
+    "not_alighted_all": 0,
+    "event_time_violations": 0,
+    "physical_constraint_violations": 0
+  },
+  "anomalous_runs": 0
+}

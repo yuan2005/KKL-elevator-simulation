@@ -68,12 +68,15 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--prior', required=True, type=Path)
     ap.add_argument('--output', required=True, type=Path)
+    ap.add_argument('--seeds', nargs='+', type=int, default=SEEDS)
     args = ap.parse_args()
     prior, out = args.prior.resolve(), args.output.resolve()
     if out.exists(): raise FileExistsError('Use a new output directory; preserve evidence')
     old = load(prior/'protocol.json')
     coverage = load(prior/'coverage_private.json')
     hashes = source_hashes()
+    seeds = sorted(set(args.seeds))
+    assert seeds and set(seeds) <= set(old['seeds'])
     for name, digest in old['original_source_hashes'].items():
         if name not in ['building.py', 'sim.py']: assert hashes[name] == digest, name
     scripts = [Path(__file__).with_name(n) for n in ['run_repair_validation.py',
@@ -85,19 +88,19 @@ def main():
     for day in old['dates']:
         record = coverage[day]
         for variant in old['variants']:
-            for seed in SEEDS:
+            for seed in seeds:
                 file = prior/'runs'/f'{day}_{variant}_{seed}.json'
                 prior_files[file.name] = sha(file)
                 jobs.append(((day, variant, seed, record['selected'], *record['window'], old['controllers']), file))
     protocol = dict(created_utc=datetime.now(timezone.utc).isoformat(),
         design='Candidate motion repair validation on fixed explored inputs, not policy selection or a new holdout',
-        dates=old['dates'], seeds=SEEDS, steps=STEPS, controllers=old['controllers'],
+        dates=old['dates'], seeds=seeds, steps=STEPS, controllers=old['controllers'],
         base=old['base'], variants=old['variants'], frozen=old['frozen'],
         inputs=len(jobs), runs=len(jobs)*len(STEPS)*len(old['controllers']),
         checks=['same passenger hashes, demand audits and D10 decisions as original',
                 'report all service, chain and event-time anomalies without exclusions',
                 'report grid shifts and paired policy contrasts without choosing a favourable grid'],
-        interpretation='One seed across fixed dates/backgrounds: descriptive repair check only; no Monte Carlo confidence intervals, convergence proof or new policy-benefit claim.',
+        interpretation='Fixed original development seeds: repair validation, not new policy selection or independent evaluation. Seed-level uncertainty is conditional on the fixed dates/backgrounds; no convergence proof.',
         source_hashes=hashes, original_source_hashes=old['original_source_hashes'],
         script_hashes={p.name:sha(p) for p in scripts},
         prior_protocol_hash=sha(prior/'protocol.json'), prior_raw_hash=sha(prior/'raw.json'),
