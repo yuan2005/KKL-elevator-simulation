@@ -1,0 +1,227 @@
+[
+  {
+    "date": "2026-10-26",
+    "capacity_fraction": 0.4,
+    "candidates": 56,
+    "selected": 44,
+    "excluded": 12,
+    "known_count_sessions": 22,
+    "estimated_count_sessions": 22,
+    "known_headcount_sum": 1326,
+    "estimated_headcount_sum": 893,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "capacity_fraction": 0.6,
+    "candidates": 56,
+    "selected": 44,
+    "excluded": 12,
+    "known_count_sessions": 22,
+    "estimated_count_sessions": 22,
+    "known_headcount_sum": 1326,
+    "estimated_headcount_sum": 1339,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-26",
+    "capacity_fraction": 0.8,
+    "candidates": 56,
+    "selected": 44,
+    "excluded": 12,
+    "known_count_sessions": 22,
+    "estimated_count_sessions": 22,
+    "known_headcount_sum": 1326,
+    "estimated_headcount_sum": 1785,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-27",
+    "capacity_fraction": 0.4,
+    "candidates": 79,
+    "selected": 46,
+    "excluded": 33,
+    "known_count_sessions": 25,
+    "estimated_count_sessions": 21,
+    "known_headcount_sum": 1580,
+    "estimated_headcount_sum": 726,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-27",
+    "capacity_fraction": 0.6,
+    "candidates": 79,
+    "selected": 46,
+    "excluded": 33,
+    "known_count_sessions": 25,
+    "estimated_count_sessions": 21,
+    "known_headcount_sum": 1580,
+    "estimated_headcount_sum": 1089,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-27",
+    "capacity_fraction": 0.8,
+    "candidates": 79,
+    "selected": 46,
+    "excluded": 33,
+    "known_count_sessions": 25,
+    "estimated_count_sessions": 21,
+    "known_headcount_sum": 1580,
+    "estimated_headcount_sum": 1451,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "capacity_fraction": 0.4,
+    "candidates": 47,
+    "selected": 38,
+    "excluded": 9,
+    "known_count_sessions": 8,
+    "estimated_count_sessions": 30,
+    "known_headcount_sum": 600,
+    "estimated_headcount_sum": 1215,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "capacity_fraction": 0.6,
+    "candidates": 47,
+    "selected": 38,
+    "excluded": 9,
+    "known_count_sessions": 8,
+    "estimated_count_sessions": 30,
+    "known_headcount_sum": 600,
+    "estimated_headcount_sum": 1820,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "capacity_fraction": 0.8,
+    "candidates": 47,
+    "selected": 38,
+    "excluded": 9,
+    "known_count_sessions": 8,
+    "estimated_count_sessions": 30,
+    "known_headcount_sum": 600,
+    "estimated_headcount_sum": 2427,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "capacity_fraction": 0.4,
+    "candidates": 74,
+    "selected": 52,
+    "excluded": 22,
+    "known_count_sessions": 26,
+    "estimated_count_sessions": 26,
+    "known_headcount_sum": 1566,
+    "estimated_headcount_sum": 1008,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "capacity_fraction": 0.6,
+    "candidates": 74,
+    "selected": 52,
+    "excluded": 22,
+    "known_count_sessions": 26,
+    "estimated_count_sessions": 26,
+    "known_headcount_sum": 1566,
+    "estimated_headcount_sum": 1511,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "capacity_fraction": 0.8,
+    "candidates": 74,
+    "selected": 52,
+    "excluded": 22,
+    "known_count_sessions": 26,
+    "estimated_count_sessions": 26,
+    "known_headcount_sum": 1566,
+    "estimated_headcount_sum": 2013,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "capacity_fraction": 0.4,
+    "candidates": 56,
+    "selected": 41,
+    "excluded": 15,
+    "known_count_sessions": 19,
+    "estimated_count_sessions": 22,
+    "known_headcount_sum": 1162,
+    "estimated_headcount_sum": 752,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "capacity_fraction": 0.6,
+    "candidates": 56,
+    "selected": 41,
+    "excluded": 15,
+    "known_count_sessions": 19,
+    "estimated_count_sessions": 22,
+    "known_headcount_sum": 1162,
+    "estimated_headcount_sum": 1126,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "capacity_fraction": 0.8,
+    "candidates": 56,
+    "selected": 41,
+    "excluded": 15,
+    "known_count_sessions": 19,
+    "estimated_count_sessions": 22,
+    "known_headcount_sum": 1162,
+    "estimated_headcount_sum": 1501,
+    "window": [
+      31500,
+      79500
+    ]
+  }
+]

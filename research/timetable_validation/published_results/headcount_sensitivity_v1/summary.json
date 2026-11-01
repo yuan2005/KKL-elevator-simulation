@@ -1,0 +1,445 @@
+{
+  "summary": [
+    {
+      "capacity_fraction": 0.4,
+      "controller": "C1",
+      "awt": 7.812999449253171,
+      "p90": 13.747005943564888,
+      "lwt": 0.19605412329620212,
+      "G_awt": 6.400570406349328,
+      "other_awt": 8.339890483546592,
+      "n": 4073.6666666666665,
+      "switches": 0,
+      "unserved": 0,
+      "not_alighted": 0,
+      "chain_availability_violations": 0,
+      "late_transfer_lift_count": 0
+    },
+    {
+      "capacity_fraction": 0.4,
+      "controller": "C7",
+      "awt": 8.757548831166071,
+      "p90": 20.219386775150888,
+      "lwt": 0.22104010662694695,
+      "G_awt": 4.649394136618578,
+      "other_awt": 10.288525688504965,
+      "n": 4073.6666666666665,
+      "switches": 0,
+      "unserved": 0,
+      "not_alighted": 0,
+      "chain_availability_violations": 0,
+      "late_transfer_lift_count": 0
+    },
+    {
+      "capacity_fraction": 0.4,
+      "controller": "D10",
+      "awt": 7.884175972769685,
+      "p90": 13.948366058438308,
+      "lwt": 0.23494260886694707,
+      "G_awt": 6.281078976609923,
+      "other_awt": 8.482111453933982,
+      "n": 4073.6666666666665,
+      "switches": 8.333333333333334,
+      "unserved": 0,
+      "not_alighted": 0,
+      "chain_availability_violations": 0,
+      "late_transfer_lift_count": 0
+    },
+    {
+      "capacity_fraction": 0.6,
+      "controller": "C1",
+      "awt": 8.438587778629568,
+      "p90": 15.319576054823507,
+      "lwt": 0.3978779972393217,
+      "G_awt": 6.711110098646986,
+      "other_awt": 9.067523690532697,
+      "n": 4404.8,
+      "switches": 0,
+      "unserved": 0,
+      "not_alighted": 0,
+      "chain_availability_violations": 0,
+      "late_transfer_lift_count": 0
+    },
+    {
+      "capacity_fraction": 0.6,
+      "controller": "C7",
+      "awt": 9.052316351002176,
+      "p90": 20.925878105173076,
+      "lwt": 0.25353176323053583,
+      "G_awt": 4.978592221748105,
+      "other_awt": 10.535190364457131,
+      "n": 4404.8,
+      "switches": 0,
+      "unserved": 0,
+      "not_alighted": 0,
+      "chain_availability_violations": 0,
+      "late_transfer_lift_count": 0
+    },
+    {
+      "capacity_fraction": 0.6,
+      "controller": "D10",
+      "awt": 8.458089951518703,
+      "p90": 15.570907216479759,
+      "lwt": 0.37602819714416325,
+      "G_awt": 6.5009527066116295,
+      "other_awt": 9.170494541603656,
+      "n": 4404.8,
+      "switches": 10.6,
+      "unserved": 0,
+      "not_alighted": 0,
+      "chain_availability_violations": 0,
+      "late_transfer_lift_count": 0
+    },
+    {
+      "capacity_fraction": 0.8,
+      "controller": "C1",
+      "awt": 9.343589502821853,
+      "p90": 17.305356693897366,
+      "lwt": 0.8873157709102639,
+      "G_awt": 7.016044969820509,
+      "other_awt": 10.169550895249587,
+      "n": 4731.133333333333,
+      "switches": 0,
+      "unserved": 0,
+      "not_alighted": 0,
+      "chain_availability_violations": 0,
+      "late_transfer_lift_count": 0
+    },
+    {
+      "capacity_fraction": 0.8,
+      "controller": "C7",
+      "awt": 9.841479937717216,
+      "p90": 22.250027855461475,
+      "lwt": 0.7156609137402775,
+      "G_awt": 5.276069330377443,
+      "other_awt": 11.463829304420397,
+      "n": 4731.133333333333,
+      "switches": 0,
+      "unserved": 0,
+      "not_alighted": 0,
+      "chain_availability_violations": 0,
+      "late_transfer_lift_count": 0
+    },
+    {
+      "capacity_fraction": 0.8,
+      "controller": "D10",
+      "awt": 9.395189858477869,
+      "p90": 17.674398398531448,
+      "lwt": 0.8850441193106229,
+      "G_awt": 6.825947573438479,
+      "other_awt": 10.306755550434325,
+      "n": 4731.133333333333,
+      "switches": 11.533333333333333,
+      "unserved": 0,
+      "not_alighted": 0,
+      "chain_availability_violations": 0,
+      "late_transfer_lift_count": 0
+    }
+  ],
+  "comparisons": [
+    {
+      "capacity_fraction": 0.4,
+      "comparison": "C7-C1",
+      "delta": 0.9445493819128995,
+      "ci95": [
+        0.5679903930994593,
+        1.3211083707263396
+      ],
+      "seed_mean_differences": [
+        0.8129162360954861,
+        1.1102792535307258,
+        0.9104526561124867
+      ]
+    },
+    {
+      "capacity_fraction": 0.4,
+      "comparison": "D10-C1",
+      "delta": 0.07117652351651423,
+      "ci95": [
+        -0.1069019134770466,
+        0.24925496051007506
+      ],
+      "seed_mean_differences": [
+        0.15011256944566256,
+        0.01012750638969422,
+        0.05328949471418589
+      ]
+    },
+    {
+      "capacity_fraction": 0.6,
+      "comparison": "C7-C1",
+      "delta": 0.6137285723726091,
+      "ci95": [
+        0.2674849495166874,
+        0.959972195228531
+      ],
+      "seed_mean_differences": [
+        0.5179293095243981,
+        0.773628946061135,
+        0.5496274615322945
+      ]
+    },
+    {
+      "capacity_fraction": 0.6,
+      "comparison": "D10-C1",
+      "delta": 0.01950217288913502,
+      "ci95": [
+        -0.07870696958747841,
+        0.11771131536574847
+      ],
+      "seed_mean_differences": [
+        0.06195124200873625,
+        0.012821849959943243,
+        -0.016266573301274435
+      ]
+    },
+    {
+      "capacity_fraction": 0.8,
+      "comparison": "C7-C1",
+      "delta": 0.4978904348953607,
+      "ci95": [
+        0.21412606310322208,
+        0.7816548066874993
+      ],
+      "seed_mean_differences": [
+        0.626973345496966,
+        0.40985821480480167,
+        0.45683974438431446
+      ]
+    },
+    {
+      "capacity_fraction": 0.8,
+      "comparison": "D10-C1",
+      "delta": 0.051600355656014986,
+      "ci95": [
+        -0.13414197012599344,
+        0.2373426814380234
+      ],
+      "seed_mean_differences": [
+        0.052639363406112596,
+        -0.02368508201516519,
+        0.12584678557709755
+      ]
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-10-26",
+      "capacity_fraction": 0.4,
+      "means": {
+        "C1": 7.911757123729322,
+        "C7": 8.762088509442766,
+        "D10": 7.863465116108256
+      },
+      "ranking": [
+        "D10",
+        "C1",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "capacity_fraction": 0.4,
+      "means": {
+        "C1": 7.997305121858863,
+        "C7": 8.907317851946216,
+        "D10": 8.134941703596128
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "capacity_fraction": 0.4,
+      "means": {
+        "C1": 7.586945582894756,
+        "C7": 8.712853280257349,
+        "D10": 7.686885740934785
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "capacity_fraction": 0.4,
+      "means": {
+        "C1": 8.264973977035513,
+        "C7": 9.10354897029254,
+        "D10": 8.379417570962655
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "capacity_fraction": 0.4,
+      "means": {
+        "C1": 7.304015440747403,
+        "C7": 8.301935543891483,
+        "D10": 7.356169732246604
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "capacity_fraction": 0.6,
+      "means": {
+        "C1": 8.347266892191538,
+        "C7": 8.88878073058765,
+        "D10": 8.36158704247939
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "capacity_fraction": 0.6,
+      "means": {
+        "C1": 8.374851170650253,
+        "C7": 9.331002116885113,
+        "D10": 8.48152159378475
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "capacity_fraction": 0.6,
+      "means": {
+        "C1": 8.938014981718954,
+        "C7": 9.322928892200991,
+        "D10": 8.821379030190347
+      },
+      "ranking": [
+        "D10",
+        "C1",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "capacity_fraction": 0.6,
+      "means": {
+        "C1": 8.941477774583468,
+        "C7": 9.281607139513099,
+        "D10": 8.974676690437846
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "capacity_fraction": 0.6,
+      "means": {
+        "C1": 7.5913280740036235,
+        "C7": 8.43726287582403,
+        "D10": 7.6512854007011795
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-26",
+      "capacity_fraction": 0.8,
+      "means": {
+        "C1": 9.294754490767243,
+        "C7": 9.482688054290296,
+        "D10": 9.290522401155583
+      },
+      "ranking": [
+        "D10",
+        "C1",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-27",
+      "capacity_fraction": 0.8,
+      "means": {
+        "C1": 9.015153622311752,
+        "C7": 9.830991394275872,
+        "D10": 9.021534844966318
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-28",
+      "capacity_fraction": 0.8,
+      "means": {
+        "C1": 10.73720425646077,
+        "C7": 11.384181154897021,
+        "D10": 10.865339093063932
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-29",
+      "capacity_fraction": 0.8,
+      "means": {
+        "C1": 9.878104718590878,
+        "C7": 10.048516723827584,
+        "D10": 9.934085515928384
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    },
+    {
+      "date": "2026-10-30",
+      "capacity_fraction": 0.8,
+      "means": {
+        "C1": 7.792730425978627,
+        "C7": 8.461022361295301,
+        "D10": 7.864467437275128
+      },
+      "ranking": [
+        "C1",
+        "D10",
+        "C7"
+      ]
+    }
+  ],
+  "service_anomalies": [],
+  "checks": {
+    "paired_inputs": 45,
+    "known_attendance_unchanged": true,
+    "background_and_through_counts_unchanged": true,
+    "flow_conservation": true
+  },
+  "scope": "Mixed background only; fixed five explored days; three Monte Carlo seeds; not new held-out validation"
+}

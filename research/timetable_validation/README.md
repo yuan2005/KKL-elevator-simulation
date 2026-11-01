@@ -41,6 +41,20 @@ Set `KKL_OUTPUT_DIR` to a new directory for each independent repeat. It defaults
 
 The initial `timetable_demand.py` CLI is retained as the earlier unlinked prototype. The three comparative runners use `linked_demand.py`, whose independently generated through traffic and class-transfer assumptions differ from that prototype. Do not combine their parameters as though they were one model.
 
+### Missing-headcount sensitivity
+
+The follow-up keeps the original selection and controllers unchanged, varying only the estimated enrolment of eligible sessions without known headcounts. It uses 40%, 60% and 80% of room capacity, five explored dates, three new seeds and C1/C7/D10: 135 simulations. Background remains fixed at the mixed setting; this is not another three-background held-out evaluation.
+
+```powershell
+# KKL_DATA_DIR must point to the authorized derived inputs described above.
+python research/timetable_validation/scripts/run_headcount_sensitivity.py --output research/timetable_validation/local_runs/headcount_sensitivity_v1
+python research/timetable_validation/scripts/report_headcount_sensitivity.py research/timetable_validation/local_runs/headcount_sensitivity_v1
+```
+
+The runner refuses an existing output directory and saves its protocol before simulation. Detailed coverage, cohort audits and decision logs stay local; publish only the allowlisted aggregate results. The report checks equal inputs across controls, unchanged attendance for known-count classes, background/through-flow counts and demand conservation. With only three seed-level replicates, intervals describe limited Monte Carlo precision, not model or real-world uncertainty.
+
+The follow-up is complete: **135 additional simulations** (1,740 archived runs in total). At 40%/60%/80%, equal-date/seed mean waiting for C1 is 7.813/8.439/9.344 seconds; D10 is 7.884/8.458/9.395, with all D10−C1 Monte Carlo intervals crossing zero. C7 has higher overall waiting but lower G-origin waiting in each condition. No unserved, incomplete, chain-conflict or late-transfer trips were recorded. This mixed-background finding does not replace the earlier three-background evaluation. See [full result tables](published_results/headcount_sensitivity_v1/结果说明.md), [interpretation and next steps](published_results/headcount_sensitivity_v1/interpretation_zh.md) and [figure](published_results/headcount_sensitivity_v1/headcount_sensitivity.png). Eleven behavioral tests pass, including two new missing-count/selection checks.
+
 ## Results and interpretation
 
 | Evaluation background | Fixed C1 | Fixed C7 | Frozen D10 | D10 minus C1 |

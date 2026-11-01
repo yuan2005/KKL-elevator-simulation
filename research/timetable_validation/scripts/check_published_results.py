@@ -48,6 +48,25 @@ def main():
     assert abs(delta - next(x['delta'] for x in summary['overall'] if x['base'] == 'C1')) < 1e-12
     assert -.25 < delta < 0 and summary['exploratory_success'] is False
     print(f'PASS: {sum(batches.values())} archived runs; 75 paired evaluation inputs; D10-C1={delta:.6f}s; frozen selection hashes match.')
+    sensitivity = load('headcount_sensitivity_v1/raw.json')
+    reported = load('headcount_sensitivity_v1/summary.json')
+    assert len(sensitivity) == 135
+    paired = defaultdict(dict)
+    for r in sensitivity:
+        key = r['date'], r['capacity_fraction'], r['seed']
+        assert r['controller'] not in paired[key]
+        paired[key][r['controller']] = r
+    assert len(paired) == 45
+    for group in paired.values():
+        assert set(group) == {'C1', 'C7', 'D10'}
+        assert len({r['input_sha256'] for r in group.values()}) == 1
+        assert len({r['n'] for r in group.values()}) == 1
+    for result in reported['comparisons']:
+        control = result['comparison'].split('-')[0]
+        diffs = [g[control]['awt']-g['C1']['awt'] for key,g in paired.items() if key[1] == result['capacity_fraction']]
+        assert abs(mean(diffs)-result['delta']) < 1e-12
+    assert all(r[k] == 0 for r in sensitivity for k in ['unserved','not_alighted','chain_availability_violations','late_transfer_lift_count'])
+    print('PASS: additional 135 missing-headcount runs; 45 paired inputs; reported deltas match; no service anomalies.')
 
 
 if __name__ == '__main__':
