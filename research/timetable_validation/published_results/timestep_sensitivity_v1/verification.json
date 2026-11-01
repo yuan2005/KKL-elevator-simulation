@@ -1,0 +1,9 @@
+{
+  "runs": 270,
+  "paired_inputs": 45,
+  "coarse_metric_comparisons": 2970,
+  "coarse_max_abs_difference": 0,
+  "same_inputs_across_steps_and_controls": true,
+  "same_D10_decision_and_switch_logs": true,
+  "service_anomalies": []
+}

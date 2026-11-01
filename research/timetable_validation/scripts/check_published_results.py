@@ -67,6 +67,42 @@ def main():
         assert abs(mean(diffs)-result['delta']) < 1e-12
     assert all(r[k] == 0 for r in sensitivity for k in ['unserved','not_alighted','chain_availability_violations','late_transfer_lift_count'])
     print('PASS: additional 135 missing-headcount runs; 45 paired inputs; reported deltas match; no service anomalies.')
+    grid_rows = load('timestep_sensitivity_v1/raw.json')
+    grid_report = load('timestep_sensitivity_v1/summary.json')
+    grid_protocol = load('timestep_sensitivity_v1/protocol.json')
+    grid_execution = load('timestep_sensitivity_v1/execution.json')
+    assert len(grid_rows) == 270
+    grid_path = ROOT / 'published_results/timestep_sensitivity_v1/protocol.json'
+    assert hashlib.sha256(grid_path.read_bytes()).hexdigest() == grid_execution['protocol_hash']
+    prior_index = {(r['date'],r['variant'],r['seed'],r['controller']):r for r in develop}
+    grid_groups = defaultdict(dict)
+    for r in grid_rows:
+        key = r['date'],r['variant'],r['seed']
+        assert (r['dt'],r['controller']) not in grid_groups[key]
+        grid_groups[key][(r['dt'],r['controller'])] = r
+        if r['dt'] == .25:
+            prior = prior_index[key+(r['controller'],)]
+            assert r['input_sha256'] == prior['input_sha256']
+            assert all(r[k] == v for k,v in prior.items() if isinstance(v,(int,float)))
+    assert len(grid_groups) == 45
+    for group in grid_groups.values():
+        assert set(group) == {(dt,c) for dt in [.25,.125] for c in ['C1','C7','D10']}
+        assert len({r['input_sha256'] for r in group.values()}) == 1
+    for result in grid_report['contrasts']:
+        c=result['comparison'].split('-')[0];dt=result['dt']
+        diffs=[g[(dt,c)]['awt']-g[(dt,'C1')]['awt'] for k,g in grid_groups.items()
+               if result['variant']=='all' or k[1]==result['variant']]
+        assert abs(mean(diffs)-result['mean']) < 1e-12
+    for result in grid_report['fine_minus_coarse']:
+        selected=[g for k,g in grid_groups.items() if result['variant']=='all' or k[1]==result['variant']]
+        if result['quantity'].endswith('_awt'):
+            c=result['quantity'].removesuffix('_awt')
+            diffs=[g[(.125,c)]['awt']-g[(.25,c)]['awt'] for g in selected]
+        else:
+            c=result['quantity'].split('-')[0]
+            diffs=[g[(.125,c)]['awt']-g[(.125,'C1')]['awt']-g[(.25,c)]['awt']+g[(.25,'C1')]['awt'] for g in selected]
+        assert abs(mean(diffs)-result['mean']) < 1e-12
+    print('PASS: additional 270 timestep runs; 45 paired inputs; original coarse-grid results and reported grid contrasts match.')
 
 
 if __name__ == '__main__':

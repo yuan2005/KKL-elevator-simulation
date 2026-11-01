@@ -55,6 +55,21 @@ The runner refuses an existing output directory and saves its protocol before si
 
 The follow-up is complete: **135 additional simulations** (1,740 archived runs in total). At 40%/60%/80%, equal-date/seed mean waiting for C1 is 7.813/8.439/9.344 seconds; D10 is 7.884/8.458/9.395, with all D10−C1 Monte Carlo intervals crossing zero. C7 has higher overall waiting but lower G-origin waiting in each condition. No unserved, incomplete, chain-conflict or late-transfer trips were recorded. This mixed-background finding does not replace the earlier three-background evaluation. See [full result tables](published_results/headcount_sensitivity_v1/结果说明.md), [interpretation and next steps](published_results/headcount_sensitivity_v1/interpretation_zh.md) and [figure](published_results/headcount_sensitivity_v1/headcount_sensitivity.png). Eleven behavioral tests pass, including two new missing-count/selection checks.
 
+### Paired timestep check
+
+The timestep runner compares 0.25 and 0.125 seconds using five explored dates, low/mixed/high backgrounds, three original development seeds, and fixed C1/C7/D10 (270 simulations). It retains identical passenger inputs and decision intervals in physical seconds, checks identical D10 decisions/switch times across grids, and reproduces the 0.25-second results against the development archive. Two grids alone do not prove convergence or establish a real-world accuracy bound.
+
+```powershell
+python research/timetable_validation/scripts/run_timestep_sensitivity.py --output research/timetable_validation/local_runs/timestep_sensitivity_v1
+python research/timetable_validation/scripts/report_timestep_sensitivity.py research/timetable_validation/local_runs/timestep_sensitivity_v1
+```
+
+This runner temporarily changes `config.DT` inside each worker process and restores it even after failure; it does not edit the original simulator or config file. Simulation snapshots, selected classrooms and detailed decision logs remain local. The paired fine-minus-coarse change in a strategy contrast is reported separately from its absolute waiting-time shift. Do not interpret changes in this development-date experiment as a re-evaluation of the prior held-out 0.140-second result.
+
+Completed results: 270 further simulations, bringing the published archive to **2,010 runs**. Overall development-date mean waiting changes from C1/C7/D10 = 8.259/8.715/8.099 seconds at 0.25 seconds to 8.405/8.792/8.268 at 0.125 seconds. D10−C1 changes from −0.161 to −0.137 seconds; its fine-grid three-seed Monte Carlo interval is [−0.277, +0.004]. The paired change in this contrast is +0.0238 seconds with interval [−0.0123, +0.0600], so crossing zero in one interval does not itself demonstrate a significant grid effect. D10 was selected on these development conditions; these are numerical diagnostics, not fresh independent validation.
+
+All 2,970 compared coarse-grid numeric fields match the prior archive exactly; paired demand and D10 decision/switch logs are identical across grids; no service anomalies occurred. Thirteen behavioral tests pass. Absolute waits do shift and small D10−C1 comparisons can reverse sign; convergence is not established. A third grid should be checked before retuning the rule. See [tables](published_results/timestep_sensitivity_v1/结果说明.md), [interpretation](published_results/timestep_sensitivity_v1/interpretation_zh.md) and [figure](published_results/timestep_sensitivity_v1/timestep_sensitivity.png).
+
 ## Results and interpretation
 
 | Evaluation background | Fixed C1 | Fixed C7 | Frozen D10 | D10 minus C1 |

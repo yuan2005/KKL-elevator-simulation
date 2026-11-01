@@ -1,0 +1,24 @@
+[
+  {
+    "dt": 0.25,
+    "steps": 113,
+    "observed_steps": [
+      0.25
+    ],
+    "board": 8.2,
+    "alight": 31.2,
+    "expected_board": 8.2,
+    "expected_alight": 31.299999999999997
+  },
+  {
+    "dt": 0.125,
+    "steps": 226,
+    "observed_steps": [
+      0.125
+    ],
+    "board": 8.2,
+    "alight": 31.325,
+    "expected_board": 8.2,
+    "expected_alight": 31.299999999999997
+  }
+]

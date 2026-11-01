@@ -1,0 +1,88 @@
+{
+  "created_utc": "2026-11-01T05:02:04.485982+00:00",
+  "design": "Paired numerical sensitivity; explored development dates, unchanged demand/controls; not a new holdout",
+  "dates": [
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
+  ],
+  "seeds": [
+    4000,
+    4001,
+    4002
+  ],
+  "steps": [
+    0.25,
+    0.125
+  ],
+  "controllers": [
+    "C1",
+    "C7",
+    "D10"
+  ],
+  "base": {
+    "transfer_fraction": 0.2,
+    "high_share": 0.5,
+    "attendance": 0.8,
+    "background_rate": 12,
+    "through_rate": 6,
+    "top": 16
+  },
+  "variants": {
+    "low": {
+      "high_share": 0.0
+    },
+    "mixed": {
+      "high_share": 0.5
+    },
+    "high": {
+      "high_share": 1.0
+    }
+  },
+  "inputs": 45,
+  "runs": 270,
+  "frozen": {
+    "missing_headcount_capacity_fraction": 0.6,
+    "D10_threshold": 0.1,
+    "controller_interval_seconds": 60,
+    "rolling_window_seconds": 300,
+    "min_dwell_seconds": 600,
+    "dispatch_interval_seconds": 1
+  },
+  "primary": "Paired fine-minus-coarse change in AWT and in D10-C1 / C7-C1 contrasts; equal date/variant/seed weighting",
+  "checks": [
+    "identical demand hashes/audits across both grids and all controls",
+    "identical D10 decision/switch logs across grids",
+    "coarse metrics match prior development archive",
+    "service anomalies retained and reported"
+  ],
+  "interpretation": "Two grids cannot prove numerical convergence or establish an error bound. No pass tolerance chosen after seeing output. Unstable ranking or material contrast shifts trigger finer-grid/model review before retuning.",
+  "uncertainty": "Seed-level paired contrasts, each averaged across fixed dates/variants; three-replicate t intervals reflect Monte Carlo variability only",
+  "original_source_hashes": {
+    "building.py": "9e54af2466fed09c5146cef210e7385aa19a43b7df8c3f641daa5ce7fbc9ff47",
+    "config.py": "a82e82dab37c15d073c1603d75d5e029515136120abd720ae7e2740d5b42c367",
+    "controllers.py": "ff2aa72e10467d9183d3d446a70175abca25ea3e7cc52b2d36930c2c75fc81d7",
+    "experiments.py": "7c44beeac6fd081ee0cd164d5a21b2c0420e47300a7109739deaecd151c2897f",
+    "metrics.py": "9cd1282737b8dbdc69809a4e2cc2ba41513984631051995bea49e5580fdacad2",
+    "plots.py": "692204be9b5fa95005210edb390f3277ff37f3aa424efd91795d2190dd7b769a",
+    "sim.py": "84db73ed92aa13efa905c614b913b8a5967b35ba192b236a7c183f5d7b1a5f96",
+    "strategies.py": "3eba566684f8597959b84f2b63f3990909214af9ee780cb07ed5aaa4dc96bb63",
+    "traffic.py": "4f2976ab30af0b9d206615159d4a14e8c6bdb3760735fcd16319130d25b0abcd"
+  },
+  "data_hashes": {
+    "semester1_kkl_dated_candidates.json": "cb4ae32dd1583624c157db479efc668014f13698d94986e1cec3ab88bff97c6d",
+    "room_registry.json": "fde5957f9802b0fa5c69ae03bc10b026cdff1aceca95c3f1346f44c429261a5d"
+  },
+  "script_hashes": {
+    "run_timestep_sensitivity.py": "e0b3063f5d853db5259a3a74dac77610e65f3248bb22c4d4b3bc66e2647774be",
+    "run_adaptive.py": "d051390913221a9eb2882a0f0e74c37778fac82b29e54104a3751d95350facdd",
+    "run_linked_pilot.py": "1d2cae84d70dd6e2a0c5dc4f6814e4f64c8196ac2fe8e5b08cc3f6f057ee5c2e",
+    "timetable_demand.py": "8a4f4bd3cc9fadfcf706df9d40194460fc9ffb4f8fb7ca97fcb030bfe1e09339",
+    "linked_demand.py": "aeac79f1a96a1fd0704ef45bbd52cae4d2979243bd3ec67185ef0fa5adcd8d78",
+    "adaptive_policy.py": "d0aeb0e3c792329857cd9cf938ec194851733952c1a7f8912b30709c1583eeb2",
+    "study_paths.py": "575b87fde90f25a91706ee6820c55248c5ac9a0181c9da14be7f67545930a7ad"
+  },
+  "prior_development_raw_hash": "094823e22d410e9f91912cbf4da07cdb18da0c3ab609b2795c5cabd60267d586"
+}
