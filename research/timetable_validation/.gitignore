@@ -1,0 +1,6 @@
+# Authenticated timetable data, derived classroom records and new passenger logs.
+private_data/
+local_runs/
+*.xlsx
+*.xls
+__pycache__/

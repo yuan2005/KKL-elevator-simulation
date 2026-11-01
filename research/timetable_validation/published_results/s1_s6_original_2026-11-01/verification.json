@@ -1,0 +1,12 @@
+{
+  "runs": 360,
+  "matched_keys": 360,
+  "metric_comparisons": 6120,
+  "differences": [],
+  "max_absolute_difference": 0.0,
+  "source_unchanged": true,
+  "unserved_total": 0,
+  "outside_window_unique_inputs": 1,
+  "analysis_elapsed_seconds": 0.41220664978027344,
+  "simulation_elapsed_seconds_rounded_from_log": 11.6
+}

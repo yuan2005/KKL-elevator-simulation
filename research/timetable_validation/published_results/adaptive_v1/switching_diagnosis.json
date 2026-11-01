@@ -1,0 +1,52 @@
+{
+  "status": "post_hoc_diagnostic_not_new_validation",
+  "unit": "equal-run means; AWT seconds; fractions of logged decisions",
+  "caveat": "Condition failures overlap. Logs do not identify causal delay costs or optimal switching times. No threshold changed.",
+  "by_variant": {
+    "high": {
+      "C1_awt": 8.62409859996519,
+      "C7_awt": 10.418442513429072,
+      "D10_awt": 8.64932781734311,
+      "switches": 4.48,
+      "C7_decision_fraction": 0.028176100628930816,
+      "entry_conditions_pass_fraction": 0.011874213836477987,
+      "sparse_fraction": 0.022943396226415093,
+      "entry_share_below_70_fraction": 0.8015094339622642,
+      "high_endpoint_above_10_fraction": 0.9585408805031447,
+      "entry_pass_but_C1_fraction": 0.003672955974842767,
+      "runs": 25,
+      "D10_minus_C1": 0.02522921737791961,
+      "D10_minus_C7": -1.7691146960859623
+    },
+    "low": {
+      "C1_awt": 7.599563168187854,
+      "C7_awt": 6.462949600215277,
+      "D10_awt": 7.135425162700872,
+      "switches": 50.44,
+      "C7_decision_fraction": 0.40352201257861636,
+      "entry_conditions_pass_fraction": 0.3232704402515723,
+      "sparse_fraction": 0.1349937106918239,
+      "entry_share_below_70_fraction": 0.627069182389937,
+      "high_endpoint_above_10_fraction": 0,
+      "entry_pass_but_C1_fraction": 0.10515723270440251,
+      "runs": 25,
+      "D10_minus_C1": -0.4641380054869817,
+      "D10_minus_C7": 0.6724755624855954
+    },
+    "mixed": {
+      "C1_awt": 8.175973047113564,
+      "C7_awt": 9.029282908800239,
+      "D10_awt": 8.194285606725607,
+      "switches": 9.2,
+      "C7_decision_fraction": 0.058666666666666666,
+      "entry_conditions_pass_fraction": 0.03245283018867925,
+      "sparse_fraction": 0.04286792452830189,
+      "entry_share_below_70_fraction": 0.7860125786163522,
+      "high_endpoint_above_10_fraction": 0.9049056603773585,
+      "entry_pass_but_C1_fraction": 0.00910691823899371,
+      "runs": 25,
+      "D10_minus_C1": 0.0183125596120437,
+      "D10_minus_C7": -0.8349973020746315
+    }
+  }
+}
