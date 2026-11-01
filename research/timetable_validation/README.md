@@ -1,5 +1,7 @@
 # S1–S6 reproduction and timetable-informed demand experiments
 
+> **Numerical validation finding:** a one-car, one-passenger, one-floor test fails to deliver its passenger at dt=0.0625 s in the unchanged base simulator. See [the reproducible missed-stop issue](KNOWN_NUMERICAL_ISSUE.md). Finer-grid results must not be treated as ground truth, and threshold tuning should wait for a separately validated simulator repair. Historical results remain reproducible records, not numerically validated real-world effect sizes.
+
 2026-11-01 research extension, based on simulator commit `f6c9ca4af440cff4a258237e1214c8dc0266fb50`. The original simulator and its E0–E3 results are unchanged. This extension was developed with AI assistance; it is a reproducible exploration, not a calibrated model of actual KKL operations.
 
 ## What is included
@@ -69,6 +71,21 @@ This runner temporarily changes `config.DT` inside each worker process and resto
 Completed results: 270 further simulations, bringing the published archive to **2,010 runs**. Overall development-date mean waiting changes from C1/C7/D10 = 8.259/8.715/8.099 seconds at 0.25 seconds to 8.405/8.792/8.268 at 0.125 seconds. D10−C1 changes from −0.161 to −0.137 seconds; its fine-grid three-seed Monte Carlo interval is [−0.277, +0.004]. The paired change in this contrast is +0.0238 seconds with interval [−0.0123, +0.0600], so crossing zero in one interval does not itself demonstrate a significant grid effect. D10 was selected on these development conditions; these are numerical diagnostics, not fresh independent validation.
 
 All 2,970 compared coarse-grid numeric fields match the prior archive exactly; paired demand and D10 decision/switch logs are identical across grids; no service anomalies occurred. Thirteen behavioral tests pass. Absolute waits do shift and small D10−C1 comparisons can reverse sign; convergence is not established. A third grid should be checked before retuning the rule. See [tables](published_results/timestep_sensitivity_v1/结果说明.md), [interpretation](published_results/timestep_sensitivity_v1/interpretation_zh.md) and [figure](published_results/timestep_sensitivity_v1/timestep_sensitivity.png).
+
+### Third-grid extension
+
+`run_third_grid.py` adds only the 0.0625-second runs. It loads the same selected classes and time windows from the **local** two-grid archive, verifies unchanged source/script hashes, and checks the new passenger inputs, demand audits and D10 decision logs against both previous grids. It requires `coverage_private.json` and the local `runs/` logs; aggregate public data alone cannot reconstruct these private inputs.
+
+```powershell
+python research/timetable_validation/scripts/run_third_grid.py --prior research/timetable_validation/local_runs/timestep_sensitivity_v1 --output research/timetable_validation/local_runs/timestep_third_grid_v2
+python research/timetable_validation/scripts/report_third_grid.py research/timetable_validation/local_runs/timestep_third_grid_v2
+```
+
+The report compares both signed aggregate increments and the mean absolute per-input increments, to avoid hiding instability through cancellation. It does not assume a convergence order, perform Richardson extrapolation, or treat the smallest step as ground truth. Prior protocols/results remain unchanged. Three-grid comparisons on already explored development dates are numerical diagnostics, not independent policy validation.
+
+The third grid is complete: **135 new archived runs**, for 2,145 total archived runs, including failure cases. At dt=0.0625, **128/135** runs have service/chain anomalies. Aggregate recorded waiting for C1/C7/D10 is 17.552/18.689/17.576 seconds, but these are failure diagnostics and must not be interpreted as valid policy effect estimates. Inputs, demand audits and D10 decisions match the previous grids. The single-floor reproduction demonstrates a missed-stop loop independently of D10 and timetable demand. Repair the simulator and revalidate before further threshold work.
+
+See [third-grid tables](published_results/timestep_third_grid_v2/结果说明.md), [interpretation](published_results/timestep_third_grid_v2/interpretation_zh.md), [failure-labelled figure](published_results/timestep_third_grid_v2/three_grid_check.png), and [minimal reproduction evidence](published_results/timestep_third_grid_v2/minimal_reproducer.json). Fifteen routine tests pass; the separate diagnostic script intentionally fails on the unmodified simulator. The first third-grid attempt was aborted because native tuple logs and archived JSON lists were compared directly; regression tests reproduced this bookkeeping error and verified the format-only fix. The completed v2 experiment uses unchanged simulator algorithms and separately frozen provenance.
 
 ## Results and interpretation
 

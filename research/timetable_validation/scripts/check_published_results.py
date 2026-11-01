@@ -103,6 +103,34 @@ def main():
             diffs=[g[(.125,c)]['awt']-g[(.125,'C1')]['awt']-g[(.25,c)]['awt']+g[(.25,'C1')]['awt'] for g in selected]
         assert abs(mean(diffs)-result['mean']) < 1e-12
     print('PASS: additional 270 timestep runs; 45 paired inputs; original coarse-grid results and reported grid contrasts match.')
+    third_rows=load('timestep_third_grid_v2/raw.json')
+    third_report=load('timestep_third_grid_v2/summary.json')
+    third_protocol=load('timestep_third_grid_v2/protocol.json')
+    third_verification=load('timestep_third_grid_v2/verification.json')
+    assert len(third_rows)==135 and third_protocol['dt']==.0625
+    old_grid_path=ROOT/'published_results/timestep_sensitivity_v1/raw.json'
+    assert hashlib.sha256(old_grid_path.read_bytes()).hexdigest()==third_protocol['prior_raw_hash']
+    combined={}
+    for r in grid_rows+third_rows:
+        key=r['date'],r['variant'],r['seed'],r['dt'],r['controller']
+        assert key not in combined
+        combined[key]=r
+    assert len(combined)==405
+    for pair,g in grid_groups.items():
+        fingerprints={r['input_sha256'] for r in g.values()}
+        fingerprints.update(combined[pair+(.0625,c)]['input_sha256'] for c in ['C1','C7','D10'])
+        assert len(fingerprints)==1
+    for result in third_report['contrasts']:
+        c=result['comparison'].split('-')[0];dt=result['dt']
+        selected=[p for p in grid_groups if result['variant']=='all' or p[1]==result['variant']]
+        deltas=[combined[p+(dt,c)]['awt']-combined[p+(dt,'C1')]['awt'] for p in selected]
+        assert abs(mean(deltas)-result['mean'])<1e-12
+    anomaly_keys=['unserved','not_alighted','chain_availability_violations','late_transfer_lift_count']
+    actual=[{k:r[k] for k in ['date','variant','seed','dt','controller']+anomaly_keys} for r in grid_rows+third_rows if any(r[k] for k in anomaly_keys)]
+    assert actual==third_verification['service_anomalies']
+    minimal=load('timestep_third_grid_v2/minimal_reproducer.json')['results']
+    assert all(r['alight'] is not None for r in minimal[:2]) and minimal[2]['alight'] is None
+    print(f'PASS: 135 third-grid archived runs, three-grid contrasts and {len(actual)} anomaly records verified. KNOWN FAILURE: single-floor fine-grid trip remains incomplete.')
 
 
 if __name__ == '__main__':
