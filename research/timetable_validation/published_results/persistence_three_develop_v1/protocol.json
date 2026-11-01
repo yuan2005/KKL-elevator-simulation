@@ -1,0 +1,134 @@
+{
+  "created_utc": "2026-11-01T18:45:31.546061+00:00",
+  "design": "One-factor development experiment: persistence 2 -> 3 consecutive decisions in both switch directions",
+  "model_commit": "dd06745a66eb2c21f3cd2ae6ead75220eb4dbfcc",
+  "dates": [
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
+  ],
+  "variants": {
+    "low": {
+      "high_share": 0.0
+    },
+    "mixed": {
+      "high_share": 0.5
+    },
+    "high": {
+      "high_share": 1.0
+    }
+  },
+  "seeds": [
+    4000,
+    4001,
+    4002
+  ],
+  "steps": [
+    0.25,
+    0.125
+  ],
+  "base": {
+    "transfer_fraction": 0.2,
+    "high_share": 0.5,
+    "attendance": 0.8,
+    "background_rate": 12,
+    "through_rate": 6,
+    "top": 16
+  },
+  "new_controller": "D10P3",
+  "new_runs": 90,
+  "runs": 90,
+  "inputs": 45,
+  "reused_baseline_runs": 270,
+  "only_change": "Consecutive target-state decisions required for switching: 2 -> 3. Update 60s, history 300s, dwell 600s, h=.10, entry .70/exit .65, n>=10, initial C1 unchanged.",
+  "primary": "Paired D10P3-D10 whole-day AWT, equal date/background/seed means at both fixed grids",
+  "proceed_screen": "Proceed to further testing only if D10P3-D10 mean and seed-CI upper are below zero at both grids, every variant mean regression <=0.5s, and zero service/chain/event/physical anomalies. Fewer switches alone is insufficient.",
+  "original_success_screen": "Separately retain >=0.25s saving versus C1, seed-CI upper<0, no variant mean regression>0.5s and zero service/chain anomalies. Not replaced by candidate comparison.",
+  "secondary": "Switch count, G/other waits, P90, >60s waits; all backgrounds retained. No threshold search.",
+  "selection_warning": "Proposed after inspecting previously used evaluation outputs; development-only exploration. November 2-6 is not a new untouched test for this revision. No independent candidate evaluation in this experiment.",
+  "prior_hashes": {
+    "motion_repair_v1": {
+      "protocol.json": "a576ba4fa409f36e30f2b0ece1ba154c603507aceb6103f42d57989fcb3450b6",
+      "execution.json": "ce1596968222970979842a6ea900d32c9c4a6c71b1fb8486395548ed6e1a3cb8",
+      "raw.json": "31b7af6b8591428d9ab749cf3d890ded869058f8b3924161138aa5435df9e4c1"
+    },
+    "motion_repair_extra_seeds_v1": {
+      "protocol.json": "629a0546d07982168b7f6c063766d270cd17402249a51f784ab5acfbb0474975",
+      "execution.json": "74ee4132b86ac979a6df51fc0453ede2b808d71e3a38b4b8bf400eaea3846b2b",
+      "raw.json": "fed507d6c1a6ce232cf7bf1c3e8125ad30db0208ba6ba121f4ab63d89d4896b9"
+    }
+  },
+  "prior_run_hashes": {
+    "2026-10-26_low_4000.json": "276a4bdafdf81049a3471dc035af5715de8c2fda64943980c71693f636bb3085",
+    "2026-10-26_low_4001.json": "76b6874fd8c45b6b48f6967b92650ab1013c0bb0d0484f4ffd275e4bf68e3c16",
+    "2026-10-26_low_4002.json": "42de435810717645b13b0a842aa756d22038f9646c86c90e2b7b33498e5c49f7",
+    "2026-10-26_mixed_4000.json": "cf1ec4243ee4f118c67a8185b1b2df0971fdc45c78975f4c51ba28f34b30cd73",
+    "2026-10-26_mixed_4001.json": "411bf787a9b2dec7bdf9bbce68c8992f10712cbbefb2d4e175c6225641711e18",
+    "2026-10-26_mixed_4002.json": "62f44cd6122b2610002a423578b794f4a0234a6aa0e15e49e6cade71426d89ed",
+    "2026-10-26_high_4000.json": "82bd606b8d00599ad8d905a1568ade6f10e7159256d60d4c3e50aafaa0160a6d",
+    "2026-10-26_high_4001.json": "3e1099c34a6a1a6877c393f12c57f6e510428c701daddfb00fb77e2bad046746",
+    "2026-10-26_high_4002.json": "df1e8503c8a978b95298e07c0df61309a95d97d831dc5a41c1b8d0232bb6cd59",
+    "2026-10-27_low_4000.json": "def9c73e52443e8a76420f60e973de2aa564017071ddf96b4d8119359c8b9973",
+    "2026-10-27_low_4001.json": "9322b3152b3056c27cde89ab0261a8e5ecbbb5f3d722de66b5cba866addffd13",
+    "2026-10-27_low_4002.json": "f80cebb8cd537c1f603dc9739c2797adfc4ad804490e85b27c32ecc68c1e2837",
+    "2026-10-27_mixed_4000.json": "c5f15c2fa7c550ba03133da5517216a2fde7678c012a77bad757e3690fc9500e",
+    "2026-10-27_mixed_4001.json": "90ec076fa345602c4395ddc46e123b1a411f26e2f909dc749a00767635c270d9",
+    "2026-10-27_mixed_4002.json": "8ea5c9c8eca882bccf9c43731258a55f5d592c9134d556c71f27d3bfcbb12fd9",
+    "2026-10-27_high_4000.json": "bb9a52115936ed90f97b2ac4b3356862109989caf5de6bf65a8fce496d3ece61",
+    "2026-10-27_high_4001.json": "7027632526ed75499f6a8f35da3e3fd317b6b4f172fd703c9504c3d4bfc9ac71",
+    "2026-10-27_high_4002.json": "a39ea0c026436493df0e2db9084ca2a07531b2b894c07ed84ab9e3e93becbdb1",
+    "2026-10-28_low_4000.json": "52e3011bad8c93fcfe5addc723bab9ba8cbc8815401a4d272ff722f24a294058",
+    "2026-10-28_low_4001.json": "2507d1d8a95a8a773fa4ce20a295aad82b7b2a15e51d78c046866c2072d84e15",
+    "2026-10-28_low_4002.json": "56de882446d7f04a2e182ff7aff57a4bc222d55d5861b9aabaaf9275b81f5bea",
+    "2026-10-28_mixed_4000.json": "29e932eb7ef908770d392ca385855c73490375c254cf787cb575053b9353d225",
+    "2026-10-28_mixed_4001.json": "e2a8c6751b300fd846d347970db817fe7eb1139a7ed1a11d487f4e95d3661dfb",
+    "2026-10-28_mixed_4002.json": "bc88b8c38ab8dd8f58226a5e31e2e8baad2d34c50dde090cf40691c0119d3b8d",
+    "2026-10-28_high_4000.json": "6c76171e842b14fb4ebb8a14f79df2def0ebc00cf0d4f4cb5e2a03c9e286da79",
+    "2026-10-28_high_4001.json": "9af143eb9c64a46161bfd974786acbf0bf05f1c5cbdd809ebb098f11361e5c67",
+    "2026-10-28_high_4002.json": "5afe1110965ebc9c47cb14d16a5b326307e51e1e64d4435acc8b5d2ebbbb6ad4",
+    "2026-10-29_low_4000.json": "41f8583e206fe183a2536f4f7360f0bfd6a1d3434404f45acc4692f7dad38b2b",
+    "2026-10-29_low_4001.json": "2a6559d2590201116cb8a04ac71732b8bb8088da18e2a6d45e933e79b338fcbd",
+    "2026-10-29_low_4002.json": "b1f7960cc2b70dd837748b34fcb369dbc75d97e4883ed091d07cd7c4a227d7cd",
+    "2026-10-29_mixed_4000.json": "e8134b318c8bf6749611e7a1a8f22230c8bc909d7aaa6cf0778b011e399ca2e3",
+    "2026-10-29_mixed_4001.json": "9552a6e8e91f47a0509357d0b9779148bc0e91dff56e63920115aa76a0fe6ee3",
+    "2026-10-29_mixed_4002.json": "d99c0ae82d2f2f656a254d750e620c048f41b8b6594afb1ce3696391c653f144",
+    "2026-10-29_high_4000.json": "2e4e41c242c06407ae2438f2065a28a72d7a081de0ed6575eb72f969888927a6",
+    "2026-10-29_high_4001.json": "8f59b5a4c0ba023301ce014e0e5831f9c5f4b57ad1c5059d37cdd2420f8cbab2",
+    "2026-10-29_high_4002.json": "eee375862b63c0c2d2765bb1dbe72b83bb96a9f6acb771ee962177105d00ef66",
+    "2026-10-30_low_4000.json": "98335438b9653e596710d599aa8f1ab0d45b2c863287be8fe8081bfa2ef2ab5a",
+    "2026-10-30_low_4001.json": "b89f0377a035fa7e3bbe0229b4d1558c07776f1de170857cb474a962cc1d748c",
+    "2026-10-30_low_4002.json": "ec357d843d56f6d10ac0c19238542c46d24a4d9c09ab7e49589685fcfa4a4c21",
+    "2026-10-30_mixed_4000.json": "76549b903a8baddb472b951bae353d69ca1e76bdaf95499c2f8254ce5dde8c00",
+    "2026-10-30_mixed_4001.json": "de1fb469eab0b3aeab418ab0938e42ed33caeb8488e4c8f0e976c8755c2ff9d6",
+    "2026-10-30_mixed_4002.json": "a079aa3eb7335e02f90da4d3a98604b31d874da03a0f12b50bce2a17508d8e0a",
+    "2026-10-30_high_4000.json": "2bff6bdf04b2c63141e5452c07921805829f7a0de9d0334a5046210033df059d",
+    "2026-10-30_high_4001.json": "216220ee73fa17b68cad045962368c83ebcfcd4586bcafdc42633dfd63c8c48f",
+    "2026-10-30_high_4002.json": "2361a2a0f1dcf645272b269225c896af37db32fa02d8d6d4fe86e33bc9c4a9fc"
+  },
+  "coverage_hash": "dc8ca772fae255ad6b030350c09fc8fa7616e5d52d501e5119350cf46a067e45",
+  "source_hashes": {
+    "building.py": "33576ec6cd0c997e3247d9eebc71df73aa282707253b68f35493c3274da3c88a",
+    "config.py": "a82e82dab37c15d073c1603d75d5e029515136120abd720ae7e2740d5b42c367",
+    "controllers.py": "ff2aa72e10467d9183d3d446a70175abca25ea3e7cc52b2d36930c2c75fc81d7",
+    "experiments.py": "7c44beeac6fd081ee0cd164d5a21b2c0420e47300a7109739deaecd151c2897f",
+    "metrics.py": "9cd1282737b8dbdc69809a4e2cc2ba41513984631051995bea49e5580fdacad2",
+    "plots.py": "692204be9b5fa95005210edb390f3277ff37f3aa424efd91795d2190dd7b769a",
+    "sim.py": "d7d85c3a5a5cb7aab9a266118f06314a86bc1b88e5561f7fd44524c5df996644",
+    "strategies.py": "3eba566684f8597959b84f2b63f3990909214af9ee780cb07ed5aaa4dc96bb63",
+    "test_motion.py": "c6c0b0c4110da2152602299a929ec750aeaf850b6d3e34de63372144935f6db4",
+    "traffic.py": "4f2976ab30af0b9d206615159d4a14e8c6bdb3760735fcd16319130d25b0abcd"
+  },
+  "script_hashes": {
+    "run_persistence_candidate.py": "e0e4e828a7d2debc0b0cc3f4e635719b8cda9e22403b6eac5dbfa47c1db0b00b",
+    "persistence_candidate.py": "97eb185d5570ad2f20c60d4ed182f8b52aa7b044743bbbe9bf5a6c3d8e0c4b99",
+    "repair_study_utils.py": "eeb6ab2310024a49a13df58b28fb12db90333ac8969734c0be163c30e05c955b",
+    "adaptive_policy.py": "d0aeb0e3c792329857cd9cf938ec194851733952c1a7f8912b30709c1583eeb2",
+    "run_adaptive.py": "d051390913221a9eb2882a0f0e74c37778fac82b29e54104a3751d95350facdd",
+    "run_linked_pilot.py": "1d2cae84d70dd6e2a0c5dc4f6814e4f64c8196ac2fe8e5b08cc3f6f057ee5c2e",
+    "linked_demand.py": "aeac79f1a96a1fd0704ef45bbd52cae4d2979243bd3ec67185ef0fa5adcd8d78",
+    "timetable_demand.py": "8a4f4bd3cc9fadfcf706df9d40194460fc9ffb4f8fb7ca97fcb030bfe1e09339",
+    "study_paths.py": "575b87fde90f25a91706ee6820c55248c5ac9a0181c9da14be7f67545930a7ad"
+  }
+}

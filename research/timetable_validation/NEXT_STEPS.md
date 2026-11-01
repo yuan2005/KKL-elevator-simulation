@@ -1,5 +1,7 @@
 # Why the switching gain is small, and what to test next
 
+**Latest:** [paired window diagnosis and the single-factor persistence test](WINDOW_DIAGNOSIS_AND_PERSISTENCE.md) are complete. D10P3 (three confirmations rather than two) reduces switches but does not pass its frozen development screen; do not adopt it or scan more counts simply to obtain a positive result. Keep D10 as the research reference, complete model-owner review, and prioritize a clearly bounded background-demand sensitivity/calibration question. The earlier priority list below records historical proposals, some now completed.
+
 **2026-11-02 status:** [the repaired-model follow-up](REPAIRED_FOLLOWUP.md) has completed the three-seed grid check, all original S1–S6 baselines and the original evaluation conditions at two time steps. The rule still fails the unchanged 0.25-second benefit screen. Predeclared subgroup/window summaries and local passenger traces are available. Next, obtain model-owner review and use those summaries to frame one controlled development-only rule revision or one demand/physical sensitivity question; do not repeat already completed baseline runs without a code change or unresolved issue. Keep the old-model diagnosis below labelled historical.
 
 This is a post-hoc research diagnosis, not a newly validated controller. The original D10 rule, success screen, and evaluation results remain frozen.
