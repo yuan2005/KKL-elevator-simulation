@@ -1,6 +1,6 @@
 # Window diagnosis and one-factor persistence experiment
 
-The motion model remains `dd06745`. The original demand generator, D10 controller and all earlier archives are unchanged. This follow-up first diagnoses existing repaired evaluation outputs, then tests one proposed rule revision on already used development conditions. It does not turn those evaluation dates into a new untouched test set.
+The motion model remains `dd06745`. The original demand generator, D10 controller and all earlier archives are unchanged. This follow-up first diagnoses existing repaired evaluation outputs, then tests one proposed rule revision on already used development conditions. Evaluation dates used in this diagnosis are now part of development evidence.
 
 ## Existing-output diagnosis: no new simulations
 
@@ -25,9 +25,9 @@ The protocol is frozen before running **90 new simulations**: five original deve
 | 0.25 s | −0.0070 s | [−0.1563, +0.1424] s | 20.40 → 17.33 |
 | 0.125 s | −0.0005 s | [−0.1045, +0.1034] s | 20.40 → 17.33 |
 
-All six recorded service/chain/lateness/event/motion anomaly totals are zero. Switching falls by about 15%, but neither grid demonstrates a reliable added waiting benefit. **Do not advance or adopt D10P3.** It fails the predeclared development screen requiring a negative mean and seed-CI upper bound at both grids, acceptable per-background changes and zero anomalies. It also fails the separately retained original 0.25-second saving screen versus C1. A nonsignificant result with three seeds does not prove equivalence or rule out other persistence designs.
+All six recorded service/chain/lateness/event/motion anomaly totals are zero. Switching falls by about 15%, but neither grid demonstrates a reliable added waiting benefit. **Keep the original D10; D10P3 is not adopted.** It fails the predeclared development screen requiring a negative mean and seed-CI upper bound at both grids, acceptable per-background changes and zero anomalies. It also fails the separately retained original 0.25-second saving screen versus C1. A nonsignificant result with three seeds does not prove equivalence or rule out other persistence designs.
 
-See [candidate report](published_results/persistence_three_develop_v1/结果说明.md), [figure](published_results/persistence_three_develop_v1/persistence_comparison.png), protocol and raw per-run aggregate metrics. The candidate was motivated after inspecting already used evaluation results; it has no independent validation. No further confirmation counts or thresholds were searched.
+See [candidate report](published_results/persistence_three_develop_v1/结果说明.md), [figure](published_results/persistence_three_develop_v1/persistence_comparison.png), protocol and raw per-run aggregate metrics. The candidate was motivated after inspecting already used evaluation results; it has no independent validation.
 
 ## Reproduce and verify
 
@@ -41,4 +41,4 @@ python research/timetable_validation/scripts/check_diagnosis_candidate.py
 
 Exact reruns need authorized local detailed archives. Public files contain only aggregate results and hashes; per-passenger records, selected classrooms and per-input detailed diagnostic groups remain local. New output directories are required. The public check independently recalculates paired intervals and the frozen decision from aggregate rows; it does not claim to reopen private traces.
 
-Only 90 simulations were added: cumulative unique archived runs are 3,450 (2,145 original-model historical + 1,215 repaired-model follow-up + 90 candidate). Reused baseline rows and diagnostics add none. Historical failure runs remain labelled and are not all valid policy evaluations. The next useful question is the sensitivity to independently assumed background traffic or its available calibration evidence, with ranges fixed before testing; that new study has not been run. Model-owner review remains pending.
+This study added 90 simulations; reused baseline rows and trajectory diagnostics add none. The next [background-intensity check](BACKGROUND_SENSITIVITY.md) is now complete. See [the current handoff](REPORT_HANDOFF.md) for the combined conclusions and archive count.

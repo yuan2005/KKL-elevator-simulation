@@ -3,3 +3,5 @@ published_results/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab
 scripts/*.py text eol=lf
 *.md text eol=lf
 port_provenance.json text eol=lf
+# This release manifest includes the generated report's original byte hash.
+published_results/background_rate_repaired_v1/** -text

@@ -1,14 +1,36 @@
-# Packaging validation (2026-11-01)
+# Validation status — 2026-11-02
 
-Validation performed before publishing this extension:
+## Current checks
 
-- Nine existing behavioral unit tests passed after path migration.
-- Public archive checker verified 1,605 archived runs, the frozen development selection/hash, 75 matched evaluation inputs and the reported D10−C1 delta of −0.140199 seconds.
-- The portable S1–S6 runner actually reran 360 simulations: all 6,120 numerical comparisons matched the original repository output exactly; maximum absolute difference was zero. This rerun is separate from the 1,605 archived runs.
-- A synthetic two-class integration run exercised the relocated demand generator, simulator and C1/C7/D10 controllers. Each received the same 683 trips; no unserved, incomplete or chain-conflict trips occurred. This verifies integration, not real-data calibration.
-- Original-to-packaged hashes were checked against `port_provenance.json`; existing algorithm files differ only in path configuration where recorded.
-- Published JSON was checked for classroom/passenger payload fields. Source workbooks, derived classroom records, detailed runtime logs and personal writing drafts were excluded.
+| Check | Coverage |
+|---|---|
+| 25 research tests | Demand conservation and overlap handling, reproducible inputs, transfer chains, past-only policy decisions, archive/statistics helpers, diagnostic label normalization, persistence equivalence and background-layer isolation |
+| Five motion tests | Both directions and trip lengths, analytic flight times, speed/acceleration, reachable versus late new calls and seeded multi-passenger motion |
+| Original smoke | Single-passenger waiting/travel hand calculation |
+| Public archive checks | Recompute aggregate claims, seed intervals, fixed screens, input hashes, reused rows and publication hashes |
+| Local detailed checks | Passenger-trace hashes, partition counts and weighted waits, complete window/state groups; detailed inputs remain local |
 
-The complete 1,245 archived timetable simulations were not rerun during packaging. Their stored metrics were checked, and the migrated runtime was tested with synthetic data. Full timetable reproduction still requires the authorized local derived inputs described in DATA.md.
+Run from the repository root:
 
-New outputs go to ignored `local_runs/` by default. The original top-level simulator source files and original experiment results were not edited.
+```sh
+python -m unittest discover -s research/timetable_validation/scripts -p "test_*.py"
+python -m unittest test_motion
+python experiments.py smoke
+python research/timetable_validation/scripts/check_all_results.py
+```
+
+The unified archive command calls the older milestone checks and then checks the new background study and current inventory. Numbers printed by an older milestone describe that milestone; the final inventory gives the current total.
+
+## Archived experiments
+
+The [machine-readable inventory](published_results/archive_inventory.json) counts **3,630 unique runs**: 2,145 original-model and 1,485 repaired-model runs. The latter comprise 405 grid checks, 360 S1–S6 runs, 450 original-evaluation runs, 90 D10P3 candidate runs and 180 background-intensity runs. Reused rows, combined summaries and incomplete archival attempts add none.
+
+The original fine-grid archive includes 128 anomalous runs out of 135. On identical inputs the repaired batch records none. All repaired batches report zero recorded service/chain/lateness/event anomalies. Motion-constraint instrumentation additionally covers repaired S1–S6, evaluation, persistence and background batches. The zero counts concern these implemented checks and input sets; the outer discrete loop still affects waiting metrics.
+
+## Provenance and reproduction boundaries
+
+Protocols freeze source and script hashes before execution. Public JSON preserves archived bytes. The [checkout provenance](published_results/motion_repair_v1/source_checkout_provenance.json) reconciles Windows CRLF execution hashes with Git LF source hashes. `background_rate_repaired_v1/publication.json` additionally checks its released aggregates and analysis scripts.
+
+Exact timetable reruns require the authorized derived inputs and detailed archived pairing inputs described in [DATA.md](DATA.md). Public checks recompute the released aggregate evidence; they do not reopen private passenger traces. [The repaired follow-up](REPAIRED_FOLLOWUP.md) gives the local trace-check commands.
+
+Source calibration and model-owner review are the remaining evidence tasks. Numerical checks establish consistency of this implementation; the empirical adequacy of the KKL assumptions needs building and demand data.

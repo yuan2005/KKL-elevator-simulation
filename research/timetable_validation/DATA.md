@@ -1,6 +1,6 @@
 # Local input contract and source provenance
 
-The SIS timetable was obtained by the user after university authentication. It and classroom-level derivatives remain local. A public repository is not needed for sharing those source records. This extension publishes model code and aggregate simulation results only.
+The SIS timetable was obtained by the user after university authentication. It and classroom-level derivatives remain local. This extension publishes model code and aggregate simulation results only.
 
 ## Sources used in the archived runs
 
@@ -27,4 +27,4 @@ These are recorded source locations and versions from the original study, not cl
 
 The selection stage merges adjacent blocks of the same class/room with gaps up to 10 minutes, identifies overlapping sessions before excluding anything, and uses known headcounts or the explicit capacity assumption. The conservation tests check model consistency; they cannot validate the underlying enrolment/room assumptions.
 
-Exact reruns require the same archived derived inputs identified in the published protocols. An independently re-extracted or updated timetable can produce different results. Do not reconstruct restricted source records from aggregate result files, or treat missing classes as zero real demand.
+Exact reruns require the same archived derived inputs identified in the published protocols. An independently re-extracted or updated timetable can produce different results. Missing classes remain a coverage gap; the workbook extraction pipeline and authorized source records are retained locally.

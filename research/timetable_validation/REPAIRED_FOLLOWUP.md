@@ -1,6 +1,6 @@
 # Follow-up experiments on the candidate motion repair
 
-All runs use the candidate model at `dd06745a66eb2c21f3cd2ae6ead75220eb4dbfcc`. No root simulator, demand generator or D10 controller algorithm was changed during this follow-up. These experiments extend validation while model review is pending; they do not substitute for review or real KKL calibration.
+All runs use the candidate model at `dd06745a66eb2c21f3cd2ae6ead75220eb4dbfcc`. No root simulator, demand generator or D10 controller algorithm was changed during this follow-up. Model-owner review and empirical calibration remain pending.
 
 ## Three original development seeds
 
@@ -16,7 +16,7 @@ The next **360 runs** retain the original scenario definitions, seeds 0–9, con
 
 C7 has the lowest mean wait in S1; C1 in S2/S3/S4/S6. In S5, C4 is only 0.0041 seconds below C1 with a paired interval [−0.1524, +0.1443], which does not demonstrate superiority. Means and paired intervals are in [the scenario report](published_results/s1_s6_repaired_v2/结果说明.md).
 
-This is a new-model baseline comparison, not a claim that repaired outputs match the old results. It does not refit the E1 policy map or revalidate old E2/E3 conclusions. These original scenarios use different building settings from the LG2–16 timetable experiments and must not be pooled with them.
+These scenarios use different building settings from the LG2–16 timetable experiments. Report them separately. E1 policy-map fitting and old E2/E3 results belong to the original model.
 
 The first archival attempt (`s1_s6_repaired_v1`) failed before saving a result because the new JSON helper did not convert a NumPy integer. Its protocol and failure record remain. The format-only correction is regression-tested; the complete `v2` run uses unchanged model code. Unretained work from the aborted attempt is not counted as completed validated simulations.
 
@@ -29,13 +29,13 @@ The final **450 new runs** use the previously evaluated November 2–6 dates, lo
 | 0.25 s | 8.2393 s | 8.1084 s | −0.1309 [−0.2092, −0.0526] s | Not met |
 | 0.125 s | 8.1736 s | 8.0214 s | −0.1522 [−0.2114, −0.0931] s | Not met |
 
-Both conditional Monte Carlo intervals exclude zero, but the mean saving remains below the original minimum. The rule is not reclassified as successful. The benefit is concentrated in the low-floor background scenario; mixed/high scenario mean differences are small positive values with intervals crossing zero. Fixed C7 still has lower mean waiting than D10 in low-floor scenarios, so improvement over C1 does not establish adaptive superiority over the best fixed control in each scenario.
+Both conditional Monte Carlo intervals exclude zero, but the mean saving remains below the original minimum. The benefit is concentrated in the low-floor background scenario; mixed/high scenario mean differences are small positive values with intervals crossing zero. Fixed C7 still has lower mean waiting than D10 in low-floor scenarios, so improvement over C1 does not establish adaptive superiority over the best fixed control in each scenario.
 
 Predeclared strata show a different, complementary distinction: across all background scenarios, classroom and through-traffic passengers have lower mean waits under D10, while the independently generated background-traffic layer has a roughly 0.19-second higher mean wait at both grids. This layer is not the same as the low/mixed/high background scenario variable. These subgroup findings are exploratory, not independent causal effects or evidence about measured real passengers.
 
 See [evaluation report](published_results/adaptive_repaired_evaluation_v1/结果说明.md), [paired summary](published_results/adaptive_repaired_evaluation_v1/summary.json) and [predefined stratum/window summary](published_results/adaptive_repaired_evaluation_v1/strata_summary.json). All fixed 15-minute windows are retained, not selected for favorable effects. Local partition checks reconstruct each run's passenger count and weighted mean wait, and verify the hashes of 450 local compressed passenger traces. Subgroup/window intervals are not corrected for multiple comparisons.
 
-Across this follow-up there are **1,080 new completed runs** (270 + 360 + 450). With the previous 135 repaired runs there are 1,215 unique repaired-model runs; adding the separate 2,145 original-model historical runs gives 3,360 archived runs. The 405-row combined grid analysis adds no runs; failed archival attempts are not counted.
+At this follow-up milestone there were **1,080 new completed runs** (270 + 360 + 450). With the previous 135 repaired runs there are 1,215 unique repaired-model runs; adding the separate 2,145 original-model historical runs gives 3,360 archived runs. The 405-row combined grid analysis adds no runs; failed archival attempts are not counted.
 
 ## Reproduction and outputs
 
@@ -56,4 +56,4 @@ python research/timetable_validation/scripts/report_repaired_studies.py evaluati
 
 Protocols freeze model/script hashes before execution. Historical root sources were executed with Windows CRLF while Git stores LF; [the repair checkout provenance](published_results/motion_repair_v1/source_checkout_provenance.json) records both hashes. Original pairing runners use byte hashes, so exact replay of those old local archives requires matching checkout line endings; new result analyses do not treat newline conversion as a model change.
 
-The old 0.140-second effect remains an original-model historical result. All new claims must cite the repaired archive and model version, and state that the timetable demand and physical parameters remain uncalibrated.
+Later studies add [persistence diagnosis](WINDOW_DIAGNOSIS_AND_PERSISTENCE.md) and [background-intensity sensitivity](BACKGROUND_SENSITIVITY.md). The current total and report conclusions are in [the handoff](REPORT_HANDOFF.md).
