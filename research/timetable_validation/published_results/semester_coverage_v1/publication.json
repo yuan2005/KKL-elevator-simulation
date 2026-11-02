@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-02",
+  "files": {
+    "comparison.json": "263f48ccb52ccd5b6e0e1d1e8065bbea264e930dbdea5e27b031ffb726ecb34f",
+    "next_experiment_plan.json": "2905331775313ef3f6e8579422c95115525aa13a43629d33e7788f7c176b65ef",
+    "original_summary.json": "bff87af713428f479aed2b7e5344eacddc4fdc326a2cf7892579e5d165689767",
+    "revised_summary.json": "36db34576aecc77defaf57aa249c327e9d9cf532df2a6d09bef3f294348abb61",
+    "weekly_coverage.png": "c2f244a74fe94b650d1a9d489b9d53f207652350e97a1cbf510e2fa6a88852ac",
+    "结果说明.md": "96c46f24d93cf7b342e78593d6b94c0127809179d1fd9dbad6eccb64be776025"
+  },
+  "scripts": {
+    "audit_semester_coverage.py": "ef30251f59e3abf48b9578c09e7efae01f639930f0baaa1be2169fb05c3d3117",
+    "check_semester_coverage.py": "3bb89b3a622529e82704012c412b5ccef55b8b8eade7848a4d1ef4f1a0384c34",
+    "plot_semester_coverage.py": "f9704870f492db92829707118ef5a94b24ec2782b92f780671b30fdab8f480ee",
+    "test_semester_coverage.py": "00a3a40f40dddba20a7e4b5cf8d2e8dd8136424ca4623d71685f1e3f2099a46f"
+  },
+  "scope": "Public aggregates only; source-room registry, classroom details and exact selected-session comparisons remain local. No simulations added."
+}

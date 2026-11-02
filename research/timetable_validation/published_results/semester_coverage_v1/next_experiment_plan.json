@@ -1,0 +1,127 @@
+{
+  "status": "prepared_not_run",
+  "simulations_added": 0,
+  "first_stage": {
+    "question": "Effect of the two evidence-backed room floor corrections on fixed-input-family policy comparisons",
+    "dates": [
+      "2026-10-26",
+      "2026-10-27",
+      "2026-10-28",
+      "2026-10-29",
+      "2026-10-30"
+    ],
+    "seeds": [
+      4000,
+      4001,
+      4002
+    ],
+    "variants": [
+      "mixed"
+    ],
+    "steps": [
+      0.25,
+      0.125
+    ],
+    "controllers": [
+      "C1",
+      "C7",
+      "D10"
+    ],
+    "planned_new_runs": 90,
+    "baseline": "90 original-registry mixed rows from motion_repair_v1 and motion_repair_extra_seeds_v1",
+    "comparison": "Date/seed pairing; classroom additions alter generated demand and transfers, so compare policy contrasts rather than asserting individual-passenger causal pairing."
+  },
+  "second_stage": {
+    "question": "Fixed-rule robustness across early, middle and late ordinary teaching weeks",
+    "proposed_weeks": [
+      {
+        "week_start": "2026-09-21",
+        "dates": [
+          "2026-09-21",
+          "2026-09-22",
+          "2026-09-23",
+          "2026-09-24",
+          "2026-09-25"
+        ],
+        "role": "early",
+        "selected_sessions": 250,
+        "assumed_headcount_sessions": 141,
+        "previously_seen_session_signatures": 237,
+        "non_UG_sessions": 68
+      },
+      {
+        "week_start": "2026-10-05",
+        "dates": [
+          "2026-10-05",
+          "2026-10-06",
+          "2026-10-07",
+          "2026-10-08",
+          "2026-10-09"
+        ],
+        "role": "middle",
+        "selected_sessions": 252,
+        "assumed_headcount_sessions": 143,
+        "previously_seen_session_signatures": 237,
+        "non_UG_sessions": 70
+      },
+      {
+        "week_start": "2026-11-16",
+        "dates": [
+          "2026-11-16",
+          "2026-11-17",
+          "2026-11-18",
+          "2026-11-19",
+          "2026-11-20"
+        ],
+        "role": "late",
+        "selected_sessions": 246,
+        "assumed_headcount_sessions": 137,
+        "previously_seen_session_signatures": 237,
+        "non_UG_sessions": 64
+      },
+      {
+        "week_start": "2026-11-23",
+        "dates": [
+          "2026-11-23",
+          "2026-11-24",
+          "2026-11-25",
+          "2026-11-26",
+          "2026-11-27"
+        ],
+        "role": "reserve",
+        "selected_sessions": 242,
+        "assumed_headcount_sessions": 133,
+        "previously_seen_session_signatures": 236,
+        "non_UG_sessions": 60
+      }
+    ],
+    "seeds": [
+      6000,
+      6001,
+      6002
+    ],
+    "variants": [
+      "low",
+      "mixed",
+      "high"
+    ],
+    "steps": [
+      0.25,
+      0.125
+    ],
+    "controllers": [
+      "C1",
+      "C7",
+      "D10"
+    ],
+    "planned_new_runs": 810,
+    "reserve_runs": 0,
+    "selection": "Early/middle/late coverage after add/drop, avoiding general reading week, weekday public holidays and previously simulated weeks. No policy outcomes inspected for these dates.",
+    "scope": "September-2 schedule snapshot with October-31 headcount assumptions; programme calendar and actual attendance are not reconstructed."
+  },
+  "before_execution": [
+    "Freeze fresh execution protocol and model/input hashes; confirm current model-review status.",
+    "Use revised room registry under a new KKL_DATA_DIR, preserving historical archives.",
+    "Maintain D10 thresholds and original benefit screen; document all source and service checks."
+  ]
+}

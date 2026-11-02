@@ -28,3 +28,10 @@ These are recorded source locations and versions from the original study, not cl
 The selection stage merges adjacent blocks of the same class/room with gaps up to 10 minutes, identifies overlapping sessions before excluding anything, and uses known headcounts or the explicit capacity assumption. The conservation tests check model consistency; they cannot validate the underlying enrolment/room assumptions.
 
 Exact reruns require the same archived derived inputs identified in the published protocols. An independently re-extracted or updated timetable can produce different results. Missing classes remain a coverage gap; the workbook extraction pipeline and authorized source records are retained locally.
+
+
+## Revised input version: 2026-11-02
+
+Historical simulations use the original `sis_2026-27` registry. The separate local directory `sis_2026-27_reviewed_2026-11-02` changes only the floor/provenance fields for KKLG110 and KKLG111, using [HKU ITS room evidence](room_evidence_2026-11-02.json). Both floors are LG1; capacities remain 45 and 46. Timetable candidates and rules retain their original hashes. The revision manifest and [coverage comparison](published_results/semester_coverage_v1/comparison.json) link the versions. No archived simulation uses the revised input yet.
+
+Coverage auditing additionally requires `semester1_kkl_rules.json`, containing the source-row career and offering-department fields. These support aggregate coverage checks but do not uniquely identify each class's programme-specific calendar. The [calendar review](semester_calendar_review.json) records general dates and exceptions; the audit preserves source sessions and labels the ordinary-weekday subset separately.

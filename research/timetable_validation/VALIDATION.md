@@ -4,7 +4,7 @@
 
 | Check | Coverage |
 |---|---|
-| 25 research tests | Demand conservation and overlap handling, reproducible inputs, transfer chains, past-only policy decisions, archive/statistics helpers, diagnostic label normalization, persistence equivalence and background-layer isolation |
+| 28 research tests | Demand conservation and overlap handling, reproducible inputs, transfer chains, past-only policy decisions, archive/statistics helpers, diagnostic label normalization, persistence equivalence, background-layer isolation and semester calendar/count reconciliation |
 | Five motion tests | Both directions and trip lengths, analytic flight times, speed/acceleration, reachable versus late new calls and seeded multi-passenger motion |
 | Original smoke | Single-passenger waiting/travel hand calculation |
 | Public archive checks | Recompute aggregate claims, seed intervals, fixed screens, input hashes, reused rows and publication hashes |
@@ -17,9 +17,12 @@ python -m unittest discover -s research/timetable_validation/scripts -p "test_*.
 python -m unittest test_motion
 python experiments.py smoke
 python research/timetable_validation/scripts/check_all_results.py
+python research/timetable_validation/scripts/check_semester_coverage.py
 ```
 
 The unified archive command calls the older milestone checks and then checks the new background study and current inventory. Numbers printed by an older milestone describe that milestone; the final inventory gives the current total.
+
+The separate semester-coverage command checks the original/revised registry summaries, source hashes and planned run counts. Coverage analysis adds zero simulations; its 90/810-run follow-up plans remain unexecuted.
 
 ## Archived experiments
 

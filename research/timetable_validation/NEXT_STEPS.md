@@ -12,9 +12,15 @@ For the November 4 Interim Log, use the repaired-model figures and explain the c
 
 Prepare an evidence table for the six lifts' served floors, capacity, speed and door timing; for headcount coverage; and for background/through-traffic rates. Each row needs a source date, units and an explicit link to the parameter it supports. Seek available official building/lift specifications, published measurements or enrolment records first. A timetable constrains class times; it does not identify lift use or unrelated background traffic.
 
-For semester coverage, summarize eligible sessions by week, excluded/overlapping records and missing headcounts, then confirm teaching-calendar exceptions. Select additional weeks only after this coverage check. The current workbook's semester coverage is wider than the dates actually simulated.
+[Semester coverage](published_results/semester_coverage_v1/结果说明.md) is complete. The original registry selects 2,621 meetings; two official floor corrections raise this to 2,957. The revised input is separately versioned. Remaining gaps include overlapping classes, unsupported high-floor rooms, missing headcounts and programme calendar exceptions. The current source-informed class layer covers LG1/1/2 only.
 
-## 3. Choose the next experiment from that evidence
+## 3. Check the revised input, then extend across weeks
+
+First run the planned 90 mixed-background comparisons on October 26–30, seeds 4000–4002, C1/C7/D10 and both original grids. Compare revised-registry policy contrasts with the 90 archived original-registry rows, keeping physical and controller settings fixed. Source-supported classroom additions also alter generated transfer chains, so pair by date/seed rather than treating all passenger records as unchanged.
+
+Next consider September 21–25, October 5–9 and November 16–20: 810 planned runs across three backgrounds, three seeds, three controls and two grids. These dates avoid the general calendar exceptions; programme-specific confirmation remains separate. Most session signatures repeat those in already studied weeks, so this tests cross-date robustness. Reserve November 23–27 for later work. Both stages are prepared, not run; freeze execution protocols before starting. Details are in [the proposed plan](published_results/semester_coverage_v1/next_experiment_plan.json).
+
+## 4. Physical assumptions and future controller work
 
 The background check held the floor distribution at mixed and found no resolved D10 advantage at any tested intensity. Additional random seeds would sharpen the uncertainty within those assumptions; they would not identify the actual KKL rate. Prioritize a physical-parameter check when a credible capacity/speed/door-time value or range becomes available. Freeze the supported range, outcome measures and paired inputs before running it.
 

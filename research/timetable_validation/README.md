@@ -6,6 +6,8 @@ The repaired-model evaluation gives D10 a **0.1309/0.1522-second mean saving ver
 
 Start with [report handoff](REPORT_HANDOFF.md), [next work](NEXT_STEPS.md), or [validation and archive inventory](VALIDATION.md).
 
+[Semester coverage review](published_results/semester_coverage_v1/结果说明.md) is now complete. Official floor evidence for KKLG110/111 increases selected class meetings from 2,621 to 2,957 in a separately versioned input set. Existing simulations use the original registry; the proposed 90-run input update check and 810-run multiweek study are prepared, not run.
+
 ## Evidence map
 
 | Study | Unique runs | Evidence |
@@ -36,9 +38,10 @@ python -m unittest discover -s research/timetable_validation/scripts -p "test_*.
 python -m unittest test_motion
 python experiments.py smoke
 python research/timetable_validation/scripts/check_all_results.py
+python research/timetable_validation/scripts/check_semester_coverage.py
 ```
 
-The current suite has 25 research tests and five motion tests. The public archive check recalculates aggregate comparisons, intervals, input pairing and experiment decisions. Local passenger-trace checks are documented separately in [VALIDATION.md](VALIDATION.md).
+The current suite has 28 research tests and five motion tests. The public archive check recalculates aggregate comparisons, intervals, input pairing and experiment decisions. The coverage check reconciles session counts and revised-input provenance. Local passenger-trace checks are documented separately in [VALIDATION.md](VALIDATION.md).
 
 ## Reproduce experiments
 

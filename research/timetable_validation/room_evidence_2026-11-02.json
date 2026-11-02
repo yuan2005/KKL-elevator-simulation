@@ -1,0 +1,10 @@
+{
+  "review_date": "2026-11-02",
+  "retrieval": "HKU ITS page content returned through targeted web search; direct page opens timed out. Capacities independently cross-checked on the Examinations Office page.",
+  "capacity_crosscheck": "https://exam.hku.hk/c_rooms.php",
+  "updates": [
+    {"room": "KKLG110", "floor": "LG1", "capacity": 45, "source": "https://its.hku.hk/teaching-space/kklg110/", "source_title": "LG1/F - KKLG110"},
+    {"room": "KKLG111", "floor": "LG1", "capacity": 46, "source": "https://its.hku.hk/teaching-space/kklg111/", "source_title": "LG1/F - KKLG111"}
+  ],
+  "scope": "Verifies classroom floor and capacity; does not measure attendance or verify elevator access. Apply to a new input version, retaining historical input hashes."
+}

@@ -1,6 +1,6 @@
 # KKL 电梯分场景控制策略仿真（第二版）
 
-> **当前研究入口（2026-11-02）：** [报告与分析交接](research/timetable_validation/REPORT_HANDOFF.md)汇总修复版 S1–S6、课表需求、D10 评价及敏感性实验。D10 平均节省 0.131/0.152 秒，低于原 0.25 秒门槛；确认次数和背景强度检查没有支持推进新规则。30 项测试与公开归档检查见[验证说明](research/timetable_validation/VALIDATION.md)。运动修复在 PR #2 待审阅。
+> **当前研究入口（2026-11-02）：** [报告与分析交接](research/timetable_validation/REPORT_HANDOFF.md)汇总修复版 S1–S6、课表需求、D10 评价及敏感性实验。D10 平均节省 0.131/0.152 秒，低于原 0.25 秒门槛；确认次数和背景强度检查没有支持推进新规则。33 项测试与公开归档检查见[验证说明](research/timetable_validation/VALIDATION.md)。运动修复在 PR #2 待审阅。
 
 ## 原 E0–E3 项目说明与历史结果
 

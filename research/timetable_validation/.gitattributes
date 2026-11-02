@@ -5,3 +5,6 @@ scripts/*.py text eol=lf
 port_provenance.json text eol=lf
 # This release manifest includes the generated report's original byte hash.
 published_results/background_rate_repaired_v1/** -text
+published_results/semester_coverage_v1/** -text
+semester_calendar_review.json -text
+room_evidence_2026-11-02.json -text
