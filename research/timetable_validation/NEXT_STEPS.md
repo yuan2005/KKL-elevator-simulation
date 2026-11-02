@@ -16,9 +16,9 @@ Prepare an evidence table for the six lifts' served floors, capacity, speed and 
 
 ## 3. Check the revised input, then extend across weeks
 
-First run the planned 90 mixed-background comparisons on October 26–30, seeds 4000–4002, C1/C7/D10 and both original grids. Compare revised-registry policy contrasts with the 90 archived original-registry rows, keeping physical and controller settings fixed. Source-supported classroom additions also alter generated transfer chains, so pair by date/seed rather than treating all passenger records as unchanged.
+The [90-run revised-input check](ROOM_REVISION.md) is complete. D10−C1 is +0.0085/+0.0185 seconds, with intervals crossing zero. Independent background/through movements and existing class attendance match; new classroom and transfer demand are recorded. Keep the rule fixed and proceed to the planned cross-week check.
 
-Next consider September 21–25, October 5–9 and November 16–20: 810 planned runs across three backgrounds, three seeds, three controls and two grids. These dates avoid the general calendar exceptions; programme-specific confirmation remains separate. Most session signatures repeat those in already studied weeks, so this tests cross-date robustness. Reserve November 23–27 for later work. Both stages are prepared, not run; freeze execution protocols before starting. Details are in [the proposed plan](published_results/semester_coverage_v1/next_experiment_plan.json).
+Next consider September 21–25, October 5–9 and November 16–20: 810 planned runs across three backgrounds, three seeds, three controls and two grids. These dates avoid the general calendar exceptions; programme-specific confirmation remains separate. Most session signatures repeat those in already studied weeks, so this tests cross-date robustness. Reserve November 23–27 for later work. The 90-run first stage is complete; the 810-run stage remains unexecuted and needs its execution protocol frozen before starting. Details are in [the proposed plan](published_results/semester_coverage_v1/next_experiment_plan.json).
 
 ## 4. Physical assumptions and future controller work
 
@@ -33,3 +33,5 @@ A further controller revision needs a specific mechanism and a development scree
 - D10P3 reduced mean switches from 20.40 to 17.33; its waiting-time intervals crossed zero at both grids. Keep D10 unchanged.
 - Background rates 6/12/24 produced D10−C1 differences from −0.0132 to +0.0443 seconds, all with seed intervals crossing zero. Use the observed intensity dependence of absolute waits to motivate calibration.
 - Reporting and source verification are now more useful than another unconstrained threshold search.
+
+[High-floor source review](HIGH_FLOOR_EVIDENCE.md) confirms office, lab and teaching/seminar uses. Office prevalence, room capacity and traffic intensity are distinct evidence gaps; the source review has not changed high_share or actual demand rates.

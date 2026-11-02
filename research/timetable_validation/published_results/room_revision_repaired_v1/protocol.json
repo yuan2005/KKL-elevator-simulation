@@ -1,0 +1,99 @@
+{
+  "created_utc": "2026-11-02T02:32:06.930723+00:00",
+  "model_commit": "dd06745a66eb2c21f3cd2ae6ead75220eb4dbfcc",
+  "design": "Room registry revision only: add eligible KKLG110/111 sessions; controls and physical settings unchanged",
+  "dates": [
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
+  ],
+  "seeds": [
+    4000,
+    4001,
+    4002
+  ],
+  "steps": [
+    0.25,
+    0.125
+  ],
+  "controllers": [
+    "C1",
+    "C7",
+    "D10"
+  ],
+  "variants": [
+    "mixed"
+  ],
+  "base": {
+    "transfer_fraction": 0.2,
+    "high_share": 0.5,
+    "attendance": 0.8,
+    "background_rate": 12,
+    "through_rate": 6,
+    "top": 16
+  },
+  "runs": 90,
+  "reused_baseline_runs": 90,
+  "inputs": 15,
+  "revision": {
+    "parent_hashes": {
+      "semester1_kkl_dated_candidates.json": "cb4ae32dd1583624c157db479efc668014f13698d94986e1cec3ab88bff97c6d",
+      "semester1_kkl_rules.json": "ecf199301d1155286d107e72c6343aa9e18e73b42878aaf236d8989d233676dd",
+      "room_registry.json": "fde5957f9802b0fa5c69ae03bc10b026cdff1aceca95c3f1346f44c429261a5d"
+    },
+    "new_hashes": {
+      "semester1_kkl_dated_candidates.json": "cb4ae32dd1583624c157db479efc668014f13698d94986e1cec3ab88bff97c6d",
+      "semester1_kkl_rules.json": "ecf199301d1155286d107e72c6343aa9e18e73b42878aaf236d8989d233676dd",
+      "room_registry.json": "cdd14fc492a1a3d70533d1a21f3f393182681c76552fdab1dc311d9d9493fe5b"
+    },
+    "evidence_hash": "aa5c9dc2d7dc65556d55997efae1708dfb7cfad327217b461e67c993701e570a",
+    "changed_rooms": [
+      "KKLG110",
+      "KKLG111"
+    ],
+    "change": "Only the two previously unverified floor mappings and their provenance fields are updated."
+  },
+  "prior_hashes": {
+    "motion_repair_v1": {
+      "protocol.json": "a576ba4fa409f36e30f2b0ece1ba154c603507aceb6103f42d57989fcb3450b6",
+      "raw.json": "31b7af6b8591428d9ab749cf3d890ded869058f8b3924161138aa5435df9e4c1",
+      "execution.json": "ce1596968222970979842a6ea900d32c9c4a6c71b1fb8486395548ed6e1a3cb8"
+    },
+    "motion_repair_extra_seeds_v1": {
+      "protocol.json": "629a0546d07982168b7f6c063766d270cd17402249a51f784ab5acfbb0474975",
+      "raw.json": "fed507d6c1a6ce232cf7bf1c3e8125ad30db0208ba6ba121f4ab63d89d4896b9",
+      "execution.json": "74ee4132b86ac979a6df51fc0453ede2b808d71e3a38b4b8bf400eaea3846b2b"
+    }
+  },
+  "coverage_hash": "dc8ca772fae255ad6b030350c09fc8fa7616e5d52d501e5119350cf46a067e45",
+  "plan_hash": "2905331775313ef3f6e8579422c95115525aa13a43629d33e7788f7c176b65ef",
+  "primary": "D10-C1 and C7-C1 at both registries, paired change of each contrast after the room addition",
+  "secondary": "AWT/P90/long wait/G/other waits, switching, added demand and service/event/physical anomalies",
+  "pairing": "Dates and seeds shared; independent background and through movements and existing class attendance identical. Classroom movements and transfer links may change.",
+  "uncertainty": "Three seed-level five-day means. Fixed mixed-background development check, not a fresh policy evaluation.",
+  "source_hashes": {
+    "building.py": "33576ec6cd0c997e3247d9eebc71df73aa282707253b68f35493c3274da3c88a",
+    "config.py": "a82e82dab37c15d073c1603d75d5e029515136120abd720ae7e2740d5b42c367",
+    "controllers.py": "ff2aa72e10467d9183d3d446a70175abca25ea3e7cc52b2d36930c2c75fc81d7",
+    "experiments.py": "7c44beeac6fd081ee0cd164d5a21b2c0420e47300a7109739deaecd151c2897f",
+    "metrics.py": "9cd1282737b8dbdc69809a4e2cc2ba41513984631051995bea49e5580fdacad2",
+    "plots.py": "692204be9b5fa95005210edb390f3277ff37f3aa424efd91795d2190dd7b769a",
+    "sim.py": "d7d85c3a5a5cb7aab9a266118f06314a86bc1b88e5561f7fd44524c5df996644",
+    "strategies.py": "3eba566684f8597959b84f2b63f3990909214af9ee780cb07ed5aaa4dc96bb63",
+    "test_motion.py": "c6c0b0c4110da2152602299a929ec750aeaf850b6d3e34de63372144935f6db4",
+    "traffic.py": "4f2976ab30af0b9d206615159d4a14e8c6bdb3760735fcd16319130d25b0abcd"
+  },
+  "script_hashes": {
+    "run_room_revision.py": "99e8a97d5d8a5871081f7a153ccaa7f0dcda989d19ba81547977b6844bf355d2",
+    "run_background_sensitivity.py": "fcae5990031958f9b59db919efbb1b6037856c72a32eb07ea287b3b384121a29",
+    "repair_study_utils.py": "eeb6ab2310024a49a13df58b28fb12db90333ac8969734c0be163c30e05c955b",
+    "run_adaptive.py": "d051390913221a9eb2882a0f0e74c37778fac82b29e54104a3751d95350facdd",
+    "run_linked_pilot.py": "1d2cae84d70dd6e2a0c5dc4f6814e4f64c8196ac2fe8e5b08cc3f6f057ee5c2e",
+    "adaptive_policy.py": "d0aeb0e3c792329857cd9cf938ec194851733952c1a7f8912b30709c1583eeb2",
+    "linked_demand.py": "aeac79f1a96a1fd0704ef45bbd52cae4d2979243bd3ec67185ef0fa5adcd8d78",
+    "timetable_demand.py": "8a4f4bd3cc9fadfcf706df9d40194460fc9ffb4f8fb7ca97fcb030bfe1e09339",
+    "study_paths.py": "575b87fde90f25a91706ee6820c55248c5ac9a0181c9da14be7f67545930a7ad"
+  }
+}

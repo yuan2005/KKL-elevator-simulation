@@ -25,7 +25,7 @@ Five motion tests cover analytic travel times, both directions and distances, sp
 
 ## Validation
 
-The repaired three-grid study comprises 405 runs. On the same 135 fine-grid inputs, the original 128 anomalous runs fall to zero. S1–S6, frozen-rule evaluation, persistence and background sensitivity extend the check to 1,485 repaired-model runs, with zero recorded service/chain/lateness/event anomalies. The latter four batches also check motion constraints.
+The repaired three-grid study comprises 405 runs. On the same 135 fine-grid inputs, the original 128 anomalous runs fall to zero. S1–S6, frozen-rule evaluation, persistence, background sensitivity and room revision extend the check to 1,575 repaired-model runs, with zero recorded service/chain/lateness/event anomalies. The later scenario, evaluation, persistence, background and room-revision batches also check motion constraints.
 
 Absolute waiting values and individual contrasts still shift with grid refinement. The current evidence supports removal of the reproduced fault; numerical convergence remains a separate question. See [validation inventory](VALIDATION.md) and [paired repair results](REPAIRED_FOLLOWUP.md).
 

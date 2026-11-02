@@ -1,0 +1,16 @@
+{
+  "files": {
+    "protocol.json": "c79c41569476300506d0141c9339d4b218b569f7ff2c2c2f6170c92fc716b5fe",
+    "execution.json": "c7fc9f84269a945326d434516121760b868136ebcdac05cfd8914888f49cef36",
+    "raw.json": "48bab07f45d9980e617c274627a6b8d511709a679424ca639ffac9a1f3c0b99c",
+    "reused_baselines.json": "837a0af7b9f3168cb33760ce3092fd725653581abe0150f311418da5635cbfc9",
+    "input_checks.json": "aea840a9ffad8ef41a919425c07dbcf1bb3a91362cbd2a0d940c14698208ed54",
+    "summary.json": "b0545fe00ebab61ed2e56c503c51bade009481bdfef7fc89a84a5b96a7032465",
+    "结果说明.md": "eb427a6de9486be3ecf7cea41449ff0df154269682188fd2500e9b43f5decfa0"
+  },
+  "analysis_scripts": {
+    "report_room_revision.py": "0fda3e75bc7defa06bdc21e648ca0db1fa574860c3731ee9e87e638929be2f24",
+    "check_current_results.py": "a00fc7e4d58711804145b5a8bbfea6f42cd625962e93c25191f75993d262d650"
+  },
+  "scope": "Aggregate results only; selected classroom records and detailed runs remain local."
+}
