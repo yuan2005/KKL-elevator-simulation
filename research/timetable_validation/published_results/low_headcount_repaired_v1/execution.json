@@ -1,0 +1,19 @@
+{
+  "runs": 540,
+  "reused_runs": 270,
+  "paired_inputs": 135,
+  "seconds": 1003.0964477062225,
+  "protocol_hash": "e16af87980b7cd151dfc3dc5884cfb61a4cde1c2322e179b8c5be7b58294b92c",
+  "anomaly_totals": {
+    "unserved": 0,
+    "not_alighted": 0,
+    "chain_availability_violations": 0,
+    "late_transfer_lift_count": 0,
+    "event_time_violations": 0,
+    "physical_constraint_violations": 0
+  },
+  "anomalous_runs": 0,
+  "source_unchanged": true,
+  "inputs_unchanged": true,
+  "baseline_unchanged": true
+}

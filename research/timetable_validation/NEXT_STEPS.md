@@ -20,7 +20,9 @@ The 90-run revised-input check and [810-run cross-week comparison](CROSSWEEK.md)
 
 The [40/60/80% missing-headcount check](HEADCOUNT_SENSITIVITY.md) is now complete on the repaired model and revised registry: 180 new runs plus 90 reused baselines. It holds the October 26–30 mixed development conditions fixed. All changes in D10−C1 relative to 60% have intervals crossing zero; keep thresholds unchanged.
 
-The next priority is finishing the Interim Log, resolving the model review, and collecting missing headcounts/shared-class clarification. If the specific next question is whether the cross-week low-background benefit depends on assumed headcounts, design a separate low/high sensitivity using the corresponding archived baselines. The completed mixed-only check leaves that interaction unresolved. Define scope and comparisons before execution; 40/60/80% remain exploratory settings, not calibrated occupancy bounds.
+The [low-background headcount check](LOW_HEADCOUNT.md) is now complete: 540 new runs and 270 reused baselines across the three previously studied weeks. It preserves all model and controller settings. High-background and cross-week mixed-background headcount interactions are not covered by this batch.
+
+Finish the Interim Log and model review, then resolve the headcount/shared-class items. Do not continue adding synthetic parameter combinations by default: identify which unresolved empirical quantity would change the report's claim, obtain a credible value or range, and design the corresponding check. Existing assumptions and the model owner's review remain the next dependencies.
 
 November 23–27 remains unused for a later, specifically motivated evaluation. Model review and the Interim Log take priority before another parameter sweep.
 
@@ -34,6 +36,7 @@ A further controller revision needs a specific mechanism and a development scree
 
 ## Decision from the latest checks
 
+- Low-background headcount sensitivity retains fixed C7's advantage over D10 in all 18 week/fraction/grid intervals. Overall D10 beats C1 by 0.4166–0.5064 seconds but loses to C7 by 0.7057–0.8156 seconds. This input has no 4/F-or-higher requests and cannot identify h; do not retune that threshold from these runs.
 - Repaired missing-headcount sensitivity changes absolute waiting but gives no resolved change in D10−C1 relative to 60% in mixed development conditions. A 0.0128-second fine-grid advantage at 40% does not persist at the coarser grid.
 - The cross-week comparison gives D10 an overall 0.1376/0.1251-second saving versus C1, below the target. In low backgrounds fixed C7 is better than D10; mixed/high D10−C1 intervals cross zero when averaged across weeks. Prioritize the empirical background distribution and missing-headcount checks over threshold retuning.
 - D10P3 reduced mean switches from 20.40 to 17.33; its waiting-time intervals crossed zero at both grids. Keep D10 unchanged.

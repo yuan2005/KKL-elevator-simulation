@@ -14,7 +14,7 @@ Higher assumed headcounts increase mean lift requests from 4,081.2 to 4,761.3 pe
 
 Known class headcounts and attendance draws, independent background movements and through movements match across the three fractions. Changed missing headcounts can alter transfer chains. Each fraction shares trips across controls/grids. All six anomaly totals are zero; 45 demand inputs were regenerated locally and matched their archived fingerprints.
 
-Intervals use three seed-level five-day means. This is an exploratory mixed-background development check. The [cross-week low/high comparisons](CROSSWEEK.md) still use 60% assumed headcounts; this batch does not evaluate their sensitivity to missing headcounts.
+Intervals use three seed-level five-day means. This is an exploratory mixed-background development check. This mixed-only batch does not evaluate cross-week low/high headcount sensitivity. A subsequent [low-background check](LOW_HEADCOUNT.md) now covers 40/60/80% on the three weeks; high-background headcount sensitivity remains untested.
 
 [Full Chinese report](published_results/headcount_repaired_v1/结果说明.md) · [Vector figure](published_results/headcount_repaired_v1/headcount_contrasts.svg)
 
