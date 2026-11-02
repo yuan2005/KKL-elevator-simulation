@@ -1,0 +1,182 @@
+[
+  {
+    "week": "early",
+    "date": "2026-09-21",
+    "candidates": 58,
+    "selected": 51,
+    "excluded": 7,
+    "assumed_headcount_sessions": 26,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "early",
+    "date": "2026-09-22",
+    "candidates": 79,
+    "selected": 55,
+    "excluded": 24,
+    "assumed_headcount_sessions": 27,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "early",
+    "date": "2026-09-23",
+    "candidates": 50,
+    "selected": 40,
+    "excluded": 10,
+    "assumed_headcount_sessions": 31,
+    "window": [
+      31500,
+      81300
+    ]
+  },
+  {
+    "week": "early",
+    "date": "2026-09-24",
+    "candidates": 73,
+    "selected": 58,
+    "excluded": 15,
+    "assumed_headcount_sessions": 30,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "early",
+    "date": "2026-09-25",
+    "candidates": 53,
+    "selected": 46,
+    "excluded": 7,
+    "assumed_headcount_sessions": 27,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "middle",
+    "date": "2026-10-05",
+    "candidates": 58,
+    "selected": 51,
+    "excluded": 7,
+    "assumed_headcount_sessions": 26,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "middle",
+    "date": "2026-10-06",
+    "candidates": 80,
+    "selected": 56,
+    "excluded": 24,
+    "assumed_headcount_sessions": 28,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "middle",
+    "date": "2026-10-07",
+    "candidates": 52,
+    "selected": 42,
+    "excluded": 10,
+    "assumed_headcount_sessions": 33,
+    "window": [
+      31500,
+      81300
+    ]
+  },
+  {
+    "week": "middle",
+    "date": "2026-10-08",
+    "candidates": 73,
+    "selected": 58,
+    "excluded": 15,
+    "assumed_headcount_sessions": 30,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "middle",
+    "date": "2026-10-09",
+    "candidates": 54,
+    "selected": 45,
+    "excluded": 9,
+    "assumed_headcount_sessions": 26,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "late",
+    "date": "2026-11-16",
+    "candidates": 55,
+    "selected": 48,
+    "excluded": 7,
+    "assumed_headcount_sessions": 23,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "late",
+    "date": "2026-11-17",
+    "candidates": 82,
+    "selected": 54,
+    "excluded": 28,
+    "assumed_headcount_sessions": 26,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "late",
+    "date": "2026-11-18",
+    "candidates": 49,
+    "selected": 39,
+    "excluded": 10,
+    "assumed_headcount_sessions": 30,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "late",
+    "date": "2026-11-19",
+    "candidates": 72,
+    "selected": 58,
+    "excluded": 14,
+    "assumed_headcount_sessions": 30,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "week": "late",
+    "date": "2026-11-20",
+    "candidates": 54,
+    "selected": 47,
+    "excluded": 7,
+    "assumed_headcount_sessions": 28,
+    "window": [
+      31500,
+      79500
+    ]
+  }
+]

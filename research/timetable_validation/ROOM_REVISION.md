@@ -21,4 +21,4 @@ python research/timetable_validation/scripts/report_room_revision.py path/to/new
 python research/timetable_validation/scripts/check_current_results.py
 ```
 
-The next planned study is the 810-run early/middle/late-week comparison, still unexecuted. [High-floor source research](HIGH_FLOOR_EVIDENCE.md) supports mixed office/learning/seminar use but does not supply occupancy or lift-use rates. No new high-floor parameter was inserted into this batch.
+The subsequent [810-run early/middle/late-week comparison](CROSSWEEK.md) is now complete. [High-floor source research](HIGH_FLOOR_EVIDENCE.md) supports mixed office/learning/seminar use but does not supply occupancy or lift-use rates. No new high-floor parameter was inserted into this batch.

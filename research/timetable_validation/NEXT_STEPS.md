@@ -14,22 +14,25 @@ Prepare an evidence table for the six lifts' served floors, capacity, speed and 
 
 [Semester coverage](published_results/semester_coverage_v1/结果说明.md) is complete. The original registry selects 2,621 meetings; two official floor corrections raise this to 2,957. The revised input is separately versioned. Remaining gaps include overlapping classes, unsupported high-floor rooms, missing headcounts and programme calendar exceptions. The current source-informed class layer covers LG1/1/2 only.
 
-## 3. Check the revised input, then extend across weeks
+## 3. Use the completed cross-week evidence
 
-The [90-run revised-input check](ROOM_REVISION.md) is complete. D10−C1 is +0.0085/+0.0185 seconds, with intervals crossing zero. Independent background/through movements and existing class attendance match; new classroom and transfer demand are recorded. Keep the rule fixed and proceed to the planned cross-week check.
+The 90-run revised-input check and [810-run cross-week comparison](CROSSWEEK.md) are complete. Keep the original thresholds and report both fixed-control comparisons, including each background/week. Most class signatures repeat; this extends cross-date coverage under the model assumptions.
 
-Next consider September 21–25, October 5–9 and November 16–20: 810 planned runs across three backgrounds, three seeds, three controls and two grids. These dates avoid the general calendar exceptions; programme-specific confirmation remains separate. Most session signatures repeat those in already studied weeks, so this tests cross-date robustness. Reserve November 23–27 for later work. The 90-run first stage is complete; the 810-run stage remains unexecuted and needs its execution protocol frozen before starting. Details are in [the proposed plan](published_results/semester_coverage_v1/next_experiment_plan.json).
+Do not add more similar weeks by default. The next useful input task is the missing-headcount review and shared-class clarification in the local collection list. If those records remain unavailable and further simulation is needed, prepare a one-factor 40/60/80% missing-headcount sensitivity on the repaired model and revised registry; the earlier 135-run headcount study used the original model. Keep observed headcounts, dates, background assumptions and policy thresholds fixed. These fractions are exploratory stress levels, not a calibrated confidence range; freeze the protocol before execution.
+
+November 23–27 remains unused for a later, specifically motivated evaluation. Model review and the Interim Log take priority before another parameter sweep.
 
 ## 4. Physical assumptions and future controller work
 
 The background check held the floor distribution at mixed and found no resolved D10 advantage at any tested intensity. Additional random seeds would sharpen the uncertainty within those assumptions; they would not identify the actual KKL rate. Prioritize a physical-parameter check when a credible capacity/speed/door-time value or range becomes available. Freeze the supported range, outcome measures and paired inputs before running it.
 
-If the research question becomes robustness across a semester, run unchanged C1/C7/D10 on calendar-checked weeks with fixed assumptions. If it becomes comparison with the best fixed strategy under timetable demand, add the relevant fixed controls to that same setting; the existing S1–S6 ranking uses a different building/input configuration.
+If the research question becomes robustness across a semester, use the completed unchanged C1/C7/D10 calendar-checked comparison. If it becomes comparison with the best fixed strategy under timetable demand, add the relevant fixed controls to that same setting; the existing S1–S6 ranking uses a different building/input configuration.
 
 A further controller revision needs a specific mechanism and a development screen. Dates November 2–6 have already informed diagnosis; a revised rule needs separate, unused evaluation conditions. Original D10 and its 0.25-second screen remain the reference.
 
 ## Decision from the latest checks
 
+- The cross-week comparison gives D10 an overall 0.1376/0.1251-second saving versus C1, below the target. In low backgrounds fixed C7 is better than D10; mixed/high D10−C1 intervals cross zero when averaged across weeks. Prioritize the empirical background distribution and missing-headcount checks over threshold retuning.
 - D10P3 reduced mean switches from 20.40 to 17.33; its waiting-time intervals crossed zero at both grids. Keep D10 unchanged.
 - Background rates 6/12/24 produced D10−C1 differences from −0.0132 to +0.0443 seconds, all with seed intervals crossing zero. Use the observed intensity dependence of absolute waits to motivate calibration.
 - Reporting and source verification are now more useful than another unconstrained threshold search.

@@ -1,0 +1,19 @@
+{
+  "files": {
+    "protocol.json": "c042b711a52be36b8e609ade6902e59a6c286406621bc78a43f5e8bcdb4252a4",
+    "execution.json": "b8e7da9ac0ebf619bfbaf54c19c16374f4132bff2a0d6c6553d4d989b20cf1ef",
+    "raw.json": "253591e9c335409a7af82a4f8b1d8212a1bdaa9e98a498fd855a7db8b69df90b",
+    "input_checks.json": "5c57b0f8868bb85ffaa85cc3c9e63de023032876858ee363b29871b836f6a21c",
+    "daily_coverage.json": "27d4b301ace26eee03c9d45b703f694a0bfc7514dbb32bbb0f4b3fc5fc149914",
+    "summary.json": "7e75494c841a656fed5a02f6c606e22f2b2c26973d1aeed6d8090d6a2605f4fd",
+    "结果说明.md": "eb750352f4536117987a8443d1e08e6109c7ca4b5052554c417ab6be5d7b3aca",
+    "crossweek_contrasts.png": "1b96062e3e275f19297704c732cf21a6265a0e17bf5a1359cebf0a4665557690",
+    "crossweek_contrasts.svg": "e8caa79ff5338621160a55fee06bad0c6b802508915a31b534fb65797cb5bdf8"
+  },
+  "analysis_scripts": {
+    "report_crossweek.py": "ea8401f2ce9c8c544e6caf88015de1f492c6bd207e681dd6c4e7154a6aa106ee",
+    "plot_crossweek.py": "60bb4ab3d0cb4b0f73bf8ffcdaf383f99628bd0283a7f119656bc74f79147bae",
+    "check_latest_results.py": "761aa328b9debcf5d85f8e9a318e7fffa6b761ba7f3e082739257f0d8c06b648"
+  },
+  "scope": "Aggregate simulations, day-level coverage and figures only; source classroom records and detailed runs remain local."
+}
