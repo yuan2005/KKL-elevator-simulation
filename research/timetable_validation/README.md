@@ -4,6 +4,8 @@ Current research status, 2026-11-02. This extension builds on the group's simula
 
 The original-registry repaired-model evaluation gives D10 a **0.1309/0.1522-second mean saving versus C1**, below the original 0.25-second benefit screen. Longer persistence reduces switching without a demonstrated waiting benefit. A background-intensity check also gives no evidence for advancing a revised rule. Keep the original D10 as the research reference while the model owner reviews the motion repair.
 
+The repaired-model [missing-headcount check](HEADCOUNT_SENSITIVITY.md) is complete in mixed development conditions. Absolute waits change with assumed headcounts, while all paired changes in D10−C1 relative to 60% have intervals crossing zero.
+
 Start with [report handoff](REPORT_HANDOFF.md), [next work](NEXT_STEPS.md), or [validation and archive inventory](VALIDATION.md).
 
 [Semester coverage review](published_results/semester_coverage_v1/结果说明.md) is now complete. Official floor evidence for KKLG110/111 increases selected class meetings from 2,621 to 2,957 in a separately versioned input set. The [90-run revised-input check](ROOM_REVISION.md) is complete: D10−C1 is +0.0085/+0.0185 seconds with both intervals crossing zero. The 810-run cross-week comparison gives D10 mean savings of 0.1376/0.1251 seconds against C1; see the per-grid benefit screens in [the cross-week report](CROSSWEEK.md). [High-floor evidence](HIGH_FLOOR_EVIDENCE.md) documents mixed uses and the remaining parameter gaps.
@@ -12,7 +14,7 @@ Start with [report handoff](REPORT_HANDOFF.md), [next work](NEXT_STEPS.md), or [
 
 | Study | Unique runs | Evidence |
 |---|---:|---|
-| Original-model reproduction, demand experiments and numerical diagnosis | 2,145 | Historical `published_results` batches; [inventory](published_results/archive_inventory_crossweek_v1.json) |
+| Original-model reproduction, demand experiments and numerical diagnosis | 2,145 | Historical `published_results` batches; [inventory](published_results/archive_inventory_headcount_v1.json) |
 | Repaired motion, three grids and three development seeds | 405 | [Combined grid report](published_results/motion_repair_three_seeds_v1/结果说明.md) |
 | Repaired S1–S6, six fixed controls | 360 | [Scenario report](published_results/s1_s6_repaired_v2/结果说明.md) |
 | Frozen D10 under original evaluation conditions | 450 | [Evaluation report](published_results/adaptive_repaired_evaluation_v1/结果说明.md) |
@@ -20,8 +22,9 @@ Start with [report handoff](REPORT_HANDOFF.md), [next work](NEXT_STEPS.md), or [
 | Background intensity 6/12/24 intents per five minutes | 180 new + 90 reused | [Sensitivity report](BACKGROUND_SENSITIVITY.md) |
 | Revised KKLG110/111 classroom input | 90 new + 90 reused | [Room revision](ROOM_REVISION.md) |
 | Three teaching weeks, unchanged C1/C7/D10 | 810 | [Cross-week comparison](CROSSWEEK.md) |
+| Missing headcounts at 40/60/80% of capacity | 180 new + 90 reused | [Headcount sensitivity](HEADCOUNT_SENSITIVITY.md) |
 
-Total: **4,530 unique archived runs**, comprising 2,145 original-model and 2,385 repaired-model runs. Diagnostic summaries and reused rows add no runs. Historical failed runs remain in their labelled batches.
+Total: **4,710 unique archived runs**, comprising 2,145 original-model and 2,565 repaired-model runs. Diagnostic summaries and reused rows add no runs. Historical failed runs remain in their labelled batches.
 
 ## Model and interpretation
 
@@ -39,10 +42,10 @@ From the repository root, with `requirements.txt` installed:
 python -m unittest discover -s research/timetable_validation/scripts -p "test_*.py"
 python -m unittest test_motion
 python experiments.py smoke
-python research/timetable_validation/scripts/check_latest_results.py
+python research/timetable_validation/scripts/check_headcount_results.py
 ```
 
-The current suite has 32 research tests and five motion tests. The public archive check recalculates aggregate comparisons, intervals, input pairing and experiment decisions. The coverage check reconciles session counts and revised-input provenance. Local passenger-trace checks are documented separately in [VALIDATION.md](VALIDATION.md).
+The current suite has 33 research tests and five motion tests. The public archive check recalculates aggregate comparisons, intervals, input pairing and experiment decisions. The coverage check reconciles session counts and revised-input provenance. Local passenger-trace checks are documented separately in [VALIDATION.md](VALIDATION.md).
 
 ## Reproduce experiments
 
@@ -52,6 +55,7 @@ Set `KKL_DATA_DIR` to the authorized derived-input directory described in [DATA.
 - Window diagnosis and persistence candidate: [commands](WINDOW_DIAGNOSIS_AND_PERSISTENCE.md).
 - Background intensity: [commands](BACKGROUND_SENSITIVITY.md).
 - Cross-week comparison: [commands and figure](CROSSWEEK.md).
+- Missing headcounts: [commands and figure](HEADCOUNT_SENSITIVITY.md).
 - Minimal motion regression: [command](KNOWN_NUMERICAL_ISSUE.md).
 
 Use a fresh output directory for each new experiment. Published `raw.json` files contain per-simulation aggregates. The SIS workbook, classroom-level derivatives and passenger traces stay local; [DATA.md](DATA.md) records source versions and hashes.

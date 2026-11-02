@@ -1,0 +1,37 @@
+[
+  {
+    "date": "2026-10-26",
+    "selected": 49,
+    "known": 25,
+    "assumed": 24,
+    "excluded": 7
+  },
+  {
+    "date": "2026-10-27",
+    "selected": 55,
+    "known": 28,
+    "assumed": 27,
+    "excluded": 24
+  },
+  {
+    "date": "2026-10-28",
+    "selected": 40,
+    "known": 9,
+    "assumed": 31,
+    "excluded": 7
+  },
+  {
+    "date": "2026-10-29",
+    "selected": 59,
+    "known": 28,
+    "assumed": 31,
+    "excluded": 15
+  },
+  {
+    "date": "2026-10-30",
+    "selected": 46,
+    "known": 19,
+    "assumed": 27,
+    "excluded": 10
+  }
+]

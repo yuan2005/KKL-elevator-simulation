@@ -1,0 +1,21 @@
+{
+  "files": {
+    "protocol.json": "10125de0100eec44be549f51d66cde6a182554f5ee993aa7111e59a891272a6f",
+    "execution.json": "a29ed32584be16698b8d93f710e3e9369d0c9249bbcce9f629fa2714a171b332",
+    "raw.json": "d8f17fc56fe297e061c06c201fd70d01a14e26639d731d6a6eb6182557a2e5d8",
+    "reused_baselines.json": "48bab07f45d9980e617c274627a6b8d511709a679424ca639ffac9a1f3c0b99c",
+    "input_checks.json": "529a16847e8daa34e533bfc025e053c8e78312ed2c5e122ba7082e53040700a4",
+    "daily_coverage.json": "ee7b25c7f16ea0cf3101cceadc988910bdd2d6a048f7e0469662b6255bcaf00e",
+    "summary.json": "ac51bdd99ff428dc335dd8a32fb5beb4e89fb0e67ec3ec07e49f743e73c1a7c4",
+    "结果说明.md": "55aea4b2172161cf1044c0ada65ef67e5d85d60e3d54daf52aef26d999cf9a78",
+    "headcount_contrasts.png": "b3270593fdf4af730831e28ee6d6d6e4e73679ce18709da97cccabd1bbf2537a",
+    "headcount_contrasts.svg": "e0837ec78b1996e0b60972cfa0d02d0d9f8101d988bdf0f09a84510f94f026a6"
+  },
+  "analysis_scripts": {
+    "report_repaired_headcount.py": "65faae2ab0d9892f93a9c90aca180d597889d55f753a35b34b2d2f506c421997",
+    "report_crossweek.py": "ea8401f2ce9c8c544e6caf88015de1f492c6bd207e681dd6c4e7154a6aa106ee",
+    "plot_repaired_headcount.py": "41788e5cbc29439c23ee58928248c3402c12ada92b6d4acbdf48e5296e657158",
+    "check_headcount_results.py": "b58f066ba24f10d16dc6b4c4c75135cdb947d770f9c4cd3433dafc2e4a2b7705"
+  },
+  "scope": "Aggregate simulations and figures; classroom-level inputs and detailed decisions remain local."
+}

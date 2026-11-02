@@ -18,7 +18,9 @@ Prepare an evidence table for the six lifts' served floors, capacity, speed and 
 
 The 90-run revised-input check and [810-run cross-week comparison](CROSSWEEK.md) are complete. Keep the original thresholds and report both fixed-control comparisons, including each background/week. Most class signatures repeat; this extends cross-date coverage under the model assumptions.
 
-Do not add more similar weeks by default. The next useful input task is the missing-headcount review and shared-class clarification in the local collection list. If those records remain unavailable and further simulation is needed, prepare a one-factor 40/60/80% missing-headcount sensitivity on the repaired model and revised registry; the earlier 135-run headcount study used the original model. Keep observed headcounts, dates, background assumptions and policy thresholds fixed. These fractions are exploratory stress levels, not a calibrated confidence range; freeze the protocol before execution.
+The [40/60/80% missing-headcount check](HEADCOUNT_SENSITIVITY.md) is now complete on the repaired model and revised registry: 180 new runs plus 90 reused baselines. It holds the October 26–30 mixed development conditions fixed. All changes in D10−C1 relative to 60% have intervals crossing zero; keep thresholds unchanged.
+
+The next priority is finishing the Interim Log, resolving the model review, and collecting missing headcounts/shared-class clarification. If the specific next question is whether the cross-week low-background benefit depends on assumed headcounts, design a separate low/high sensitivity using the corresponding archived baselines. The completed mixed-only check leaves that interaction unresolved. Define scope and comparisons before execution; 40/60/80% remain exploratory settings, not calibrated occupancy bounds.
 
 November 23–27 remains unused for a later, specifically motivated evaluation. Model review and the Interim Log take priority before another parameter sweep.
 
@@ -32,6 +34,7 @@ A further controller revision needs a specific mechanism and a development scree
 
 ## Decision from the latest checks
 
+- Repaired missing-headcount sensitivity changes absolute waiting but gives no resolved change in D10−C1 relative to 60% in mixed development conditions. A 0.0128-second fine-grid advantage at 40% does not persist at the coarser grid.
 - The cross-week comparison gives D10 an overall 0.1376/0.1251-second saving versus C1, below the target. In low backgrounds fixed C7 is better than D10; mixed/high D10−C1 intervals cross zero when averaged across weeks. Prioritize the empirical background distribution and missing-headcount checks over threshold retuning.
 - D10P3 reduced mean switches from 20.40 to 17.33; its waiting-time intervals crossed zero at both grids. Keep D10 unchanged.
 - Background rates 6/12/24 produced D10−C1 differences from −0.0132 to +0.0443 seconds, all with seed intervals crossing zero. Use the observed intensity dependence of absolute waits to motivate calibration.
