@@ -1,0 +1,52 @@
+[
+  {
+    "date": "2026-10-26",
+    "candidates": 56,
+    "selected": 44,
+    "excluded": 12,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-27",
+    "candidates": 79,
+    "selected": 46,
+    "excluded": 33,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-28",
+    "candidates": 47,
+    "selected": 38,
+    "excluded": 9,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-29",
+    "candidates": 74,
+    "selected": 52,
+    "excluded": 22,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-30",
+    "candidates": 56,
+    "selected": 41,
+    "excluded": 15,
+    "window": [
+      31500,
+      79500
+    ]
+  }
+]

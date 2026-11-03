@@ -6,6 +6,7 @@ N_FLOORS = len(C.FLOORS)
 IDX = {name: i for i, name in enumerate(C.FLOORS)}
 HEIGHT = [i * C.FLOOR_HEIGHT for i in range(N_FLOORS)]
 ENTRANCE_IDX = [IDX[f] for f in C.ENTRANCES]
+MOTION_TOL = 1e-7            # metres, floating-point tolerance, not a timestep allowance
 
 
 def flight_time(distance, v=C.RATED_SPEED, a=C.ACCEL):
@@ -20,6 +21,40 @@ def flight_time(distance, v=C.RATED_SPEED, a=C.ACCEL):
 
 def floors_flight_time(f1, f2):
     return flight_time(abs(HEIGHT[f2] - HEIGHT[f1]))
+
+
+def advance_to_stop(distance, speed, dt):
+    """Advance along a feasible accelerate/cruise/brake profile for up to dt.
+
+    Integrate phase boundaries inside the tick instead of accelerating past the
+    braking point and asking the dispatcher to abandon the destination later.
+    Returns (travelled distance, new speed, elapsed time, reached target).
+    """
+    a, vmax = C.ACCEL, C.RATED_SPEED
+    if dt <= 0 or a <= 0 or vmax <= 0 or speed < 0 or speed > vmax + MOTION_TOL:
+        raise ValueError('Invalid motion state or configuration')
+    stop_distance = speed * speed / (2 * a)
+    if distance < -MOTION_TOL or distance + MOTION_TOL < stop_distance:
+        raise ValueError('Selected target is inside the physical stopping distance')
+    distance = max(0.0, distance)
+    peak = min(vmax, max(speed, math.sqrt(a * distance + speed * speed / 2)))
+    accelerate = max(0.0, (peak - speed) / a)
+    brake = peak / a
+    accel_distance = (peak * peak - speed * speed) / (2 * a)
+    brake_distance = peak * peak / (2 * a)
+    cruise = max(0.0, (distance - accel_distance - brake_distance) / peak) if peak else 0.0
+    duration = accelerate + cruise + brake
+    if dt >= duration:
+        return distance, 0.0, duration, True
+    left, travelled, velocity = dt, 0.0, speed
+    for phase_time, acceleration in ((accelerate, a), (cruise, 0.0), (brake, -a)):
+        elapsed = min(left, phase_time)
+        travelled += velocity * elapsed + .5 * acceleration * elapsed * elapsed
+        velocity += acceleration * elapsed
+        left -= elapsed
+        if left <= 0:
+            break
+    return travelled, max(0.0, velocity), dt, False
 
 
 class Car:
@@ -60,7 +95,8 @@ class Car:
         if self.state != "moving":
             return True
         dist = (HEIGHT[f] - self.x) * self.dir
-        if dist < -1e-6:
+        if dist < -MOTION_TOL:
             return False
-        # 留一个时间步的余量：离散步长下刚进入减速段的电梯仍可停靠
-        return dist + self.v * C.DT + 1e-6 >= self.v * self.v / (2 * C.ACCEL)
+        # A new call cannot rely on a grid-sized allowance to exceed the
+        # configured deceleration. Motion integration uses the same constraint.
+        return dist + MOTION_TOL >= self.v * self.v / (2 * C.ACCEL)

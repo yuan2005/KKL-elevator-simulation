@@ -1,0 +1,7 @@
+{
+  "status": "superseded_analysis",
+  "reason": "Switch logs store verbose combination names, not bare C1/C7 labels. The time-share comparison to bare C7 incorrectly returned zero; labels in state groups were verbose. Paired passenger differences were unaffected.",
+  "remedy": "Normalize explicit C1/C7 prefixes and validate state at every decision timestamp, with boundary and invalid-log tests.",
+  "replacement": "repaired_window_diagnosis_v2",
+  "new_simulations": 0
+}

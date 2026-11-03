@@ -1,0 +1,28 @@
+{
+  "added_sessions": 336,
+  "added_distinct_classes": 35,
+  "added_known": 103,
+  "added_assumed": 233,
+  "added_ordinary": 334,
+  "old_selected_unchanged": true,
+  "added_only_evidence_updated_rooms": true,
+  "simulations_added": 0,
+  "revision": {
+    "parent_hashes": {
+      "semester1_kkl_dated_candidates.json": "cb4ae32dd1583624c157db479efc668014f13698d94986e1cec3ab88bff97c6d",
+      "semester1_kkl_rules.json": "ecf199301d1155286d107e72c6343aa9e18e73b42878aaf236d8989d233676dd",
+      "room_registry.json": "fde5957f9802b0fa5c69ae03bc10b026cdff1aceca95c3f1346f44c429261a5d"
+    },
+    "new_hashes": {
+      "semester1_kkl_dated_candidates.json": "cb4ae32dd1583624c157db479efc668014f13698d94986e1cec3ab88bff97c6d",
+      "semester1_kkl_rules.json": "ecf199301d1155286d107e72c6343aa9e18e73b42878aaf236d8989d233676dd",
+      "room_registry.json": "cdd14fc492a1a3d70533d1a21f3f393182681c76552fdab1dc311d9d9493fe5b"
+    },
+    "evidence_hash": "aa5c9dc2d7dc65556d55997efae1708dfb7cfad327217b461e67c993701e570a",
+    "changed_rooms": [
+      "KKLG110",
+      "KKLG111"
+    ],
+    "change": "Only the two previously unverified floor mappings and their provenance fields are updated."
+  }
+}

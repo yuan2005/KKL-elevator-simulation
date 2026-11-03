@@ -1,0 +1,29 @@
+{
+  "source_hashes": {
+    "building.py": "33576ec6cd0c997e3247d9eebc71df73aa282707253b68f35493c3274da3c88a",
+    "config.py": "a82e82dab37c15d073c1603d75d5e029515136120abd720ae7e2740d5b42c367",
+    "controllers.py": "ff2aa72e10467d9183d3d446a70175abca25ea3e7cc52b2d36930c2c75fc81d7",
+    "experiments.py": "7c44beeac6fd081ee0cd164d5a21b2c0420e47300a7109739deaecd151c2897f",
+    "metrics.py": "9cd1282737b8dbdc69809a4e2cc2ba41513984631051995bea49e5580fdacad2",
+    "plots.py": "692204be9b5fa95005210edb390f3277ff37f3aa424efd91795d2190dd7b769a",
+    "sim.py": "d7d85c3a5a5cb7aab9a266118f06314a86bc1b88e5561f7fd44524c5df996644",
+    "strategies.py": "3eba566684f8597959b84f2b63f3990909214af9ee780cb07ed5aaa4dc96bb63",
+    "test_motion.py": "c6c0b0c4110da2152602299a929ec750aeaf850b6d3e34de63372144935f6db4",
+    "traffic.py": "4f2976ab30af0b9d206615159d4a14e8c6bdb3760735fcd16319130d25b0abcd"
+  },
+  "input_archives": [
+    {
+      "name": "motion_repair_v1",
+      "raw_hash": "31b7af6b8591428d9ab749cf3d890ded869058f8b3924161138aa5435df9e4c1",
+      "protocol_hash": "a576ba4fa409f36e30f2b0ece1ba154c603507aceb6103f42d57989fcb3450b6",
+      "execution_hash": "ce1596968222970979842a6ea900d32c9c4a6c71b1fb8486395548ed6e1a3cb8"
+    },
+    {
+      "name": "motion_repair_extra_seeds_v1",
+      "raw_hash": "fed507d6c1a6ce232cf7bf1c3e8125ad30db0208ba6ba121f4ab63d89d4896b9",
+      "protocol_hash": "629a0546d07982168b7f6c063766d270cd17402249a51f784ab5acfbb0474975",
+      "execution_hash": "74ee4132b86ac979a6df51fc0453ede2b808d71e3a38b4b8bf400eaea3846b2b"
+    }
+  ],
+  "note": "405 combined rows = 135 existing + 270 new; combination does not add simulations. Runner CLI only adds seed selection."
+}

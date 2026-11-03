@@ -1,0 +1,21 @@
+{
+  "files": {
+    "protocol.json": "7fb40fee92ca5f42bb00121899922b0c11066e0529a7f723414cba0d7629c25f",
+    "execution.json": "7b4dce2bb0212bb0e1d38fbf77ed8e61f5d96a08b2003c65942773087fb36780",
+    "raw.json": "7fcdea6dec485c7f05a8930fe305a97840460034305b686413e43c71d44a39ed",
+    "reused_baselines.json": "253591e9c335409a7af82a4f8b1d8212a1bdaa9e98a498fd855a7db8b69df90b",
+    "input_checks.json": "3335e4826477538a6f3a66215212973cc06f7336ef07084700c5ae59055f1485",
+    "preparation_checks.json": "581b9e5e84497927adcb474850035d9f09f13d6a5f3789a65ed745caa3bd9380",
+    "daily_coverage.json": "e1ebdf997ddea973071e800aee233d190de9366950371d4e3c5872b308b9f455",
+    "summary.json": "ad75ace908aab091c4e29c1eb13624cfd2530ce0f3c13fd5649b50cb486e5270",
+    "\u7ed3\u679c\u8bf4\u660e.md": "f98b728326892de4e14474cf77dc9e75561e9258b1168b0a7f09fee601b0ada4",
+    "schedule_revision.png": "12dfe75ec44da6575fb314dec9a788a90856eb0c3a2f2f5d2f198f833e8cd349",
+    "schedule_revision.svg": "7dfdfec242586476cebd487e48268c521f1cbee142933f8dbd7e35ef5be2765a"
+  },
+  "analysis_scripts": {
+    "report_schedule_revision.py": "99056d0e72e4765ceb55c24eeb411323f9a4536bcd42d45e3d5c66df3692af57",
+    "report_crossweek.py": "ea8401f2ce9c8c544e6caf88015de1f492c6bd207e681dd6c4e7154a6aa106ee",
+    "plot_schedule_revision.py": "2e05d919d0e8f041080c8d130132fdc4e55b37c4658422b158079d53094c8558",
+    "test_schedule_revision.py": "6ed23643e4dee51d2a68580fa9e4f941ac789b0ed70db77ae85b4c10f3e67114"
+  }
+}

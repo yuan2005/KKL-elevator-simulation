@@ -3,3 +3,14 @@ published_results/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab
 scripts/*.py text eol=lf
 *.md text eol=lf
 port_provenance.json text eol=lf
+# This release manifest includes the generated report's original byte hash.
+published_results/background_rate_repaired_v1/** -text
+published_results/semester_coverage_v1/** -text
+semester_calendar_review.json -text
+room_evidence_2026-11-02.json -text
+published_results/room_revision_repaired_v1/** -text
+published_results/crossweek_repaired_v1/** -text
+published_results/headcount_repaired_v1/** -text
+published_results/low_headcount_repaired_v1/** -text
+
+published_results/schedule_repaired_v1/* -text

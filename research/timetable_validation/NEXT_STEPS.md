@@ -1,37 +1,50 @@
-# Why the switching gain is small, and what to test next
+# Next work after the repaired-model experiments
 
-This is a post-hoc research diagnosis, not a newly validated controller. The original D10 rule, success screen, and evaluation results remain frozen.
+Updated 2026-11-03. Three-grid validation, S1–S6 fixed controls, frozen D10 re-evaluation, all-window diagnosis, a persistence candidate and background-intensity sensitivity are complete. Their results are indexed in [the handoff](REPORT_HANDOFF.md).
 
-## New inspection of saved decision logs
+## 1. Finish the model review and Interim Log
 
-`published_results/adaptive_v1/switching_diagnosis.json` is recomputed from 75 saved evaluation runs, using `scripts/diagnose_switching.py`. No simulations or thresholds were changed for this diagnosis.
+The [486-run tutorial-date correction](SCHEDULE_REVISION.md) is now complete. Savings versus C1 remain below target at 0.1348/0.1223 seconds. Prioritize source-dated headcounts and model review; the preparation below is retained to explain this completed intervention.
 
-| Background | D10 minus C1 (s) | D10 minus C7 (s) | Mean switches/run | C7 at logged decisions |
-|---|---:|---:|---:|---:|
-| Low | −0.464 | +0.672 | 50.44 | 40.35% |
-| Mixed | +0.018 | −0.835 | 9.20 | 5.87% |
-| High | +0.025 | −1.769 | 4.48 | 2.82% |
+The model owner should review the phase integration in `building.py` and arrival/boarding/alighting/dwell timing in `sim.py`, using the short-trip regression and five motion tests. If review changes model behaviour, record a new version and repeat the affected validation and paired comparisons. Otherwise, retain the current results.
 
-The overall −0.140 seconds is the equal-weight average of those three D10−C1 differences. Low-floor demand provides the gain; mixed/high demand provides little mean improvement. The latter small positive differences have intervals crossing zero in the original evaluation and should not be called proven harms.
+For the November 4 Interim Log, use the repaired-model figures and explain the contribution: timetable-based demand construction, reproducibility checks, numerical fault diagnosis, and evaluation of fixed/dynamic policies. The present conclusion is that the tested dynamic rule's mean benefit is below the original target.
 
-In low-floor runs, the high-endpoint fraction never exceeds 10%, so changing that threshold alone cannot explain the missed fixed-C7 benefit. At 62.71% of logged decisions, the entrance-origin share is below the 70% entry threshold; at 13.50%, the count is below ten. These failures overlap and cannot be added. Entry conditions pass while the chosen state remains C1 at 10.52% of decisions, consistent with the persistence/dwell gates sometimes delaying entry.
+## 2. Resolve the inputs that would change the experiment
 
-These observations suggest overly intermittent C7 use in this particular low-floor setting. They **do not prove** that each switch is harmful or that each C1 interval should have been C7: elevator states carry over, and the fixed-C7 comparison concerns a different whole-day trajectory. Decision percentages exclude warmup and drain and are not passenger percentages or independent samples.
+The [public schedule audit](PUBLIC_SCHEDULE_REVIEW.md) now supplies a specific next intervention: AILT9018's paired subclasses use disjoint tutorial dates. Thirty currently excluded KKL meetings can be recovered under the current capacity assumption; nine affect the existing cross-week dates. Prepare the fixed-rule schedule correction comparison described there, preserving original session identities to avoid unrelated changes in random draws. The 486 simulations are complete; see SCHEDULE_REVISION.md for results.
 
-## Priorities
+Prepare an evidence table for the six lifts' served floors, capacity, speed and door timing; for headcount coverage; and for background/through-traffic rates. Each row needs a source date, units and an explicit link to the parameter it supports. Seek available official building/lift specifications, published measurements or enrolment records first. A timetable constrains class times; it does not identify lift use or unrelated background traffic.
 
-1. **Check whether the effect survives model uncertainty.** Freeze the existing controls and compare smaller time steps (0.25, 0.125 seconds), capacity/door-time assumptions, missing-headcount occupancy, and background demand. Define ranges before running them and label unsourced ranges as stress tests. A mean improvement below one simulation step is not automatically invalid, but it deserves numerical-convergence checking. More random seeds alone will not fix wrong physical or demand assumptions.
-2. **Diagnose time-local opportunity with paired trajectories.** For each identical passenger input, retain per-passenger waits under C1, C7 and D10 and compare common, predeclared windows, G versus other origins, and long waits. Define windows using timetable times or input arrivals, not whichever windows improve the result. Keep whole-day AWT as the original primary metric. Existing aggregate logs cannot establish the causal cost of switching or the best switch time.
-3. **Test one controlled rule revision at a time.** On development data, compare the current rule with a longer evidence window or stronger persistence, and separately with timetable-based advance signals. A timetable forecast may use information available beforehand, but must not read future realised arrivals or evaluation-day outcomes. Do not let the controller read the generator's latent `high_share` setting. Reducing switching may improve stability, but may also react too late; its effect must be measured.
-4. **Broaden fixed controls before claiming adaptive superiority.** Add C2/C4 under explicitly higher-load conditions. The current C1/C7 comparison does not establish the best fixed policy across the full strategy family. A simple fixed or slowly changing choice may be sufficient.
-5. **Use genuinely unused evaluation conditions for revised rules.** November 2–6 has been inspected and is no longer untouched. Choose separate eligible dates and predeclared conditions before evaluating revisions; inspect calendar exceptions and remaining overlap. Retain the original 0.25-second screen for comparisons with this study. A different research objective may be explored separately, but cannot retrospectively turn this result into a pass.
+[Semester coverage](published_results/semester_coverage_v1/结果说明.md) is complete. The original registry selects 2,621 meetings; two official floor corrections raise this to 2,957. The revised input is separately versioned. Remaining gaps include overlapping classes, unsupported high-floor rooms, missing headcounts and programme calendar exceptions. The current source-informed class layer covers LG1/1/2 only.
 
-It is acceptable for the final conclusion to be conditional: entrance parking benefits certain low-floor traffic, while this particular adaptive rule provides only a small overall gain. That answers a useful research question without claiming that switching must always win or that real KKL queues have been solved.
+## 3. Use the completed cross-week evidence
 
-## Recompute the diagnosis locally
+The 90-run revised-input check and [810-run cross-week comparison](CROSSWEEK.md) are complete. Keep the original thresholds and report both fixed-control comparisons, including each background/week. Most class signatures repeat; this extends cross-date coverage under the model assumptions.
 
-```sh
-python research/timetable_validation/scripts/diagnose_switching.py --runs /path/to/adaptive_v1/evaluate/runs --output /path/to/new_switching_diagnosis.json
-```
+The [40/60/80% missing-headcount check](HEADCOUNT_SENSITIVITY.md) is now complete on the repaired model and revised registry: 180 new runs plus 90 reused baselines. It holds the October 26–30 mixed development conditions fixed. All changes in D10−C1 relative to 60% have intervals crossing zero; keep thresholds unchanged.
 
-The input logs remain local. The published diagnosis contains only scenario-level averages.
+The [low-background headcount check](LOW_HEADCOUNT.md) is now complete: 540 new runs and 270 reused baselines across the three previously studied weeks. It preserves all model and controller settings. High-background and cross-week mixed-background headcount interactions are not covered by this batch.
+
+Finish the Interim Log and model review, then resolve the headcount/shared-class items. Do not continue adding synthetic parameter combinations by default: identify which unresolved empirical quantity would change the report's claim, obtain a credible value or range, and design the corresponding check. Existing assumptions and the model owner's review remain the next dependencies.
+
+November 23–27 remains unused for a later, specifically motivated evaluation. Model review and the Interim Log take priority before another parameter sweep.
+
+## 4. Physical assumptions and future controller work
+
+The background check held the floor distribution at mixed and found no resolved D10 advantage at any tested intensity. Additional random seeds would sharpen the uncertainty within those assumptions; they would not identify the actual KKL rate. Prioritize a physical-parameter check when a credible capacity/speed/door-time value or range becomes available. Freeze the supported range, outcome measures and paired inputs before running it.
+
+If the research question becomes robustness across a semester, use the completed unchanged C1/C7/D10 calendar-checked comparison. If it becomes comparison with the best fixed strategy under timetable demand, add the relevant fixed controls to that same setting; the existing S1–S6 ranking uses a different building/input configuration.
+
+A further controller revision needs a specific mechanism and a development screen. Dates November 2–6 have already informed diagnosis; a revised rule needs separate, unused evaluation conditions. Original D10 and its 0.25-second screen remain the reference.
+
+## Decision from the latest checks
+
+- Low-background headcount sensitivity retains fixed C7's advantage over D10 in all 18 week/fraction/grid intervals. Overall D10 beats C1 by 0.4166–0.5064 seconds but loses to C7 by 0.7057–0.8156 seconds. This input has no 4/F-or-higher requests and cannot identify h; do not retune that threshold from these runs.
+- Repaired missing-headcount sensitivity changes absolute waiting but gives no resolved change in D10−C1 relative to 60% in mixed development conditions. A 0.0128-second fine-grid advantage at 40% does not persist at the coarser grid.
+- The cross-week comparison gives D10 an overall 0.1376/0.1251-second saving versus C1, below the target. In low backgrounds fixed C7 is better than D10; mixed/high D10−C1 intervals cross zero when averaged across weeks. Prioritize the empirical background distribution and missing-headcount checks over threshold retuning.
+- D10P3 reduced mean switches from 20.40 to 17.33; its waiting-time intervals crossed zero at both grids. Keep D10 unchanged.
+- Background rates 6/12/24 produced D10−C1 differences from −0.0132 to +0.0443 seconds, all with seed intervals crossing zero. Use the observed intensity dependence of absolute waits to motivate calibration.
+- Reporting and source verification are now more useful than another unconstrained threshold search.
+
+[High-floor source review](HIGH_FLOOR_EVIDENCE.md) confirms office, lab and teaching/seminar uses. Office prevalence, room capacity and traffic intensity are distinct evidence gaps; the source review has not changed high_share or actual demand rates.

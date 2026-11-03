@@ -1,0 +1,4431 @@
+{
+  "totals": {
+    "candidate_events": 3792,
+    "merged_sessions": 3779,
+    "selected_sessions": 2957,
+    "excluded_sessions": 822,
+    "selected_known_headcount": 1247,
+    "selected_assumed_headcount": 1710,
+    "selected_headcount_sum": 164897,
+    "assumed_headcount_sum": 90150,
+    "headcount_above_capacity": 0,
+    "ordinary_selected_sessions": 2823,
+    "ordinary_selected_known": 1247,
+    "ordinary_selected_assumed": 1576,
+    "first_candidate_date": "2026-09-01",
+    "last_candidate_date": "2027-01-06",
+    "candidate_days": 95,
+    "distinct_source_classes": 335,
+    "distinct_selected_classes": 265,
+    "exclusion_reasons": {
+      "calendar_or_schedule_review": 69,
+      "missing_headcount": 195,
+      "unresolved_shared_room": 584,
+      "unverified_floor": 189
+    },
+    "exclusion_combinations": {
+      "calendar_or_schedule_review": 45,
+      "calendar_or_schedule_review|missing_headcount|unresolved_shared_room|unverified_floor": 2,
+      "calendar_or_schedule_review|missing_headcount|unverified_floor": 13,
+      "calendar_or_schedule_review|unresolved_shared_room": 9,
+      "missing_headcount": 6,
+      "missing_headcount|unverified_floor": 174,
+      "unresolved_shared_room": 573
+    },
+    "selected_careers": {
+      "RPG": 81,
+      "TPG": 668,
+      "UG": 2102,
+      "UGME": 106
+    }
+  },
+  "weekly": [
+    {
+      "week_start": "2026-08-31",
+      "candidate_events": 253,
+      "merged_sessions": 252,
+      "selected_sessions": 196,
+      "excluded_sessions": 56,
+      "selected_known_headcount": 84,
+      "selected_assumed_headcount": 112,
+      "selected_headcount_sum": 10872,
+      "assumed_headcount_sum": 5764,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 189,
+      "ordinary_selected_known": 84,
+      "ordinary_selected_assumed": 105,
+      "candidate_days": 5,
+      "ordinary_covered_days": 4,
+      "calendar_flag_days": {
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 13,
+        "unresolved_shared_room": 43,
+        "unverified_floor": 13
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 13,
+        "unresolved_shared_room": 43
+      },
+      "selected_careers": {
+        "RPG": 4,
+        "TPG": 41,
+        "UG": 144,
+        "UGME": 7
+      }
+    },
+    {
+      "week_start": "2026-09-07",
+      "candidate_events": 322,
+      "merged_sessions": 321,
+      "selected_sessions": 258,
+      "excluded_sessions": 63,
+      "selected_known_headcount": 109,
+      "selected_assumed_headcount": 149,
+      "selected_headcount_sum": 14473,
+      "assumed_headcount_sum": 7946,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 245,
+      "ordinary_selected_known": 109,
+      "ordinary_selected_assumed": 136,
+      "candidate_days": 6,
+      "ordinary_covered_days": 5,
+      "calendar_flag_days": {
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 14,
+        "unresolved_shared_room": 49,
+        "unverified_floor": 14
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 14,
+        "unresolved_shared_room": 49
+      },
+      "selected_careers": {
+        "RPG": 5,
+        "TPG": 60,
+        "UG": 184,
+        "UGME": 9
+      }
+    },
+    {
+      "week_start": "2026-09-14",
+      "candidate_events": 325,
+      "merged_sessions": 324,
+      "selected_sessions": 257,
+      "excluded_sessions": 67,
+      "selected_known_headcount": 109,
+      "selected_assumed_headcount": 148,
+      "selected_headcount_sum": 14381,
+      "assumed_headcount_sum": 7854,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 247,
+      "ordinary_selected_known": 109,
+      "ordinary_selected_assumed": 138,
+      "candidate_days": 6,
+      "ordinary_covered_days": 5,
+      "calendar_flag_days": {
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 18,
+        "unresolved_shared_room": 49,
+        "unverified_floor": 18
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 18,
+        "unresolved_shared_room": 49
+      },
+      "selected_careers": {
+        "RPG": 7,
+        "TPG": 57,
+        "UG": 184,
+        "UGME": 9
+      }
+    },
+    {
+      "week_start": "2026-09-21",
+      "candidate_events": 318,
+      "merged_sessions": 317,
+      "selected_sessions": 254,
+      "excluded_sessions": 63,
+      "selected_known_headcount": 109,
+      "selected_assumed_headcount": 145,
+      "selected_headcount_sum": 14003,
+      "assumed_headcount_sum": 7476,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 250,
+      "ordinary_selected_known": 109,
+      "ordinary_selected_assumed": 141,
+      "candidate_days": 7,
+      "ordinary_covered_days": 5,
+      "calendar_flag_days": {
+        "weekend": 2,
+        "general_holiday": 2
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 16,
+        "unresolved_shared_room": 47,
+        "unverified_floor": 15
+      },
+      "exclusion_combinations": {
+        "missing_headcount": 1,
+        "missing_headcount|unverified_floor": 15,
+        "unresolved_shared_room": 47
+      },
+      "selected_careers": {
+        "RPG": 7,
+        "TPG": 56,
+        "UG": 182,
+        "UGME": 9
+      }
+    },
+    {
+      "week_start": "2026-09-28",
+      "candidate_events": 251,
+      "merged_sessions": 250,
+      "selected_sessions": 203,
+      "excluded_sessions": 47,
+      "selected_known_headcount": 81,
+      "selected_assumed_headcount": 122,
+      "selected_headcount_sum": 11114,
+      "assumed_headcount_sum": 6215,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 192,
+      "ordinary_selected_known": 81,
+      "ordinary_selected_assumed": 111,
+      "candidate_days": 6,
+      "ordinary_covered_days": 4,
+      "calendar_flag_days": {
+        "general_holiday": 2,
+        "weekend": 2
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 10,
+        "unresolved_shared_room": 37,
+        "unverified_floor": 9
+      },
+      "exclusion_combinations": {
+        "missing_headcount": 1,
+        "missing_headcount|unverified_floor": 9,
+        "unresolved_shared_room": 37
+      },
+      "selected_careers": {
+        "RPG": 5,
+        "TPG": 50,
+        "UG": 139,
+        "UGME": 9
+      }
+    },
+    {
+      "week_start": "2026-10-05",
+      "candidate_events": 333,
+      "merged_sessions": 332,
+      "selected_sessions": 265,
+      "excluded_sessions": 67,
+      "selected_known_headcount": 109,
+      "selected_assumed_headcount": 156,
+      "selected_headcount_sum": 14588,
+      "assumed_headcount_sum": 8061,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 252,
+      "ordinary_selected_known": 109,
+      "ordinary_selected_assumed": 143,
+      "candidate_days": 7,
+      "ordinary_covered_days": 5,
+      "calendar_flag_days": {
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 18,
+        "unresolved_shared_room": 49,
+        "unverified_floor": 16
+      },
+      "exclusion_combinations": {
+        "missing_headcount": 2,
+        "missing_headcount|unverified_floor": 16,
+        "unresolved_shared_room": 49
+      },
+      "selected_careers": {
+        "RPG": 10,
+        "TPG": 63,
+        "UG": 183,
+        "UGME": 9
+      }
+    },
+    {
+      "week_start": "2026-10-12",
+      "candidate_events": 57,
+      "merged_sessions": 56,
+      "selected_sessions": 2,
+      "excluded_sessions": 54,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 2,
+      "selected_headcount_sum": 108,
+      "assumed_headcount_sum": 108,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "candidate_days": 7,
+      "ordinary_covered_days": 0,
+      "calendar_flag_days": {
+        "general_reading_week": 6,
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 54,
+        "missing_headcount": 1,
+        "unresolved_shared_room": 9,
+        "unverified_floor": 1
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review": 44,
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 1,
+        "calendar_or_schedule_review|unresolved_shared_room": 9
+      },
+      "selected_careers": {
+        "TPG": 2
+      }
+    },
+    {
+      "week_start": "2026-10-19",
+      "candidate_events": 235,
+      "merged_sessions": 234,
+      "selected_sessions": 186,
+      "excluded_sessions": 48,
+      "selected_known_headcount": 76,
+      "selected_assumed_headcount": 110,
+      "selected_headcount_sum": 10266,
+      "assumed_headcount_sum": 5688,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 173,
+      "ordinary_selected_known": 76,
+      "ordinary_selected_assumed": 97,
+      "candidate_days": 7,
+      "ordinary_covered_days": 4,
+      "calendar_flag_days": {
+        "general_holiday": 2,
+        "weekend": 2
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 10,
+        "unresolved_shared_room": 38,
+        "unverified_floor": 10
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 10,
+        "unresolved_shared_room": 38
+      },
+      "selected_careers": {
+        "RPG": 7,
+        "TPG": 44,
+        "UG": 127,
+        "UGME": 8
+      }
+    },
+    {
+      "week_start": "2026-10-26",
+      "candidate_events": 330,
+      "merged_sessions": 329,
+      "selected_sessions": 262,
+      "excluded_sessions": 67,
+      "selected_known_headcount": 109,
+      "selected_assumed_headcount": 153,
+      "selected_headcount_sum": 14692,
+      "assumed_headcount_sum": 8165,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 249,
+      "ordinary_selected_known": 109,
+      "ordinary_selected_assumed": 140,
+      "candidate_days": 7,
+      "ordinary_covered_days": 5,
+      "calendar_flag_days": {
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 14,
+        "unresolved_shared_room": 53,
+        "unverified_floor": 14
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 14,
+        "unresolved_shared_room": 53
+      },
+      "selected_careers": {
+        "RPG": 7,
+        "TPG": 62,
+        "UG": 184,
+        "UGME": 9
+      }
+    },
+    {
+      "week_start": "2026-11-02",
+      "candidate_events": 327,
+      "merged_sessions": 326,
+      "selected_sessions": 261,
+      "excluded_sessions": 65,
+      "selected_known_headcount": 109,
+      "selected_assumed_headcount": 152,
+      "selected_headcount_sum": 14646,
+      "assumed_headcount_sum": 8119,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 249,
+      "ordinary_selected_known": 109,
+      "ordinary_selected_assumed": 140,
+      "candidate_days": 7,
+      "ordinary_covered_days": 5,
+      "calendar_flag_days": {
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 16,
+        "unresolved_shared_room": 49,
+        "unverified_floor": 15
+      },
+      "exclusion_combinations": {
+        "missing_headcount": 1,
+        "missing_headcount|unverified_floor": 15,
+        "unresolved_shared_room": 49
+      },
+      "selected_careers": {
+        "RPG": 8,
+        "TPG": 58,
+        "UG": 186,
+        "UGME": 9
+      }
+    },
+    {
+      "week_start": "2026-11-09",
+      "candidate_events": 330,
+      "merged_sessions": 329,
+      "selected_sessions": 259,
+      "excluded_sessions": 70,
+      "selected_known_headcount": 109,
+      "selected_assumed_headcount": 150,
+      "selected_headcount_sum": 14600,
+      "assumed_headcount_sum": 8073,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 244,
+      "ordinary_selected_known": 109,
+      "ordinary_selected_assumed": 135,
+      "candidate_days": 7,
+      "ordinary_covered_days": 5,
+      "calendar_flag_days": {
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 17,
+        "unresolved_shared_room": 53,
+        "unverified_floor": 17
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 17,
+        "unresolved_shared_room": 53
+      },
+      "selected_careers": {
+        "RPG": 7,
+        "TPG": 60,
+        "UG": 183,
+        "UGME": 9
+      }
+    },
+    {
+      "week_start": "2026-11-16",
+      "candidate_events": 326,
+      "merged_sessions": 325,
+      "selected_sessions": 257,
+      "excluded_sessions": 68,
+      "selected_known_headcount": 109,
+      "selected_assumed_headcount": 148,
+      "selected_headcount_sum": 14423,
+      "assumed_headcount_sum": 7896,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 246,
+      "ordinary_selected_known": 109,
+      "ordinary_selected_assumed": 137,
+      "candidate_days": 7,
+      "ordinary_covered_days": 5,
+      "calendar_flag_days": {
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 17,
+        "unresolved_shared_room": 51,
+        "unverified_floor": 17
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 17,
+        "unresolved_shared_room": 51
+      },
+      "selected_careers": {
+        "RPG": 8,
+        "TPG": 56,
+        "UG": 184,
+        "UGME": 9
+      }
+    },
+    {
+      "week_start": "2026-11-23",
+      "candidate_events": 318,
+      "merged_sessions": 317,
+      "selected_sessions": 252,
+      "excluded_sessions": 65,
+      "selected_known_headcount": 109,
+      "selected_assumed_headcount": 143,
+      "selected_headcount_sum": 14098,
+      "assumed_headcount_sum": 7571,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 242,
+      "ordinary_selected_known": 109,
+      "ordinary_selected_assumed": 133,
+      "candidate_days": 7,
+      "ordinary_covered_days": 5,
+      "calendar_flag_days": {
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "missing_headcount": 14,
+        "unresolved_shared_room": 51,
+        "unverified_floor": 13
+      },
+      "exclusion_combinations": {
+        "missing_headcount": 1,
+        "missing_headcount|unverified_floor": 13,
+        "unresolved_shared_room": 51
+      },
+      "selected_careers": {
+        "RPG": 6,
+        "TPG": 54,
+        "UG": 183,
+        "UGME": 9
+      }
+    },
+    {
+      "week_start": "2026-11-30",
+      "candidate_events": 63,
+      "merged_sessions": 63,
+      "selected_sessions": 45,
+      "excluded_sessions": 18,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 20,
+      "selected_headcount_sum": 2633,
+      "assumed_headcount_sum": 1214,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 45,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 20,
+      "candidate_days": 5,
+      "ordinary_covered_days": 1,
+      "calendar_flag_days": {
+        "after_general_teaching": 6,
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 11,
+        "missing_headcount": 14,
+        "unresolved_shared_room": 6,
+        "unverified_floor": 14
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review|missing_headcount|unresolved_shared_room|unverified_floor": 2,
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 9,
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "TPG": 5,
+        "UG": 39,
+        "UGME": 1
+      }
+    },
+    {
+      "week_start": "2026-12-07",
+      "candidate_events": 3,
+      "merged_sessions": 3,
+      "selected_sessions": 0,
+      "excluded_sessions": 3,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "candidate_days": 3,
+      "ordinary_covered_days": 0,
+      "calendar_flag_days": {
+        "after_general_teaching": 7,
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 3,
+        "missing_headcount": 3,
+        "unverified_floor": 3
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {}
+    },
+    {
+      "week_start": "2026-12-14",
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "candidate_days": 0,
+      "ordinary_covered_days": 0,
+      "calendar_flag_days": {
+        "after_general_teaching": 7,
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "week_start": "2026-12-21",
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "candidate_days": 0,
+      "ordinary_covered_days": 0,
+      "calendar_flag_days": {
+        "after_general_teaching": 7,
+        "general_holiday": 3,
+        "weekend": 2
+      },
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "week_start": "2026-12-28",
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "candidate_days": 0,
+      "ordinary_covered_days": 0,
+      "calendar_flag_days": {
+        "after_general_teaching": 7,
+        "weekend": 2,
+        "general_holiday": 1
+      },
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "week_start": "2027-01-04",
+      "candidate_events": 1,
+      "merged_sessions": 1,
+      "selected_sessions": 0,
+      "excluded_sessions": 1,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "candidate_days": 1,
+      "ordinary_covered_days": 0,
+      "calendar_flag_days": {
+        "after_general_teaching": 3
+      },
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 1
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review": 1
+      },
+      "selected_careers": {}
+    }
+  ],
+  "daily": [
+    {
+      "date": "2026-09-01",
+      "week_start": "2026-08-31",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 75,
+      "merged_sessions": 74,
+      "selected_sessions": 53,
+      "excluded_sessions": 21,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 25,
+      "selected_headcount_sum": 2815,
+      "assumed_headcount_sum": 1129,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 53,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 25,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 18,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 18,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "TPG": 8,
+        "RPG": 1
+      }
+    },
+    {
+      "date": "2026-09-02",
+      "week_start": "2026-08-31",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 48,
+      "merged_sessions": 48,
+      "selected_sessions": 38,
+      "excluded_sessions": 10,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 29,
+      "selected_headcount_sum": 2276,
+      "assumed_headcount_sum": 1644,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 38,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 29,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 27,
+        "UGME": 1,
+        "TPG": 10
+      }
+    },
+    {
+      "date": "2026-09-03",
+      "week_start": "2026-08-31",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 70,
+      "merged_sessions": 70,
+      "selected_sessions": 55,
+      "excluded_sessions": 15,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 27,
+      "selected_headcount_sum": 3052,
+      "assumed_headcount_sum": 1424,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 55,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 27,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 1,
+        "UGME": 2,
+        "TPG": 8
+      }
+    },
+    {
+      "date": "2026-09-04",
+      "week_start": "2026-08-31",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 51,
+      "merged_sessions": 51,
+      "selected_sessions": 43,
+      "excluded_sessions": 8,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 24,
+      "selected_headcount_sum": 2285,
+      "assumed_headcount_sum": 1123,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 43,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 24,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 5
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 5
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 9,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-09-05",
+      "week_start": "2026-08-31",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 9,
+      "merged_sessions": 9,
+      "selected_sessions": 7,
+      "excluded_sessions": 2,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 7,
+      "selected_headcount_sum": 444,
+      "assumed_headcount_sum": 444,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 2
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 2
+      },
+      "selected_careers": {
+        "TPG": 6,
+        "UG": 1
+      }
+    },
+    {
+      "date": "2026-09-06",
+      "week_start": "2026-08-31",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-09-07",
+      "week_start": "2026-09-07",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 56,
+      "merged_sessions": 56,
+      "selected_sessions": 49,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 24,
+      "selected_headcount_sum": 2761,
+      "assumed_headcount_sum": 1342,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 49,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 24,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 39,
+        "UGME": 2,
+        "RPG": 1,
+        "TPG": 7
+      }
+    },
+    {
+      "date": "2026-09-08",
+      "week_start": "2026-09-07",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 79,
+      "merged_sessions": 78,
+      "selected_sessions": 55,
+      "excluded_sessions": 23,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 27,
+      "selected_headcount_sum": 2949,
+      "assumed_headcount_sum": 1263,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 55,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 27,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 20,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 20,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "TPG": 10,
+        "RPG": 1
+      }
+    },
+    {
+      "date": "2026-09-09",
+      "week_start": "2026-09-07",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 49,
+      "merged_sessions": 49,
+      "selected_sessions": 40,
+      "excluded_sessions": 9,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 31,
+      "selected_headcount_sum": 2410,
+      "assumed_headcount_sum": 1778,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 40,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 31,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 28,
+        "UGME": 1,
+        "TPG": 11
+      }
+    },
+    {
+      "date": "2026-09-10",
+      "week_start": "2026-09-07",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 73,
+      "merged_sessions": 73,
+      "selected_sessions": 58,
+      "excluded_sessions": 15,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 30,
+      "selected_headcount_sum": 3268,
+      "assumed_headcount_sum": 1640,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 58,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 30,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 1,
+        "UGME": 2,
+        "TPG": 11
+      }
+    },
+    {
+      "date": "2026-09-11",
+      "week_start": "2026-09-07",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 50,
+      "merged_sessions": 50,
+      "selected_sessions": 43,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 24,
+      "selected_headcount_sum": 2285,
+      "assumed_headcount_sum": 1123,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 43,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 24,
+      "exclusion_reasons": {
+        "unverified_floor": 2,
+        "missing_headcount": 2,
+        "unresolved_shared_room": 5
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 2,
+        "unresolved_shared_room": 5
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 9,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-09-12",
+      "week_start": "2026-09-07",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 15,
+      "merged_sessions": 15,
+      "selected_sessions": 13,
+      "excluded_sessions": 2,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 13,
+      "selected_headcount_sum": 800,
+      "assumed_headcount_sum": 800,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 2
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 2
+      },
+      "selected_careers": {
+        "TPG": 12,
+        "UG": 1
+      }
+    },
+    {
+      "date": "2026-09-13",
+      "week_start": "2026-09-07",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-09-14",
+      "week_start": "2026-09-14",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 56,
+      "merged_sessions": 56,
+      "selected_sessions": 49,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 24,
+      "selected_headcount_sum": 2761,
+      "assumed_headcount_sum": 1342,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 49,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 24,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 39,
+        "UGME": 2,
+        "RPG": 1,
+        "TPG": 7
+      }
+    },
+    {
+      "date": "2026-09-15",
+      "week_start": "2026-09-14",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 81,
+      "merged_sessions": 80,
+      "selected_sessions": 55,
+      "excluded_sessions": 25,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 27,
+      "selected_headcount_sum": 2949,
+      "assumed_headcount_sum": 1263,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 55,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 27,
+      "exclusion_reasons": {
+        "unverified_floor": 5,
+        "missing_headcount": 5,
+        "unresolved_shared_room": 20
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 5,
+        "unresolved_shared_room": 20
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "RPG": 2,
+        "TPG": 9
+      }
+    },
+    {
+      "date": "2026-09-16",
+      "week_start": "2026-09-14",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 51,
+      "merged_sessions": 51,
+      "selected_sessions": 41,
+      "excluded_sessions": 10,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 32,
+      "selected_headcount_sum": 2411,
+      "assumed_headcount_sum": 1779,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 41,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 32,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 27,
+        "UGME": 1,
+        "TPG": 13
+      }
+    },
+    {
+      "date": "2026-09-17",
+      "week_start": "2026-09-14",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 73,
+      "merged_sessions": 73,
+      "selected_sessions": 58,
+      "excluded_sessions": 15,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 30,
+      "selected_headcount_sum": 3235,
+      "assumed_headcount_sum": 1607,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 58,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 30,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 2,
+        "UGME": 2,
+        "TPG": 10
+      }
+    },
+    {
+      "date": "2026-09-18",
+      "week_start": "2026-09-14",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 52,
+      "merged_sessions": 52,
+      "selected_sessions": 44,
+      "excluded_sessions": 8,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 25,
+      "selected_headcount_sum": 2357,
+      "assumed_headcount_sum": 1195,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 44,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 25,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 5
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 5
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 10,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-09-19",
+      "week_start": "2026-09-14",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 12,
+      "merged_sessions": 12,
+      "selected_sessions": 10,
+      "excluded_sessions": 2,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 10,
+      "selected_headcount_sum": 668,
+      "assumed_headcount_sum": 668,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 2
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 2
+      },
+      "selected_careers": {
+        "TPG": 8,
+        "UG": 2
+      }
+    },
+    {
+      "date": "2026-09-20",
+      "week_start": "2026-09-14",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-09-21",
+      "week_start": "2026-09-21",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 58,
+      "merged_sessions": 58,
+      "selected_sessions": 51,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 26,
+      "selected_headcount_sum": 2883,
+      "assumed_headcount_sum": 1464,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 51,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 26,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 39,
+        "UGME": 2,
+        "RPG": 1,
+        "TPG": 9
+      }
+    },
+    {
+      "date": "2026-09-22",
+      "week_start": "2026-09-21",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 80,
+      "merged_sessions": 79,
+      "selected_sessions": 55,
+      "excluded_sessions": 24,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 27,
+      "selected_headcount_sum": 2888,
+      "assumed_headcount_sum": 1202,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 55,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 27,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 20
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 20
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "TPG": 10,
+        "RPG": 1
+      }
+    },
+    {
+      "date": "2026-09-23",
+      "week_start": "2026-09-21",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 50,
+      "merged_sessions": 50,
+      "selected_sessions": 40,
+      "excluded_sessions": 10,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 31,
+      "selected_headcount_sum": 2343,
+      "assumed_headcount_sum": 1711,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 40,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 31,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "missing_headcount": 1,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 27,
+        "UGME": 1,
+        "TPG": 11,
+        "RPG": 1
+      }
+    },
+    {
+      "date": "2026-09-24",
+      "week_start": "2026-09-21",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 73,
+      "merged_sessions": 73,
+      "selected_sessions": 58,
+      "excluded_sessions": 15,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 30,
+      "selected_headcount_sum": 3235,
+      "assumed_headcount_sum": 1607,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 58,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 30,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 2,
+        "UGME": 2,
+        "TPG": 10
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "week_start": "2026-09-21",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 53,
+      "merged_sessions": 53,
+      "selected_sessions": 46,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 27,
+      "selected_headcount_sum": 2468,
+      "assumed_headcount_sum": 1306,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 46,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 27,
+      "exclusion_reasons": {
+        "unverified_floor": 2,
+        "missing_headcount": 2,
+        "unresolved_shared_room": 5
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 2,
+        "unresolved_shared_room": 5
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 12,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "week_start": "2026-09-21",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 2,
+      "merged_sessions": 2,
+      "selected_sessions": 2,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 2,
+      "selected_headcount_sum": 78,
+      "assumed_headcount_sum": 78,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 2
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "week_start": "2026-09-21",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 2,
+      "merged_sessions": 2,
+      "selected_sessions": 2,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 2,
+      "selected_headcount_sum": 108,
+      "assumed_headcount_sum": 108,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 2
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "week_start": "2026-09-28",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 57,
+      "merged_sessions": 57,
+      "selected_sessions": 50,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 25,
+      "selected_headcount_sum": 2789,
+      "assumed_headcount_sum": 1370,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 50,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 25,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 39,
+        "UGME": 2,
+        "RPG": 1,
+        "TPG": 8
+      }
+    },
+    {
+      "date": "2026-09-29",
+      "week_start": "2026-09-28",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 82,
+      "merged_sessions": 81,
+      "selected_sessions": 56,
+      "excluded_sessions": 25,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 28,
+      "selected_headcount_sum": 2916,
+      "assumed_headcount_sum": 1230,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 56,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 28,
+      "exclusion_reasons": {
+        "unverified_floor": 5,
+        "missing_headcount": 5,
+        "unresolved_shared_room": 20
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 5,
+        "unresolved_shared_room": 20
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "TPG": 10,
+        "RPG": 2
+      }
+    },
+    {
+      "date": "2026-09-30",
+      "week_start": "2026-09-28",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 46,
+      "merged_sessions": 46,
+      "selected_sessions": 40,
+      "excluded_sessions": 6,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 31,
+      "selected_headcount_sum": 2384,
+      "assumed_headcount_sum": 1752,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 40,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 31,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 27,
+        "UGME": 1,
+        "TPG": 12
+      }
+    },
+    {
+      "date": "2026-10-01",
+      "week_start": "2026-09-28",
+      "weekday": 3,
+      "calendar_flags": [
+        "general_holiday"
+      ],
+      "candidate_events": 3,
+      "merged_sessions": 3,
+      "selected_sessions": 3,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 3,
+      "selected_headcount_sum": 128,
+      "assumed_headcount_sum": 128,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "UGME": 2,
+        "TPG": 1
+      }
+    },
+    {
+      "date": "2026-10-02",
+      "week_start": "2026-09-28",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 53,
+      "merged_sessions": 53,
+      "selected_sessions": 46,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 27,
+      "selected_headcount_sum": 2425,
+      "assumed_headcount_sum": 1263,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 46,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 27,
+      "exclusion_reasons": {
+        "missing_headcount": 2,
+        "unresolved_shared_room": 5,
+        "unverified_floor": 1
+      },
+      "exclusion_combinations": {
+        "missing_headcount": 1,
+        "unresolved_shared_room": 5,
+        "missing_headcount|unverified_floor": 1
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 12,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-10-03",
+      "week_start": "2026-09-28",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 10,
+      "merged_sessions": 10,
+      "selected_sessions": 8,
+      "excluded_sessions": 2,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 8,
+      "selected_headcount_sum": 472,
+      "assumed_headcount_sum": 472,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 2
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 2
+      },
+      "selected_careers": {
+        "TPG": 7,
+        "UG": 1
+      }
+    },
+    {
+      "date": "2026-10-04",
+      "week_start": "2026-09-28",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-10-05",
+      "week_start": "2026-10-05",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 58,
+      "merged_sessions": 58,
+      "selected_sessions": 51,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 26,
+      "selected_headcount_sum": 2861,
+      "assumed_headcount_sum": 1442,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 51,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 26,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 39,
+        "UGME": 2,
+        "TPG": 8,
+        "RPG": 2
+      }
+    },
+    {
+      "date": "2026-10-06",
+      "week_start": "2026-10-05",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 81,
+      "merged_sessions": 80,
+      "selected_sessions": 56,
+      "excluded_sessions": 24,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 28,
+      "selected_headcount_sum": 2968,
+      "assumed_headcount_sum": 1282,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 56,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 28,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 20
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 20
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "RPG": 2,
+        "TPG": 10
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "week_start": "2026-10-05",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 52,
+      "merged_sessions": 52,
+      "selected_sessions": 42,
+      "excluded_sessions": 10,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 33,
+      "selected_headcount_sum": 2423,
+      "assumed_headcount_sum": 1791,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 42,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 33,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "missing_headcount": 1,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 27,
+        "UGME": 1,
+        "TPG": 12,
+        "RPG": 2
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "week_start": "2026-10-05",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 73,
+      "merged_sessions": 73,
+      "selected_sessions": 58,
+      "excluded_sessions": 15,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 30,
+      "selected_headcount_sum": 3235,
+      "assumed_headcount_sum": 1607,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 58,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 30,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 2,
+        "UGME": 2,
+        "TPG": 10
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "week_start": "2026-10-05",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 54,
+      "merged_sessions": 54,
+      "selected_sessions": 45,
+      "excluded_sessions": 9,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 26,
+      "selected_headcount_sum": 2363,
+      "assumed_headcount_sum": 1201,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 45,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 26,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 5
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "missing_headcount": 1,
+        "unresolved_shared_room": 5
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 11,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-10-10",
+      "week_start": "2026-10-05",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 13,
+      "merged_sessions": 13,
+      "selected_sessions": 11,
+      "excluded_sessions": 2,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 11,
+      "selected_headcount_sum": 630,
+      "assumed_headcount_sum": 630,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 2
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 2
+      },
+      "selected_careers": {
+        "TPG": 10,
+        "UG": 1
+      }
+    },
+    {
+      "date": "2026-10-11",
+      "week_start": "2026-10-05",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 2,
+      "merged_sessions": 2,
+      "selected_sessions": 2,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 2,
+      "selected_headcount_sum": 108,
+      "assumed_headcount_sum": 108,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 2
+      }
+    },
+    {
+      "date": "2026-10-12",
+      "week_start": "2026-10-12",
+      "weekday": 0,
+      "calendar_flags": [
+        "general_reading_week"
+      ],
+      "candidate_events": 5,
+      "merged_sessions": 5,
+      "selected_sessions": 0,
+      "excluded_sessions": 5,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 5
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review": 5
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-10-13",
+      "week_start": "2026-10-12",
+      "weekday": 1,
+      "calendar_flags": [
+        "general_reading_week"
+      ],
+      "candidate_events": 9,
+      "merged_sessions": 8,
+      "selected_sessions": 0,
+      "excluded_sessions": 8,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 8
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review": 8
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-10-14",
+      "week_start": "2026-10-12",
+      "weekday": 2,
+      "calendar_flags": [
+        "general_reading_week"
+      ],
+      "candidate_events": 7,
+      "merged_sessions": 7,
+      "selected_sessions": 0,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 7
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review": 7
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-10-15",
+      "week_start": "2026-10-12",
+      "weekday": 3,
+      "calendar_flags": [
+        "general_reading_week"
+      ],
+      "candidate_events": 13,
+      "merged_sessions": 13,
+      "selected_sessions": 0,
+      "excluded_sessions": 13,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 13,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review": 9,
+        "calendar_or_schedule_review|unresolved_shared_room": 4
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-10-16",
+      "week_start": "2026-10-12",
+      "weekday": 4,
+      "calendar_flags": [
+        "general_reading_week"
+      ],
+      "candidate_events": 16,
+      "merged_sessions": 16,
+      "selected_sessions": 0,
+      "excluded_sessions": 16,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 16,
+        "unverified_floor": 1,
+        "missing_headcount": 1,
+        "unresolved_shared_room": 3
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review": 12,
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 1,
+        "calendar_or_schedule_review|unresolved_shared_room": 3
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-10-17",
+      "week_start": "2026-10-12",
+      "weekday": 5,
+      "calendar_flags": [
+        "general_reading_week",
+        "weekend"
+      ],
+      "candidate_events": 5,
+      "merged_sessions": 5,
+      "selected_sessions": 0,
+      "excluded_sessions": 5,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 5,
+        "unresolved_shared_room": 2
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review": 3,
+        "calendar_or_schedule_review|unresolved_shared_room": 2
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-10-18",
+      "week_start": "2026-10-12",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 2,
+      "merged_sessions": 2,
+      "selected_sessions": 2,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 2,
+      "selected_headcount_sum": 108,
+      "assumed_headcount_sum": 108,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 2
+      }
+    },
+    {
+      "date": "2026-10-19",
+      "week_start": "2026-10-19",
+      "weekday": 0,
+      "calendar_flags": [
+        "general_holiday"
+      ],
+      "candidate_events": 4,
+      "merged_sessions": 4,
+      "selected_sessions": 4,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 4,
+      "selected_headcount_sum": 128,
+      "assumed_headcount_sum": 128,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "UGME": 2,
+        "RPG": 1,
+        "TPG": 1
+      }
+    },
+    {
+      "date": "2026-10-20",
+      "week_start": "2026-10-19",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 78,
+      "merged_sessions": 77,
+      "selected_sessions": 55,
+      "excluded_sessions": 22,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 27,
+      "selected_headcount_sum": 2888,
+      "assumed_headcount_sum": 1202,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 55,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 27,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 20,
+        "unverified_floor": 2,
+        "missing_headcount": 2
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 20,
+        "missing_headcount|unverified_floor": 2
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "TPG": 10,
+        "RPG": 1
+      }
+    },
+    {
+      "date": "2026-10-21",
+      "week_start": "2026-10-19",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 51,
+      "merged_sessions": 51,
+      "selected_sessions": 41,
+      "excluded_sessions": 10,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 32,
+      "selected_headcount_sum": 2462,
+      "assumed_headcount_sum": 1830,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 41,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 32,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 28,
+        "UGME": 1,
+        "TPG": 11,
+        "RPG": 1
+      }
+    },
+    {
+      "date": "2026-10-22",
+      "week_start": "2026-10-19",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 74,
+      "merged_sessions": 74,
+      "selected_sessions": 59,
+      "excluded_sessions": 15,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 31,
+      "selected_headcount_sum": 3277,
+      "assumed_headcount_sum": 1649,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 59,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 31,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 2,
+        "UGME": 2,
+        "TPG": 11
+      }
+    },
+    {
+      "date": "2026-10-23",
+      "week_start": "2026-10-19",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 19,
+      "merged_sessions": 19,
+      "selected_sessions": 18,
+      "excluded_sessions": 1,
+      "selected_known_headcount": 11,
+      "selected_assumed_headcount": 7,
+      "selected_headcount_sum": 927,
+      "assumed_headcount_sum": 295,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 18,
+      "ordinary_selected_known": 11,
+      "ordinary_selected_assumed": 7,
+      "exclusion_reasons": {
+        "unverified_floor": 1,
+        "missing_headcount": 1
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 1
+      },
+      "selected_careers": {
+        "UG": 13,
+        "RPG": 2,
+        "TPG": 2,
+        "UGME": 1
+      }
+    },
+    {
+      "date": "2026-10-24",
+      "week_start": "2026-10-19",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 3,
+      "merged_sessions": 3,
+      "selected_sessions": 3,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 3,
+      "selected_headcount_sum": 180,
+      "assumed_headcount_sum": 180,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 3
+      }
+    },
+    {
+      "date": "2026-10-25",
+      "week_start": "2026-10-19",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 6,
+      "merged_sessions": 6,
+      "selected_sessions": 6,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 6,
+      "selected_headcount_sum": 404,
+      "assumed_headcount_sum": 404,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 6
+      }
+    },
+    {
+      "date": "2026-10-26",
+      "week_start": "2026-10-26",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 56,
+      "merged_sessions": 56,
+      "selected_sessions": 49,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 24,
+      "selected_headcount_sum": 2814,
+      "assumed_headcount_sum": 1395,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 49,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 24,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 40,
+        "UGME": 2,
+        "TPG": 7
+      }
+    },
+    {
+      "date": "2026-10-27",
+      "week_start": "2026-10-26",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 80,
+      "merged_sessions": 79,
+      "selected_sessions": 55,
+      "excluded_sessions": 24,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 27,
+      "selected_headcount_sum": 2941,
+      "assumed_headcount_sum": 1255,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 55,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 27,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 20
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 20
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "TPG": 9,
+        "RPG": 2
+      }
+    },
+    {
+      "date": "2026-10-28",
+      "week_start": "2026-10-26",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 47,
+      "merged_sessions": 47,
+      "selected_sessions": 40,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 31,
+      "selected_headcount_sum": 2479,
+      "assumed_headcount_sum": 1847,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 40,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 31,
+      "exclusion_reasons": {
+        "unverified_floor": 1,
+        "missing_headcount": 1,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 1,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 27,
+        "UGME": 1,
+        "TPG": 11,
+        "RPG": 1
+      }
+    },
+    {
+      "date": "2026-10-29",
+      "week_start": "2026-10-26",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 74,
+      "merged_sessions": 74,
+      "selected_sessions": 59,
+      "excluded_sessions": 15,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 31,
+      "selected_headcount_sum": 3277,
+      "assumed_headcount_sum": 1649,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 59,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 31,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 2,
+        "UGME": 2,
+        "TPG": 11
+      }
+    },
+    {
+      "date": "2026-10-30",
+      "week_start": "2026-10-26",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 56,
+      "merged_sessions": 56,
+      "selected_sessions": 46,
+      "excluded_sessions": 10,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 27,
+      "selected_headcount_sum": 2425,
+      "assumed_headcount_sum": 1263,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 46,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 27,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 7
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 7
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 12,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-10-31",
+      "week_start": "2026-10-26",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 13,
+      "merged_sessions": 13,
+      "selected_sessions": 9,
+      "excluded_sessions": 4,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 9,
+      "selected_headcount_sum": 504,
+      "assumed_headcount_sum": 504,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "TPG": 8,
+        "UG": 1
+      }
+    },
+    {
+      "date": "2026-11-01",
+      "week_start": "2026-10-26",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 4,
+      "merged_sessions": 4,
+      "selected_sessions": 4,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 4,
+      "selected_headcount_sum": 252,
+      "assumed_headcount_sum": 252,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 4
+      }
+    },
+    {
+      "date": "2026-11-02",
+      "week_start": "2026-11-02",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 56,
+      "merged_sessions": 56,
+      "selected_sessions": 49,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 24,
+      "selected_headcount_sum": 2822,
+      "assumed_headcount_sum": 1403,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 49,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 24,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 41,
+        "UGME": 2,
+        "TPG": 6
+      }
+    },
+    {
+      "date": "2026-11-03",
+      "week_start": "2026-11-02",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 80,
+      "merged_sessions": 79,
+      "selected_sessions": 54,
+      "excluded_sessions": 25,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 26,
+      "selected_headcount_sum": 2907,
+      "assumed_headcount_sum": 1221,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 54,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 26,
+      "exclusion_reasons": {
+        "unverified_floor": 5,
+        "missing_headcount": 5,
+        "unresolved_shared_room": 20
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 5,
+        "unresolved_shared_room": 20
+      },
+      "selected_careers": {
+        "UG": 43,
+        "UGME": 2,
+        "RPG": 2,
+        "TPG": 7
+      }
+    },
+    {
+      "date": "2026-11-04",
+      "week_start": "2026-11-02",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 51,
+      "merged_sessions": 51,
+      "selected_sessions": 41,
+      "excluded_sessions": 10,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 32,
+      "selected_headcount_sum": 2473,
+      "assumed_headcount_sum": 1841,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 41,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 32,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 27,
+        "UGME": 1,
+        "TPG": 11,
+        "RPG": 2
+      }
+    },
+    {
+      "date": "2026-11-05",
+      "week_start": "2026-11-02",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 75,
+      "merged_sessions": 75,
+      "selected_sessions": 60,
+      "excluded_sessions": 15,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 32,
+      "selected_headcount_sum": 3349,
+      "assumed_headcount_sum": 1721,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 60,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 32,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 2,
+        "UGME": 2,
+        "TPG": 12
+      }
+    },
+    {
+      "date": "2026-11-06",
+      "week_start": "2026-11-02",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 51,
+      "merged_sessions": 51,
+      "selected_sessions": 45,
+      "excluded_sessions": 6,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 26,
+      "selected_headcount_sum": 2363,
+      "assumed_headcount_sum": 1201,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 45,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 26,
+      "exclusion_reasons": {
+        "missing_headcount": 1,
+        "unresolved_shared_room": 5
+      },
+      "exclusion_combinations": {
+        "missing_headcount": 1,
+        "unresolved_shared_room": 5
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 11,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-11-07",
+      "week_start": "2026-11-02",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 10,
+      "merged_sessions": 10,
+      "selected_sessions": 8,
+      "excluded_sessions": 2,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 8,
+      "selected_headcount_sum": 480,
+      "assumed_headcount_sum": 480,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 2
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 2
+      },
+      "selected_careers": {
+        "TPG": 7,
+        "UG": 1
+      }
+    },
+    {
+      "date": "2026-11-08",
+      "week_start": "2026-11-02",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 4,
+      "merged_sessions": 4,
+      "selected_sessions": 4,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 4,
+      "selected_headcount_sum": 252,
+      "assumed_headcount_sum": 252,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 4
+      }
+    },
+    {
+      "date": "2026-11-09",
+      "week_start": "2026-11-09",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 56,
+      "merged_sessions": 56,
+      "selected_sessions": 48,
+      "excluded_sessions": 8,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 23,
+      "selected_headcount_sum": 2750,
+      "assumed_headcount_sum": 1331,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 48,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 23,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 39,
+        "UGME": 2,
+        "TPG": 7
+      }
+    },
+    {
+      "date": "2026-11-10",
+      "week_start": "2026-11-09",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 80,
+      "merged_sessions": 79,
+      "selected_sessions": 54,
+      "excluded_sessions": 25,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 26,
+      "selected_headcount_sum": 2907,
+      "assumed_headcount_sum": 1221,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 54,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 26,
+      "exclusion_reasons": {
+        "unverified_floor": 5,
+        "missing_headcount": 5,
+        "unresolved_shared_room": 20
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 5,
+        "unresolved_shared_room": 20
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "TPG": 9,
+        "RPG": 1
+      }
+    },
+    {
+      "date": "2026-11-11",
+      "week_start": "2026-11-09",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 49,
+      "merged_sessions": 49,
+      "selected_sessions": 39,
+      "excluded_sessions": 10,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 30,
+      "selected_headcount_sum": 2419,
+      "assumed_headcount_sum": 1787,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 39,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 30,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 27,
+        "UGME": 1,
+        "TPG": 9,
+        "RPG": 2
+      }
+    },
+    {
+      "date": "2026-11-12",
+      "week_start": "2026-11-09",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 73,
+      "merged_sessions": 73,
+      "selected_sessions": 58,
+      "excluded_sessions": 15,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 30,
+      "selected_headcount_sum": 3238,
+      "assumed_headcount_sum": 1610,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 58,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 30,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 2,
+        "UGME": 2,
+        "TPG": 10
+      }
+    },
+    {
+      "date": "2026-11-13",
+      "week_start": "2026-11-09",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 53,
+      "merged_sessions": 53,
+      "selected_sessions": 45,
+      "excluded_sessions": 8,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 26,
+      "selected_headcount_sum": 2396,
+      "assumed_headcount_sum": 1234,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 45,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 26,
+      "exclusion_reasons": {
+        "unverified_floor": 1,
+        "missing_headcount": 1,
+        "unresolved_shared_room": 7
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 1,
+        "unresolved_shared_room": 7
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 11,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-11-14",
+      "week_start": "2026-11-09",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 14,
+      "merged_sessions": 14,
+      "selected_sessions": 10,
+      "excluded_sessions": 4,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 10,
+      "selected_headcount_sum": 558,
+      "assumed_headcount_sum": 558,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "TPG": 9,
+        "UG": 1
+      }
+    },
+    {
+      "date": "2026-11-15",
+      "week_start": "2026-11-09",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 5,
+      "merged_sessions": 5,
+      "selected_sessions": 5,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 5,
+      "selected_headcount_sum": 332,
+      "assumed_headcount_sum": 332,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 5
+      }
+    },
+    {
+      "date": "2026-11-16",
+      "week_start": "2026-11-16",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 55,
+      "merged_sessions": 55,
+      "selected_sessions": 48,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 23,
+      "selected_headcount_sum": 2689,
+      "assumed_headcount_sum": 1270,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 48,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 23,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 39,
+        "UGME": 2,
+        "RPG": 1,
+        "TPG": 6
+      }
+    },
+    {
+      "date": "2026-11-17",
+      "week_start": "2026-11-16",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 83,
+      "merged_sessions": 82,
+      "selected_sessions": 54,
+      "excluded_sessions": 28,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 26,
+      "selected_headcount_sum": 2907,
+      "assumed_headcount_sum": 1221,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 54,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 26,
+      "exclusion_reasons": {
+        "unverified_floor": 6,
+        "missing_headcount": 6,
+        "unresolved_shared_room": 22
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 6,
+        "unresolved_shared_room": 22
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "TPG": 9,
+        "RPG": 1
+      }
+    },
+    {
+      "date": "2026-11-18",
+      "week_start": "2026-11-16",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 49,
+      "merged_sessions": 49,
+      "selected_sessions": 39,
+      "excluded_sessions": 10,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 30,
+      "selected_headcount_sum": 2366,
+      "assumed_headcount_sum": 1734,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 39,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 30,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 27,
+        "UGME": 1,
+        "TPG": 9,
+        "RPG": 2
+      }
+    },
+    {
+      "date": "2026-11-19",
+      "week_start": "2026-11-16",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 72,
+      "merged_sessions": 72,
+      "selected_sessions": 58,
+      "excluded_sessions": 14,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 30,
+      "selected_headcount_sum": 3268,
+      "assumed_headcount_sum": 1640,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 58,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 30,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 2,
+        "missing_headcount": 2
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 2
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 2,
+        "UGME": 2,
+        "TPG": 10
+      }
+    },
+    {
+      "date": "2026-11-20",
+      "week_start": "2026-11-16",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 54,
+      "merged_sessions": 54,
+      "selected_sessions": 47,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 28,
+      "selected_headcount_sum": 2497,
+      "assumed_headcount_sum": 1335,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 47,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 28,
+      "exclusion_reasons": {
+        "unverified_floor": 2,
+        "missing_headcount": 2,
+        "unresolved_shared_room": 5
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 2,
+        "unresolved_shared_room": 5
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 13,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-11-21",
+      "week_start": "2026-11-16",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 10,
+      "merged_sessions": 10,
+      "selected_sessions": 8,
+      "excluded_sessions": 2,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 8,
+      "selected_headcount_sum": 498,
+      "assumed_headcount_sum": 498,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 2
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 2
+      },
+      "selected_careers": {
+        "TPG": 6,
+        "UG": 2
+      }
+    },
+    {
+      "date": "2026-11-22",
+      "week_start": "2026-11-16",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 3,
+      "merged_sessions": 3,
+      "selected_sessions": 3,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 3,
+      "selected_headcount_sum": 198,
+      "assumed_headcount_sum": 198,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 3
+      }
+    },
+    {
+      "date": "2026-11-23",
+      "week_start": "2026-11-23",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 55,
+      "merged_sessions": 55,
+      "selected_sessions": 48,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 23,
+      "selected_headcount_sum": 2689,
+      "assumed_headcount_sum": 1270,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 48,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 23,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 39,
+        "UGME": 2,
+        "RPG": 1,
+        "TPG": 6
+      }
+    },
+    {
+      "date": "2026-11-24",
+      "week_start": "2026-11-23",
+      "weekday": 1,
+      "calendar_flags": [],
+      "candidate_events": 80,
+      "merged_sessions": 79,
+      "selected_sessions": 54,
+      "excluded_sessions": 25,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 26,
+      "selected_headcount_sum": 2907,
+      "assumed_headcount_sum": 1221,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 54,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 26,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 22,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 22,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 42,
+        "UGME": 2,
+        "TPG": 9,
+        "RPG": 1
+      }
+    },
+    {
+      "date": "2026-11-25",
+      "week_start": "2026-11-23",
+      "weekday": 2,
+      "calendar_flags": [],
+      "candidate_events": 49,
+      "merged_sessions": 49,
+      "selected_sessions": 39,
+      "excluded_sessions": 10,
+      "selected_known_headcount": 9,
+      "selected_assumed_headcount": 30,
+      "selected_headcount_sum": 2346,
+      "assumed_headcount_sum": 1714,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 39,
+      "ordinary_selected_known": 9,
+      "ordinary_selected_assumed": 30,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 6
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 4,
+        "unresolved_shared_room": 6
+      },
+      "selected_careers": {
+        "UG": 27,
+        "UGME": 1,
+        "TPG": 11
+      }
+    },
+    {
+      "date": "2026-11-26",
+      "week_start": "2026-11-23",
+      "weekday": 3,
+      "calendar_flags": [],
+      "candidate_events": 73,
+      "merged_sessions": 73,
+      "selected_sessions": 58,
+      "excluded_sessions": 15,
+      "selected_known_headcount": 28,
+      "selected_assumed_headcount": 30,
+      "selected_headcount_sum": 3268,
+      "assumed_headcount_sum": 1640,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 58,
+      "ordinary_selected_known": 28,
+      "ordinary_selected_assumed": 30,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 12,
+        "unverified_floor": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 12,
+        "missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {
+        "UG": 44,
+        "RPG": 2,
+        "UGME": 2,
+        "TPG": 10
+      }
+    },
+    {
+      "date": "2026-11-27",
+      "week_start": "2026-11-23",
+      "weekday": 4,
+      "calendar_flags": [],
+      "candidate_events": 49,
+      "merged_sessions": 49,
+      "selected_sessions": 43,
+      "excluded_sessions": 6,
+      "selected_known_headcount": 19,
+      "selected_assumed_headcount": 24,
+      "selected_headcount_sum": 2315,
+      "assumed_headcount_sum": 1153,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 43,
+      "ordinary_selected_known": 19,
+      "ordinary_selected_assumed": 24,
+      "exclusion_reasons": {
+        "missing_headcount": 1,
+        "unresolved_shared_room": 5
+      },
+      "exclusion_combinations": {
+        "missing_headcount": 1,
+        "unresolved_shared_room": 5
+      },
+      "selected_careers": {
+        "UG": 30,
+        "RPG": 2,
+        "TPG": 9,
+        "UGME": 2
+      }
+    },
+    {
+      "date": "2026-11-28",
+      "week_start": "2026-11-23",
+      "weekday": 5,
+      "calendar_flags": [
+        "weekend"
+      ],
+      "candidate_events": 11,
+      "merged_sessions": 11,
+      "selected_sessions": 9,
+      "excluded_sessions": 2,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 9,
+      "selected_headcount_sum": 519,
+      "assumed_headcount_sum": 519,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unresolved_shared_room": 2
+      },
+      "exclusion_combinations": {
+        "unresolved_shared_room": 2
+      },
+      "selected_careers": {
+        "TPG": 8,
+        "UG": 1
+      }
+    },
+    {
+      "date": "2026-11-29",
+      "week_start": "2026-11-23",
+      "weekday": 6,
+      "calendar_flags": [
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 1,
+      "merged_sessions": 1,
+      "selected_sessions": 1,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 1,
+      "selected_headcount_sum": 54,
+      "assumed_headcount_sum": 54,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {
+        "TPG": 1
+      }
+    },
+    {
+      "date": "2026-11-30",
+      "week_start": "2026-11-30",
+      "weekday": 0,
+      "calendar_flags": [],
+      "candidate_events": 52,
+      "merged_sessions": 52,
+      "selected_sessions": 45,
+      "excluded_sessions": 7,
+      "selected_known_headcount": 25,
+      "selected_assumed_headcount": 20,
+      "selected_headcount_sum": 2633,
+      "assumed_headcount_sum": 1214,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 45,
+      "ordinary_selected_known": 25,
+      "ordinary_selected_assumed": 20,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "missing_headcount": 3,
+        "unresolved_shared_room": 4
+      },
+      "exclusion_combinations": {
+        "missing_headcount|unverified_floor": 3,
+        "unresolved_shared_room": 4
+      },
+      "selected_careers": {
+        "UG": 39,
+        "UGME": 1,
+        "TPG": 5
+      }
+    },
+    {
+      "date": "2026-12-01",
+      "week_start": "2026-11-30",
+      "weekday": 1,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 3,
+      "merged_sessions": 3,
+      "selected_sessions": 0,
+      "excluded_sessions": 3,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "calendar_or_schedule_review": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-02",
+      "week_start": "2026-11-30",
+      "weekday": 2,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 3,
+      "merged_sessions": 3,
+      "selected_sessions": 0,
+      "excluded_sessions": 3,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unverified_floor": 3,
+        "calendar_or_schedule_review": 3,
+        "missing_headcount": 3
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 3
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-03",
+      "week_start": "2026-11-30",
+      "weekday": 3,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 4,
+      "merged_sessions": 4,
+      "selected_sessions": 0,
+      "excluded_sessions": 4,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unverified_floor": 4,
+        "calendar_or_schedule_review": 4,
+        "missing_headcount": 4,
+        "unresolved_shared_room": 2
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 2,
+        "calendar_or_schedule_review|missing_headcount|unresolved_shared_room|unverified_floor": 2
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-04",
+      "week_start": "2026-11-30",
+      "weekday": 4,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 1,
+      "merged_sessions": 1,
+      "selected_sessions": 0,
+      "excluded_sessions": 1,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unverified_floor": 1,
+        "calendar_or_schedule_review": 1,
+        "missing_headcount": 1
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 1
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-05",
+      "week_start": "2026-11-30",
+      "weekday": 5,
+      "calendar_flags": [
+        "after_general_teaching",
+        "weekend"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-06",
+      "week_start": "2026-11-30",
+      "weekday": 6,
+      "calendar_flags": [
+        "after_general_teaching",
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-07",
+      "week_start": "2026-12-07",
+      "weekday": 0,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 1,
+      "merged_sessions": 1,
+      "selected_sessions": 0,
+      "excluded_sessions": 1,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unverified_floor": 1,
+        "calendar_or_schedule_review": 1,
+        "missing_headcount": 1
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 1
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-08",
+      "week_start": "2026-12-07",
+      "weekday": 1,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 1,
+      "merged_sessions": 1,
+      "selected_sessions": 0,
+      "excluded_sessions": 1,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unverified_floor": 1,
+        "calendar_or_schedule_review": 1,
+        "missing_headcount": 1
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 1
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-09",
+      "week_start": "2026-12-07",
+      "weekday": 2,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 1,
+      "merged_sessions": 1,
+      "selected_sessions": 0,
+      "excluded_sessions": 1,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "unverified_floor": 1,
+        "calendar_or_schedule_review": 1,
+        "missing_headcount": 1
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review|missing_headcount|unverified_floor": 1
+      },
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-10",
+      "week_start": "2026-12-07",
+      "weekday": 3,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-11",
+      "week_start": "2026-12-07",
+      "weekday": 4,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-12",
+      "week_start": "2026-12-07",
+      "weekday": 5,
+      "calendar_flags": [
+        "after_general_teaching",
+        "weekend"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-13",
+      "week_start": "2026-12-07",
+      "weekday": 6,
+      "calendar_flags": [
+        "after_general_teaching",
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-14",
+      "week_start": "2026-12-14",
+      "weekday": 0,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-15",
+      "week_start": "2026-12-14",
+      "weekday": 1,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-16",
+      "week_start": "2026-12-14",
+      "weekday": 2,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-17",
+      "week_start": "2026-12-14",
+      "weekday": 3,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-18",
+      "week_start": "2026-12-14",
+      "weekday": 4,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-19",
+      "week_start": "2026-12-14",
+      "weekday": 5,
+      "calendar_flags": [
+        "after_general_teaching",
+        "weekend"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-20",
+      "week_start": "2026-12-14",
+      "weekday": 6,
+      "calendar_flags": [
+        "after_general_teaching",
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-21",
+      "week_start": "2026-12-21",
+      "weekday": 0,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-22",
+      "week_start": "2026-12-21",
+      "weekday": 1,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-23",
+      "week_start": "2026-12-21",
+      "weekday": 2,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-24",
+      "week_start": "2026-12-21",
+      "weekday": 3,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-25",
+      "week_start": "2026-12-21",
+      "weekday": 4,
+      "calendar_flags": [
+        "after_general_teaching",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-26",
+      "week_start": "2026-12-21",
+      "weekday": 5,
+      "calendar_flags": [
+        "after_general_teaching",
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-27",
+      "week_start": "2026-12-21",
+      "weekday": 6,
+      "calendar_flags": [
+        "after_general_teaching",
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-28",
+      "week_start": "2026-12-28",
+      "weekday": 0,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-29",
+      "week_start": "2026-12-28",
+      "weekday": 1,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-30",
+      "week_start": "2026-12-28",
+      "weekday": 2,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2026-12-31",
+      "week_start": "2026-12-28",
+      "weekday": 3,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2027-01-01",
+      "week_start": "2026-12-28",
+      "weekday": 4,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2027-01-02",
+      "week_start": "2026-12-28",
+      "weekday": 5,
+      "calendar_flags": [
+        "after_general_teaching",
+        "weekend"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2027-01-03",
+      "week_start": "2026-12-28",
+      "weekday": 6,
+      "calendar_flags": [
+        "after_general_teaching",
+        "weekend",
+        "general_holiday"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2027-01-04",
+      "week_start": "2027-01-04",
+      "weekday": 0,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2027-01-05",
+      "week_start": "2027-01-04",
+      "weekday": 1,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 0,
+      "merged_sessions": 0,
+      "selected_sessions": 0,
+      "excluded_sessions": 0,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {},
+      "exclusion_combinations": {},
+      "selected_careers": {}
+    },
+    {
+      "date": "2027-01-06",
+      "week_start": "2027-01-04",
+      "weekday": 2,
+      "calendar_flags": [
+        "after_general_teaching"
+      ],
+      "candidate_events": 1,
+      "merged_sessions": 1,
+      "selected_sessions": 0,
+      "excluded_sessions": 1,
+      "selected_known_headcount": 0,
+      "selected_assumed_headcount": 0,
+      "selected_headcount_sum": 0,
+      "assumed_headcount_sum": 0,
+      "headcount_above_capacity": 0,
+      "ordinary_selected_sessions": 0,
+      "ordinary_selected_known": 0,
+      "ordinary_selected_assumed": 0,
+      "exclusion_reasons": {
+        "calendar_or_schedule_review": 1
+      },
+      "exclusion_combinations": {
+        "calendar_or_schedule_review": 1
+      },
+      "selected_careers": {}
+    }
+  ],
+  "provenance": {
+    "source_hashes": {
+      "semester1_kkl_dated_candidates.json": "cb4ae32dd1583624c157db479efc668014f13698d94986e1cec3ab88bff97c6d",
+      "room_registry.json": "cdd14fc492a1a3d70533d1a21f3f393182681c76552fdab1dc311d9d9493fe5b",
+      "semester1_kkl_rules.json": "ecf199301d1155286d107e72c6343aa9e18e73b42878aaf236d8989d233676dd"
+    },
+    "calendar_sha256": "bc6f582f4183356093c301616292b63df62781ac49a617a1b12318ec48a1ccfe",
+    "scripts": {
+      "audit_semester_coverage.py": "ef30251f59e3abf48b9578c09e7efae01f639930f0baaa1be2169fb05c3d3117",
+      "timetable_demand.py": "8a4f4bd3cc9fadfcf706df9d40194460fc9ffb4f8fb7ca97fcb030bfe1e09339"
+    },
+    "simulation_runs_added": 0,
+    "selector": "unchanged capacity_assumption",
+    "ordinary_screen": "Weekdays within general teaching range, excluding general reading week and gazetted holidays; programme dates still need confirmation",
+    "denominators": "Merged sessions are class meetings, not unique people. Headcount sums count a class again each time it meets. Exclusion reasons overlap; combinations partition excluded sessions."
+  }
+}

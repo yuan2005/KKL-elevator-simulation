@@ -1,0 +1,23 @@
+{
+  "model_commit": "dd06745a66eb2c21f3cd2ae6ead75220eb4dbfcc",
+  "new_simulations": 90,
+  "reused_diagnostic_runs": 450,
+  "reused_baseline_rows": 270,
+  "source_unchanged": true,
+  "original_D10_unchanged": true,
+  "candidate_adopted": false,
+  "script_hashes": {
+    "diagnose_repaired_windows.py": "abf2ba6e4d0110454cd74bb0de63973de74379105b9ca6bdeebc17354c633c86",
+    "persistence_candidate.py": "97eb185d5570ad2f20c60d4ed182f8b52aa7b044743bbbe9bf5a6c3d8e0c4b99",
+    "run_persistence_candidate.py": "e0e4e828a7d2debc0b0cc3f4e635719b8cda9e22403b6eac5dbfa47c1db0b00b",
+    "report_diagnosis_candidate.py": "29a82902db69135b65e0275b91ae46514e3ce769ce1f0b8813524a8827d8caa2",
+    "check_diagnosis_candidate.py": "9bbde0c0e5b2c4e128aa6ecfddef64f531ac1ce514a15047ea3d50e5398bb8a3",
+    "test_repaired_diagnosis.py": "6e4dddca14f6eefe60a2265407dbadf2d5a9392eb3c4a47ee671a1ee98aaf7d4",
+    "test_persistence_candidate.py": "c1ea47167b038d57f3bda082d7e968bc6fc6d07396286e9b49a644a4545cd745"
+  },
+  "artifact_hashes": {
+    "repaired_window_diagnosis_v2\\summary.json": "ee938a30d15d015d60162e4e064f78b59396d5acc89110ad05448f607b3e21af",
+    "persistence_three_develop_v1\\raw.json": "61e389c7a0f4be38eb49d4f5340ed7cbcc6201108316c3af80f1015020ad14a3",
+    "persistence_three_develop_v1\\summary.json": "c92bfd05eca7d76c4d7816be5368be525194d9315243c1ae7d79c4e6bee0b4e7"
+  }
+}

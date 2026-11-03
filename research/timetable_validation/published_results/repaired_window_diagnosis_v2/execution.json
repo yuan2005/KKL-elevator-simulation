@@ -1,0 +1,10 @@
+{
+  "reused_simulation_runs": 450,
+  "new_simulation_runs": 0,
+  "paired_inputs": 75,
+  "verified_traces": 450,
+  "all_partition_checks_pass": true,
+  "prior_unchanged": true,
+  "protocol_hash": "80ddf271cc2aee2cf301f0455eaa1ae900737ad1ec270ef27d19d64146f59404",
+  "summary_hash": "ee938a30d15d015d60162e4e064f78b59396d5acc89110ad05448f607b3e21af"
+}

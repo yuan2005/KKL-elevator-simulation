@@ -1,0 +1,16 @@
+{
+  "runs": 270,
+  "inputs": 30,
+  "seconds": 569.4611098766327,
+  "protocol_hash": "629a0546d07982168b7f6c063766d270cd17402249a51f784ab5acfbb0474975",
+  "source_unchanged_during_run": true,
+  "prior_archive_unchanged": true,
+  "anomaly_totals": {
+    "unserved": 0,
+    "not_alighted": 0,
+    "chain_availability_violations": 0,
+    "late_transfer_lift_count": 0,
+    "event_time_violations": 0
+  },
+  "anomalous_runs": 0
+}

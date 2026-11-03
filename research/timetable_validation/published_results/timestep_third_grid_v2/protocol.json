@@ -1,0 +1,129 @@
+{
+  "created_utc": "2026-11-01T13:33:06.069822+00:00",
+  "design": "Third-grid numerical diagnostic on identical archived development inputs; no new selection or holdout",
+  "dates": [
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
+  ],
+  "seeds": [
+    4000,
+    4001,
+    4002
+  ],
+  "variants": {
+    "low": {
+      "high_share": 0.0
+    },
+    "mixed": {
+      "high_share": 0.5
+    },
+    "high": {
+      "high_share": 1.0
+    }
+  },
+  "controllers": [
+    "C1",
+    "C7",
+    "D10"
+  ],
+  "base": {
+    "transfer_fraction": 0.2,
+    "high_share": 0.5,
+    "attendance": 0.8,
+    "background_rate": 12,
+    "through_rate": 6,
+    "top": 16
+  },
+  "frozen": {
+    "missing_headcount_capacity_fraction": 0.6,
+    "D10_threshold": 0.1,
+    "controller_interval_seconds": 60,
+    "rolling_window_seconds": 300,
+    "min_dwell_seconds": 600,
+    "dispatch_interval_seconds": 1
+  },
+  "dt": 0.0625,
+  "previous_steps": [
+    0.25,
+    0.125
+  ],
+  "new_inputs": 45,
+  "new_runs": 135,
+  "primary": "Absolute waiting shifts and paired C7-C1 / D10-C1 contrast shifts across 0.25 -> 0.125 -> 0.0625 seconds",
+  "interpretation": "Compare signed increments and whether absolute increments shrink. No convergence order or Richardson extrapolation assumed for this state-switching queueing simulator. Three grids do not establish an error bound.",
+  "decision": "Keep thresholds and old acceptance screen unchanged. If refinements do not stabilize the small effect, stop threshold tuning and inspect numerical event handling before making precise benefit claims.",
+  "uncertainty": "Three seed-level paired averages across fixed dates/backgrounds; Monte Carlo uncertainty conditional on the development-selected rule",
+  "original_source_hashes": {
+    "building.py": "9e54af2466fed09c5146cef210e7385aa19a43b7df8c3f641daa5ce7fbc9ff47",
+    "config.py": "a82e82dab37c15d073c1603d75d5e029515136120abd720ae7e2740d5b42c367",
+    "controllers.py": "ff2aa72e10467d9183d3d446a70175abca25ea3e7cc52b2d36930c2c75fc81d7",
+    "experiments.py": "7c44beeac6fd081ee0cd164d5a21b2c0420e47300a7109739deaecd151c2897f",
+    "metrics.py": "9cd1282737b8dbdc69809a4e2cc2ba41513984631051995bea49e5580fdacad2",
+    "plots.py": "692204be9b5fa95005210edb390f3277ff37f3aa424efd91795d2190dd7b769a",
+    "sim.py": "84db73ed92aa13efa905c614b913b8a5967b35ba192b236a7c183f5d7b1a5f96",
+    "strategies.py": "3eba566684f8597959b84f2b63f3990909214af9ee780cb07ed5aaa4dc96bb63",
+    "traffic.py": "4f2976ab30af0b9d206615159d4a14e8c6bdb3760735fcd16319130d25b0abcd"
+  },
+  "script_hashes": {
+    "run_third_grid.py": "41432db218b9b7b96188058df73e5ffbce7c085fe313952ab7fe8ca4f0f0f019",
+    "run_adaptive.py": "d051390913221a9eb2882a0f0e74c37778fac82b29e54104a3751d95350facdd",
+    "run_linked_pilot.py": "1d2cae84d70dd6e2a0c5dc4f6814e4f64c8196ac2fe8e5b08cc3f6f057ee5c2e",
+    "timetable_demand.py": "8a4f4bd3cc9fadfcf706df9d40194460fc9ffb4f8fb7ca97fcb030bfe1e09339",
+    "linked_demand.py": "aeac79f1a96a1fd0704ef45bbd52cae4d2979243bd3ec67185ef0fa5adcd8d78",
+    "adaptive_policy.py": "d0aeb0e3c792329857cd9cf938ec194851733952c1a7f8912b30709c1583eeb2",
+    "study_paths.py": "575b87fde90f25a91706ee6820c55248c5ac9a0181c9da14be7f67545930a7ad"
+  },
+  "prior_protocol_hash": "51b04b339ca2ed900c785faad6c75ee138039649dcc8b278d8c9626e4b78bf0c",
+  "prior_raw_hash": "a8a56c94da3ab3c405f96bbd841ed95a5c2260490146b0400104fd26b6901c9c",
+  "prior_coverage_hash": "dc8ca772fae255ad6b030350c09fc8fa7616e5d52d501e5119350cf46a067e45",
+  "prior_run_hashes": {
+    "2026-10-26_low_4000.json": "875515ba6b3b12f27637f8b6a275401db6271438cc66703b9bdaf69afb23371f",
+    "2026-10-26_low_4001.json": "cc61e2c70b98f8376181aae85994da830ca522ea87aa260b4797b096081a3ea1",
+    "2026-10-26_low_4002.json": "6437943f0daeca9f3e985fee294eba70f3aa7ed2d7e2efa53b4d0a54942301f6",
+    "2026-10-26_mixed_4000.json": "b0da469add8bb3be02b89bd6041d1609d134a072baee09a7d882bf3647e8c39d",
+    "2026-10-26_mixed_4001.json": "477dc841017281a00b4830f81ae9d23234b68574991da385b97e6aaff41320fc",
+    "2026-10-26_mixed_4002.json": "e579d3329de48804754af727b07d154036e52e09f6db0eeeafde3703442e3372",
+    "2026-10-26_high_4000.json": "b75811ae33f37dbd3eb0018a39f5544a7b3b5c16a0053fd8d87390a3240b895d",
+    "2026-10-26_high_4001.json": "12fc4dc847e226750aa04811e14ef681449197b494857a97165698460943db18",
+    "2026-10-26_high_4002.json": "04e153e6cf813d3aa75aa4a65b8fe4a2975f29a098ce35aa4b4fce29c36b92ae",
+    "2026-10-27_low_4000.json": "cae13849f48fe2a711d3ad60379f18b504d07912d774c064728ed62266042910",
+    "2026-10-27_low_4001.json": "a84f25d66051eb1b4ddf020b2e7eefeec74d9ef9192aa595c6bb41ff19f7bb2d",
+    "2026-10-27_low_4002.json": "a3de1207bbe1383052e61e25832dfcc145a3d64c17c17618c8ba52bd7f5abb7b",
+    "2026-10-27_mixed_4000.json": "036e890fd1a2220c6565a6c51c5e5a21c383700e080141d5f9d91ed5490351f1",
+    "2026-10-27_mixed_4001.json": "bad3f2b21cffb3c39d4cb3d732e6c9503d4e3148eba43ca60b6c8e2f46a8ef3d",
+    "2026-10-27_mixed_4002.json": "5d507a5c53a414c2e0fd49ccc5dc103ead42bc235df02f446deb7fd114867fea",
+    "2026-10-27_high_4000.json": "4d282f56f642c17e90a426a6092afb51db50b1ff1e3d6627795512fe52d3c162",
+    "2026-10-27_high_4001.json": "71a08a0f23182c4ceb734652a78b5f11a38c149ecb95929003e84bf64d3acc7f",
+    "2026-10-27_high_4002.json": "cb5457100507bbc6ab911076ca0ad8e24810019bc389f7115f5305ccb48408c4",
+    "2026-10-28_low_4000.json": "c885ac525bc58e0b48150d4f5b347014e433976c4b025a508c7aad1c1197bee9",
+    "2026-10-28_low_4001.json": "86656d67b0858392fd38dbe433d8cdc9e258466980168fdf4a8bf36ab921dbbf",
+    "2026-10-28_low_4002.json": "bfc945202d8469809f5784174428dda2fd5da6df020eae81e15c2da61219ee91",
+    "2026-10-28_mixed_4000.json": "b765dde844e10a56609766c40491371d226195d8f649a7bad488ac003a67c8d5",
+    "2026-10-28_mixed_4001.json": "e55c9f91af9a52637309f1ad335d31ec003fbef63d27c1b6749b0fb251f5eca9",
+    "2026-10-28_mixed_4002.json": "e7b6516787821e2b6c234d6f9edb12cbd3cdb97069b849592d18e41f9c43b890",
+    "2026-10-28_high_4000.json": "ca9e3e639551f96e4d7a13f2aea9958da9d15c28f072b17726557d95bacd6ee0",
+    "2026-10-28_high_4001.json": "bfc65c3f6c9301766414c239b274ec9ecef7a89ceb453004047f169e9abbea2c",
+    "2026-10-28_high_4002.json": "e8f8562a0befdc255e6b8ce675e7ef7d5a4cdac5a3581ab9a8e846eadcbed256",
+    "2026-10-29_low_4000.json": "f8ccb29e4a60f7ca415d32e7bf6d15af86ed8b028299635bd5428fed28500196",
+    "2026-10-29_low_4001.json": "7af509270dea743fd164f056c15583c364032625f39d8f89acaa228b06842de6",
+    "2026-10-29_low_4002.json": "90b9200f2e0c663bf5fff3e4dedb65d9eb7d10bd963da258a6347a46f17bd6f5",
+    "2026-10-29_mixed_4000.json": "787951f59fc8b4d184c812416bc9e70900e314d589d72fcef6ca644bba5c923c",
+    "2026-10-29_mixed_4001.json": "bc7daa0668e41f5933b7f8588d8eaeb7f05603ee0daae2365bbc927f806a677b",
+    "2026-10-29_mixed_4002.json": "a26ca069996b58429e97863823e67e3f9f422e93b8a2f65e7270bd37fe1299e3",
+    "2026-10-29_high_4000.json": "6cf363af39ad68ec492956682c186adffe95efe6c2ea6fa1b01b18c746e000b2",
+    "2026-10-29_high_4001.json": "9190a3c11207024c6fdfc1f151eb5a57f25d6ffff773d21d359ad4fa3f3c8f7a",
+    "2026-10-29_high_4002.json": "198e6f2ab210820d16fa8e6e6bb229417e39898c1de921593db278ac5d64f4f8",
+    "2026-10-30_low_4000.json": "9d9b57cf26db700947eb9286eb51f8dc807813a961c2e59b762ce715802db1ad",
+    "2026-10-30_low_4001.json": "1088dbec1416bb9033200ffa06b210a8e4eadab8381eb38aac1e2cee8c07d91b",
+    "2026-10-30_low_4002.json": "2119da58cb92ed631936ba59ca52ce8714c0c28dd06281abba2e8e9dedf69976",
+    "2026-10-30_mixed_4000.json": "142c51095299d1336f335e7edf80fe01b8137236204ac242b0474a851dea3e08",
+    "2026-10-30_mixed_4001.json": "b22d1c3e76876655b31db147f83e9d0358192a3f7639aee726dca5bc67d671f9",
+    "2026-10-30_mixed_4002.json": "34b2669a5e5caa86fd4cf33b8c274dc0302eecda8c55293ba930b33e974f44fa",
+    "2026-10-30_high_4000.json": "76461a76387ea2096ff6d8968678e0c5d6aee10fd2c48656b4f9ef355db9724f",
+    "2026-10-30_high_4001.json": "26f4cfb9bbe88dfe061ffd3df25812d92d1c3f088e05337c2802b6a9185cc21e",
+    "2026-10-30_high_4002.json": "46a437ec8891b59c2e4893345b709b730917dd83993627fe4904f215d3d7aff3"
+  }
+}

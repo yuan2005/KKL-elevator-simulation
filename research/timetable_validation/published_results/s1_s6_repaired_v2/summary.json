@@ -1,0 +1,514 @@
+{
+  "summaries": [
+    {
+      "scenario": "S1",
+      "controller": "C0",
+      "awt": 21.123044449029884,
+      "p90_run_mean": 47.440588147052296,
+      "long_wait_percent": 5.371098149918787,
+      "repaired_minus_original": 0.8934638394708623,
+      "paired_vs_C1": {
+        "mean": 9.583571018318333,
+        "low": 6.178063001371163,
+        "high": 12.989079035265503,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S1",
+      "controller": "C1",
+      "awt": 11.539473430711551,
+      "p90_run_mean": 22.086633112282932,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.019181454090880835,
+      "paired_vs_C1": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S1",
+      "controller": "C2",
+      "awt": 11.047725948724477,
+      "p90_run_mean": 24.40911477783257,
+      "long_wait_percent": 0.654728398536448,
+      "repaired_minus_original": 0.4779751336554089,
+      "paired_vs_C1": {
+        "mean": -0.49174748198707385,
+        "low": -1.4667424137584621,
+        "high": 0.48324744978431455,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S1",
+      "controller": "C3",
+      "awt": 16.694499230708274,
+      "p90_run_mean": 30.776216148973493,
+      "long_wait_percent": 0.9511909387200471,
+      "repaired_minus_original": 0.034921258095586084,
+      "paired_vs_C1": {
+        "mean": 5.155025799996724,
+        "low": 4.57843183255507,
+        "high": 5.731619767438378,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S1",
+      "controller": "C4",
+      "awt": 11.195814040592328,
+      "p90_run_mean": 22.11031570871805,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.19163636758609465,
+      "paired_vs_C1": {
+        "mean": -0.34365939011922375,
+        "low": -0.9308721564903515,
+        "high": 0.24355337625190399,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S1",
+      "controller": "C7",
+      "awt": 8.870345809453216,
+      "p90_run_mean": 18.34507447815945,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": 0.4404876497528619,
+      "paired_vs_C1": {
+        "mean": -2.6691276212583355,
+        "low": -3.5742703886144125,
+        "high": -1.7639848539022585,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S2",
+      "controller": "C0",
+      "awt": 17.81227798978666,
+      "p90_run_mean": 40.18832174322009,
+      "long_wait_percent": 4.654643166657541,
+      "repaired_minus_original": -0.5432917402741358,
+      "paired_vs_C1": {
+        "mean": 7.179797897434867,
+        "low": 6.277434771362301,
+        "high": 8.082161023507432,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S2",
+      "controller": "C1",
+      "awt": 10.632480092351795,
+      "p90_run_mean": 19.56127300483865,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.28079169682102717,
+      "paired_vs_C1": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S2",
+      "controller": "C2",
+      "awt": 12.349463019519796,
+      "p90_run_mean": 24.59136291623277,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.33649853747063985,
+      "paired_vs_C1": {
+        "mean": 1.716982927168001,
+        "low": 1.0832532739121463,
+        "high": 2.350712580423856,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S2",
+      "controller": "C3",
+      "awt": 17.784527013934884,
+      "p90_run_mean": 38.016689305613944,
+      "long_wait_percent": 1.8484465395737257,
+      "repaired_minus_original": 0.1927243545415168,
+      "paired_vs_C1": {
+        "mean": 7.1520469215830875,
+        "low": 5.565715818792805,
+        "high": 8.73837802437337,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S2",
+      "controller": "C4",
+      "awt": 10.916007569433136,
+      "p90_run_mean": 20.791373122965865,
+      "long_wait_percent": 0.08695652173913043,
+      "repaired_minus_original": -0.5147276003132447,
+      "paired_vs_C1": {
+        "mean": 0.28352747708134096,
+        "low": -0.3050684479619711,
+        "high": 0.872123402124653,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S2",
+      "controller": "C7",
+      "awt": 12.378621039402004,
+      "p90_run_mean": 24.3141554427893,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.2941376466603403,
+      "paired_vs_C1": {
+        "mean": 1.7461409470502087,
+        "low": 1.1888790477955142,
+        "high": 2.303402846304903,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S3",
+      "controller": "C0",
+      "awt": 14.932497163809563,
+      "p90_run_mean": 32.04849306105449,
+      "long_wait_percent": 1.9482910215549774,
+      "repaired_minus_original": 1.2788729201364388,
+      "paired_vs_C1": {
+        "mean": 3.1026868615283307,
+        "low": 1.9751805832996114,
+        "high": 4.23019313975705,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S3",
+      "controller": "C1",
+      "awt": 11.829810302281231,
+      "p90_run_mean": 23.199110536515533,
+      "long_wait_percent": 0.09013581274487911,
+      "repaired_minus_original": -0.07739707471192787,
+      "paired_vs_C1": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S3",
+      "controller": "C2",
+      "awt": 14.009972763869113,
+      "p90_run_mean": 28.62155631438225,
+      "long_wait_percent": 0.7761715604198733,
+      "repaired_minus_original": -0.594505597900044,
+      "paired_vs_C1": {
+        "mean": 2.180162461587882,
+        "low": 1.483596033591832,
+        "high": 2.876728889583932,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S3",
+      "controller": "C3",
+      "awt": 18.222162512150646,
+      "p90_run_mean": 36.68863146257549,
+      "long_wait_percent": 2.7788692095668646,
+      "repaired_minus_original": 1.1360944589911628,
+      "paired_vs_C1": {
+        "mean": 6.392352209869414,
+        "low": 5.441727968152663,
+        "high": 7.342976451586165,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S3",
+      "controller": "C4",
+      "awt": 12.4257149446874,
+      "p90_run_mean": 23.95108249894017,
+      "long_wait_percent": 0.1403488790757111,
+      "repaired_minus_original": 0.5746850205213898,
+      "paired_vs_C1": {
+        "mean": 0.5959046424061676,
+        "low": -0.0849176712764681,
+        "high": 1.2767269560888033,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S3",
+      "controller": "C7",
+      "awt": 13.370264599411158,
+      "p90_run_mean": 27.762631179696196,
+      "long_wait_percent": 0.34480474313537146,
+      "repaired_minus_original": 0.17062283308448958,
+      "paired_vs_C1": {
+        "mean": 1.5404542971299267,
+        "low": 0.5555698359578638,
+        "high": 2.5253387583019897,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S4",
+      "controller": "C0",
+      "awt": 11.128004057505258,
+      "p90_run_mean": 20.761559237850054,
+      "long_wait_percent": 0.5686626563172236,
+      "repaired_minus_original": -0.18133638696495566,
+      "paired_vs_C1": {
+        "mean": 2.6323269008842405,
+        "low": 1.8848262314338577,
+        "high": 3.379827570334623,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S4",
+      "controller": "C1",
+      "awt": 8.495677156621017,
+      "p90_run_mean": 13.837677346310619,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": 0.0381359903055988,
+      "paired_vs_C1": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S4",
+      "controller": "C2",
+      "awt": 10.576628507821859,
+      "p90_run_mean": 21.525766773956608,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.5870143513755904,
+      "paired_vs_C1": {
+        "mean": 2.0809513512008406,
+        "low": 1.6888233563081334,
+        "high": 2.473079346093548,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S4",
+      "controller": "C3",
+      "awt": 15.66184653596721,
+      "p90_run_mean": 28.267987019239442,
+      "long_wait_percent": 0.4717497814687741,
+      "repaired_minus_original": 0.09481521892316405,
+      "paired_vs_C1": {
+        "mean": 7.166169379346194,
+        "low": 6.501256398785622,
+        "high": 7.831082359906765,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S4",
+      "controller": "C4",
+      "awt": 8.50107166451586,
+      "p90_run_mean": 13.64277430294841,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": 0.10575572519434369,
+      "paired_vs_C1": {
+        "mean": 0.005394507894843326,
+        "low": -0.14555626945314248,
+        "high": 0.15634528524282915,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S4",
+      "controller": "C7",
+      "awt": 10.256478542715945,
+      "p90_run_mean": 21.464602605901717,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.29044802604263503,
+      "paired_vs_C1": {
+        "mean": 1.7608013860949265,
+        "low": 1.3148538270927492,
+        "high": 2.206748945097104,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S5",
+      "controller": "C0",
+      "awt": 8.252209706129964,
+      "p90_run_mean": 14.290085510157592,
+      "long_wait_percent": 0.08403361344537816,
+      "repaired_minus_original": 0.14797337507120362,
+      "paired_vs_C1": {
+        "mean": 2.1417656686036954,
+        "low": 1.3478286959413748,
+        "high": 2.9357026412660163,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S5",
+      "controller": "C1",
+      "awt": 6.1104440375262685,
+      "p90_run_mean": 9.36441242611722,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": 0.1732088394507481,
+      "paired_vs_C1": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S5",
+      "controller": "C2",
+      "awt": 10.329693818597036,
+      "p90_run_mean": 22.65734103797293,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.5651502371508299,
+      "paired_vs_C1": {
+        "mean": 4.219249781070768,
+        "low": 3.6708600591693488,
+        "high": 4.7676395029721865,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S5",
+      "controller": "C3",
+      "awt": 12.566452245434773,
+      "p90_run_mean": 19.55310180812851,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.5722586323046807,
+      "paired_vs_C1": {
+        "mean": 6.456008207908505,
+        "low": 6.045381214035083,
+        "high": 6.866635201781928,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S5",
+      "controller": "C4",
+      "awt": 6.106382644592607,
+      "p90_run_mean": 9.149993343581645,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": 0.10824246516979663,
+      "paired_vs_C1": {
+        "mean": -0.004061392933661256,
+        "low": -0.15242703686011064,
+        "high": 0.14430425099278812,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S5",
+      "controller": "C7",
+      "awt": 10.182393784436048,
+      "p90_run_mean": 22.91246388034863,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.4879904281786377,
+      "paired_vs_C1": {
+        "mean": 4.071949746909779,
+        "low": 3.4124956645125235,
+        "high": 4.731403829307035,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S6",
+      "controller": "C0",
+      "awt": 7.5460803363992515,
+      "p90_run_mean": 14.747364743244848,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": 0.08348106890942368,
+      "paired_vs_C1": {
+        "mean": 2.57893814852731,
+        "low": 1.7434226630490235,
+        "high": 3.4144536340055964,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S6",
+      "controller": "C1",
+      "awt": 4.967142187871942,
+      "p90_run_mean": 8.09731360487387,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": 0.08206336575650956,
+      "paired_vs_C1": {
+        "mean": 0.0,
+        "low": 0.0,
+        "high": 0.0,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S6",
+      "controller": "C2",
+      "awt": 9.09270553254241,
+      "p90_run_mean": 22.658460063579366,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.8263633503241643,
+      "paired_vs_C1": {
+        "mean": 4.125563344670469,
+        "low": 3.17854363156261,
+        "high": 5.072583057778328,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S6",
+      "controller": "C3",
+      "awt": 13.53308235044532,
+      "p90_run_mean": 19.27235251236445,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.9199770543147656,
+      "paired_vs_C1": {
+        "mean": 8.565940162573378,
+        "low": 7.6570815613463346,
+        "high": 9.474798763800422,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S6",
+      "controller": "C4",
+      "awt": 5.011339401413731,
+      "p90_run_mean": 8.068591652899288,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": 0.08425147125305621,
+      "paired_vs_C1": {
+        "mean": 0.04419721354178927,
+        "low": 0.010587477183101358,
+        "high": 0.07780694990047718,
+        "n_seeds": 10
+      }
+    },
+    {
+      "scenario": "S6",
+      "controller": "C7",
+      "awt": 8.95936073134037,
+      "p90_run_mean": 22.654322851891163,
+      "long_wait_percent": 0.0,
+      "repaired_minus_original": -0.8420903141621434,
+      "paired_vs_C1": {
+        "mean": 3.9922185434684287,
+        "low": 3.0012652830810915,
+        "high": 4.9831718038557655,
+        "n_seeds": 10
+      }
+    }
+  ],
+  "anomaly_totals": {
+    "unserved_all": 0,
+    "not_alighted_all": 0,
+    "event_time_violations": 0,
+    "physical_constraint_violations": 0
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "runs": 450,
+  "inputs": 75,
+  "private_traces": 450,
+  "seconds": 681.7125315666199,
+  "protocol_hash": "324a0a40b34de8d4b82cbc2b2aba3d9f24272c32e6a23874aab7aafa99c2c013",
+  "source_unchanged": true,
+  "prior_archive_unchanged": true,
+  "anomaly_totals": {
+    "unserved": 0,
+    "not_alighted": 0,
+    "chain_availability_violations": 0,
+    "late_transfer_lift_count": 0,
+    "event_time_violations": 0,
+    "physical_constraint_violations": 0
+  },
+  "anomalous_runs": 0
+}

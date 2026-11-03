@@ -1,0 +1,18 @@
+{
+  "date": "2026-11-02",
+  "files": {
+    "protocol.json": "6d5edcb29392898c0208022ba508e8f76d3f7a93d92f1e981c5f49a9e64d6c7f",
+    "execution.json": "7a006ccc2eecd678665160d5cca51979ad12aedef75b223c48de9679298e23bb",
+    "raw.json": "03857e5ddc859a8a6b323a32ec09178cbb781ed7c65da6901e182007815d432a",
+    "reused_baselines.json": "94b9c20869cc9573572234ae7e88aa21e343ec318e32ca6c708b4e7d712eacfb",
+    "input_checks.json": "c25ee330bcd75f07868e6c4c925fae1d85f2e7961198a862733266a09eca9090",
+    "summary.json": "a54eeba5be00b63a003a7c9dd5f1431e9bce9e639949499aad506b898dd34d3a",
+    "结果说明.md": "ddaa228bfca29f320798dae98fbb5e71b7a838a12fa12c1afa70705fc795bc33",
+    "background_rate.png": "de1e3de1f20317f6231e09a51e006f2894ebb400b5006dcda2d6c014214d5ccd"
+  },
+  "analysis_scripts": {
+    "report_background_sensitivity.py": "318b0d2269803cd536270f158fd9b1fa0c23171873cea2c33a59b9fbab02781a",
+    "check_all_results.py": "9d780d4e10f432f1ebfb0f0e42af2ca139fcdd0e25ea5b759368ff4e5addc875"
+  },
+  "scope": "Per-run aggregates, layer counts and fingerprints only. Detailed runs and source snapshots remain local."
+}

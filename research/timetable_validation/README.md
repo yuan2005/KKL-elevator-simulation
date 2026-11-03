@@ -1,69 +1,66 @@
-# S1–S6 reproduction and timetable-informed demand experiments
+# S1–S6 and timetable-informed demand experiments
 
-2026-11-01 research extension, based on simulator commit `f6c9ca4af440cff4a258237e1214c8dc0266fb50`. The original simulator and its E0–E3 results are unchanged. This extension was developed with AI assistance; it is a reproducible exploration, not a calibrated model of actual KKL operations.
+Current research status, 2026-11-03. This extension builds on the group's simulator and the user's authorized HKU timetable download, with AI-assisted implementation and analysis.
 
-## What is included
+The [public schedule correction](SCHEDULE_REVISION.md) is complete: 486 new runs restore nine tutorials across the studied weeks. Revised D10 savings versus C1 are 0.1348/0.1223 seconds, below the target; changes from the previous input have intervals crossing zero. Current inventory: 5,736 unique simulations. Public check: `python research/timetable_validation/scripts/check_schedule_results.py`.
 
-- Portable demand and experiment scripts, with nine tests covering demand conservation, overlap exclusion, reproducibility, transfer chains and past-only switching.
-- Published **per-run aggregate metrics**, summaries and original protocol hashes for 1,605 completed simulations: 360 S1–S6 reproductions, 120 single-day comparisons, 675 five-day sensitivity runs, and 225 development + 225 evaluation runs for a switching candidate.
-- A post-hoc diagnosis of the frozen switching candidate, clearly separated from its original evaluation.
+The original-registry repaired-model evaluation gives D10 a **0.1309/0.1522-second mean saving versus C1**, below the original 0.25-second benefit screen. Longer persistence reduces switching without a demonstrated waiting benefit. A background-intensity check also gives no evidence for advancing a revised rule. Keep the original D10 as the research reference while the model owner reviews the motion repair.
 
-No authenticated SIS workbook, classroom-level derived timetable, individual passenger trace, credentials, or personal progress-log draft is included. The historical protocols refer to locally retained inputs by hash. Public result files named `raw.json` contain per-simulation metrics, **not raw timetable or passenger records**.
+The repaired-model [missing-headcount check](HEADCOUNT_SENSITIVITY.md) is complete in mixed development conditions. Absolute waits change with assumed headcounts, while all paired changes in D10−C1 relative to 60% have intervals crossing zero.
 
-## Run checks without timetable access
+The [low-background cross-week headcount check](LOW_HEADCOUNT.md) adds 540 runs: C7 remains better than D10 in all 18 week/fraction/grid intervals. Overall D10 beats C1 by 0.4166–0.5064 seconds but loses to C7 by 0.7057–0.8156 seconds. Keep the distinction between beating a reference baseline and beating the appropriate fixed strategy.
 
-From the repository root, use Python with the packages in the root `requirements.txt`:
+Start with [report handoff](REPORT_HANDOFF.md), [next work](NEXT_STEPS.md), or [validation and archive inventory](VALIDATION.md).
+
+[Semester coverage review](published_results/semester_coverage_v1/结果说明.md) is now complete. Official floor evidence for KKLG110/111 increases selected class meetings from 2,621 to 2,957 in a separately versioned input set. The [90-run revised-input check](ROOM_REVISION.md) is complete: D10−C1 is +0.0085/+0.0185 seconds with both intervals crossing zero. The 810-run cross-week comparison gives D10 mean savings of 0.1376/0.1251 seconds against C1; see the per-grid benefit screens in [the cross-week report](CROSSWEEK.md). [High-floor evidence](HIGH_FLOOR_EVIDENCE.md) documents mixed uses and the remaining parameter gaps.
+
+## Evidence map
+
+| Study | Unique runs | Evidence |
+|---|---:|---|
+| Original-model reproduction, demand experiments and numerical diagnosis | 2,145 | Historical `published_results` batches; [inventory](published_results/archive_inventory_low_headcount_v1.json) |
+| Repaired motion, three grids and three development seeds | 405 | [Combined grid report](published_results/motion_repair_three_seeds_v1/结果说明.md) |
+| Repaired S1–S6, six fixed controls | 360 | [Scenario report](published_results/s1_s6_repaired_v2/结果说明.md) |
+| Frozen D10 under original evaluation conditions | 450 | [Evaluation report](published_results/adaptive_repaired_evaluation_v1/结果说明.md) |
+| Three-confirmation candidate D10P3 | 90 | [Diagnosis and candidate](WINDOW_DIAGNOSIS_AND_PERSISTENCE.md) |
+| Background intensity 6/12/24 intents per five minutes | 180 new + 90 reused | [Sensitivity report](BACKGROUND_SENSITIVITY.md) |
+| Revised KKLG110/111 classroom input | 90 new + 90 reused | [Room revision](ROOM_REVISION.md) |
+| Three teaching weeks, unchanged C1/C7/D10 | 810 | [Cross-week comparison](CROSSWEEK.md) |
+| Missing headcounts at 40/60/80% of capacity, mixed development week | 180 new + 90 reused | [Headcount sensitivity](HEADCOUNT_SENSITIVITY.md) |
+| Missing headcounts in low background across three weeks | 540 new + 270 reused | [Low-background verification](LOW_HEADCOUNT.md) |
+
+Total: **5,250 unique archived runs**, comprising 2,145 original-model and 3,105 repaired-model runs. Diagnostic summaries and reused rows add no runs. Historical failed runs remain in their labelled batches.
+
+## Model and interpretation
+
+The candidate motion model is `dd06745a66eb2c21f3cd2ae6ead75220eb4dbfcc`; later experiments leave its source unchanged. [The repair note](KNOWN_NUMERICAL_ISSUE.md) explains the missed-stop loop and event-time correction. Historical pre-repair research can be reproduced at `419c1b6`.
+
+Original S1–S6 uses LG3–16 placeholder settings. Timetable experiments use six lifts, LG2–16, and partly source-informed demand. Building speed, capacity, floor height, attendance, transfer behaviour and background demand remain assumptions requiring calibration. The timetable spans a semester; completed demand simulations use selected dates and eligible classes. Keep these two experiment families separate.
+
+C1 uses ETA dispatch with distributed parking; C7 uses ETA dispatch with entrance parking and no zoning. D10 switches between them using past request observations. It uses a 300-second history, 60-second decisions, h=0.10, entrance shares 0.70/0.65, a minimum of ten requests, two confirmations and 600-second minimum dwell. Destination availability is an information assumption of this controller. D10P3 changes only the number of confirmations to three and has not been adopted.
+
+## Verify without timetable access
+
+From the repository root, with `requirements.txt` installed:
 
 ```sh
 python -m unittest discover -s research/timetable_validation/scripts -p "test_*.py"
-python research/timetable_validation/scripts/check_published_results.py
-python research/timetable_validation/scripts/reproduce_s1_s6.py
+python -m unittest test_motion
+python experiments.py smoke
+python research/timetable_validation/scripts/check_low_headcount_results.py
 ```
 
-The first two commands check nine behavioral tests and archived result claims. The third actually reruns 360 S1–S6 simulations against the existing `results/e1_raw.csv`; it writes into ignored `local_runs/`, never into `published_results/`. A completed output is protected against accidental overwrite. These checks do not establish real-world calibration.
+The current suite has 34 research tests and five motion tests. The public archive check recalculates aggregate comparisons, intervals, input pairing and experiment decisions. The coverage check reconciles session counts and revised-input provenance. Local passenger-trace checks are documented separately in [VALIDATION.md](VALIDATION.md).
 
-## Timetable experiments with local authorized inputs
+## Reproduce experiments
 
-Point `KKL_DATA_DIR` at a local directory containing `semester1_kkl_dated_candidates.json` and `room_registry.json`. The data contract and provenance are in [DATA.md](DATA.md). These files were generated separately from the user's official source downloads; this package does not currently include the workbook extraction pipeline. Without them, tests and S1–S6 reproduction work, but exact timetable reruns do not.
+Set `KKL_DATA_DIR` to the authorized derived-input directory described in [DATA.md](DATA.md). Exact paired timetable reruns also require the archived detailed run inputs. The workbook extraction pipeline currently remains local; the public package starts from its JSON data contract.
 
-PowerShell example:
+- Repaired grids, S1–S6 and evaluation: [commands and figures](REPAIRED_FOLLOWUP.md).
+- Window diagnosis and persistence candidate: [commands](WINDOW_DIAGNOSIS_AND_PERSISTENCE.md).
+- Background intensity: [commands](BACKGROUND_SENSITIVITY.md).
+- Cross-week comparison: [commands and figure](CROSSWEEK.md).
+- Missing headcounts: [mixed development week](HEADCOUNT_SENSITIVITY.md) and [low-background cross-week check](LOW_HEADCOUNT.md).
+- Minimal motion regression: [command](KNOWN_NUMERICAL_ISSUE.md).
 
-```powershell
-$env:KKL_DATA_DIR = 'C:\path\to\authorized\sis_2026-27'
-$env:KKL_OUTPUT_DIR = 'C:\path\to\new\experiment_outputs'
-python research/timetable_validation/scripts/run_linked_pilot.py
-python research/timetable_validation/scripts/run_multiday.py
-python research/timetable_validation/scripts/run_adaptive.py develop
-python research/timetable_validation/scripts/run_adaptive.py evaluate
-```
-
-Set `KKL_OUTPUT_DIR` to a new directory for each independent repeat. It defaults to this extension's ignored `local_runs/`. Do not point it at published results. Runners use four worker processes. Development writes `frozen_selection.json`; evaluation then loads that selection. These dates have already been analysed, so a rerun is a reproduction, not a new untouched evaluation. Local outputs include classroom and demand details: do not add those outputs to the public repository.
-
-The initial `timetable_demand.py` CLI is retained as the earlier unlinked prototype. The three comparative runners use `linked_demand.py`, whose independently generated through traffic and class-transfer assumptions differ from that prototype. Do not combine their parameters as though they were one model.
-
-## Results and interpretation
-
-| Evaluation background | Fixed C1 | Fixed C7 | Frozen D10 | D10 minus C1 |
-|---|---:|---:|---:|---:|
-| Low floors | 7.600 | 6.463 | 7.135 | −0.464 |
-| Mixed floors | 8.176 | 9.029 | 8.194 | +0.018 |
-| High floors | 8.624 | 10.418 | 8.649 | +0.025 |
-| Equal-weight overall | 8.133 | 8.637 | 7.993 | −0.140 |
-
-Units: seconds of mean waiting, averaged equally over the fixed dates, scenario variants and seeds. The equal weighting is experimental, not a measured frequency of KKL traffic conditions. C1 uses ETA dispatch and distributed parking; C7 uses ETA dispatch and entrance parking. C0 is a code baseline, not verified actual KKL dispatch.
-
-D10 reduced waiting by about 1.72% against development-selected C1, with paired Monte Carlo 95% interval [−0.217, −0.063] seconds. This interval represents random-seed variability under the model, not real-data uncertainty. The candidate did **not** meet the predeclared 0.25-second improvement screen, which was a research convention, not a course or industry standard. The screen is retained after seeing the results. All evaluation service-completion and chain checks passed; the preceding 675-run study recorded five late transfer trips under C0, so not every earlier experiment was free of lateness.
-
-The six original scenarios reproduced 6,120 compared numerical outputs exactly. That is evidence of reproducibility, not evidence that either simulator matches real KKL traffic.
-
-## Scope and limitations
-
-- The original S1–S6 reproduction retains LG3–16 placeholder settings. The timetable studies use six identical cars serving LG2–16, with capacity 16 and rated speed 2.5 m/s. Highest floor, capacity and speed remain assumptions.
-- Source data are the September 2 SIS timetable and October 31 business-school enrolment snapshot. The pipeline has a semester schedule skeleton, but experiments use only eligible classes on selected dates. No whole-semester simulation has been completed.
-- Missing counts use 60% of room capacity, attendance defaults to 80%, and unresolved overlaps/floors are excluded. These choices can alter the policy ranking. Capacity is not enrolment; enrolment is not observed attendance.
-- Transfer links are synthetic cohort assumptions, not inferred student identities or real course-enrolment links. Independent background and through traffic are assumed, not measured.
-- D10 observes past request origins and destinations. This information assumption is stronger than traditional up/down landing calls; no deployment feasibility is established.
-- November 2–6 are simulated future timetable dates at the time of the November 1 study. Adjacent weeks share about 85–94% of selected class signatures, so the date split gives limited independence.
-- Original E2's forecast/map controller and this extension's D10 past-request rule are different methods with different inputs. Their percentage improvements and selected-window metrics are not directly interchangeable.
-
-See [NEXT_STEPS.md](NEXT_STEPS.md) for the decision-log diagnosis and follow-up priorities. Original archived protocol/script hashes are preserved; [port_provenance.json](port_provenance.json) records the path-only changes used to package the scripts. Historical `heldout_not_evaluated_yet` in the frozen selection records its creation-time state; evaluation is now complete.
+Use a fresh output directory for each new experiment. Published `raw.json` files contain per-simulation aggregates. The SIS workbook, classroom-level derivatives and passenger traces stay local; [DATA.md](DATA.md) records source versions and hashes.

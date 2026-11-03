@@ -1,0 +1,18 @@
+{
+  "runs": 180,
+  "reused_baseline_runs": 90,
+  "input_conditions": 45,
+  "seconds": 290.23610734939575,
+  "protocol_hash": "6d5edcb29392898c0208022ba508e8f76d3f7a93d92f1e981c5f49a9e64d6c7f",
+  "source_unchanged": true,
+  "prior_archives_unchanged": true,
+  "anomaly_totals": {
+    "unserved": 0,
+    "not_alighted": 0,
+    "chain_availability_violations": 0,
+    "late_transfer_lift_count": 0,
+    "event_time_violations": 0,
+    "physical_constraint_violations": 0
+  },
+  "anomalous_runs": 0
+}

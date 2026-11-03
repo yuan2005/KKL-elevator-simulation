@@ -1,0 +1,452 @@
+[
+  {
+    "date": "2026-11-02",
+    "variant": "low",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "low",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "low",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "low",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "low",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "mixed",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "mixed",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "mixed",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "mixed",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "mixed",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "high",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "high",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "high",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "high",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-02",
+    "variant": "high",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "low",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "low",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "low",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "low",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "low",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "mixed",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "mixed",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "mixed",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "mixed",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "mixed",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "high",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "high",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "high",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "high",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "low",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-03",
+    "variant": "high",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "low",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "low",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "low",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "low",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "mixed",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "mixed",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "mixed",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "mixed",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "mixed",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "high",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "high",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "high",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "high",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "low",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-04",
+    "variant": "high",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "low",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "low",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "low",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "low",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "mixed",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "mixed",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "mixed",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "mixed",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "mixed",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "high",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "high",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "high",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "high",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-05",
+    "variant": "high",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "low",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "low",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "low",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "low",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "low",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "mixed",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "mixed",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "mixed",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "mixed",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "mixed",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "high",
+    "seed": 5000,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "high",
+    "seed": 5001,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "high",
+    "seed": 5002,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "high",
+    "seed": 5003,
+    "same_original_inputs_audits_decisions": true
+  },
+  {
+    "date": "2026-11-06",
+    "variant": "high",
+    "seed": 5004,
+    "same_original_inputs_audits_decisions": true
+  }
+]

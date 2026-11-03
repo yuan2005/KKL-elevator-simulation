@@ -1,0 +1,55 @@
+{
+  "note": "Experiment ran on Windows with checkout CRLF in existing root model files. Git stores LF. Only newline conversion separates these source bytes; protocol and result bytes remain unchanged. No algorithms were edited after the run.",
+  "sources": {
+    "building.py": {
+      "experiment_sha256": "33576ec6cd0c997e3247d9eebc71df73aa282707253b68f35493c3274da3c88a",
+      "git_blob_sha256": "0b991423fa12e62b04d022d9d352670244376b004719f5b1187a0bffed5997c4",
+      "lf_normalized_sha256": "0b991423fa12e62b04d022d9d352670244376b004719f5b1187a0bffed5997c4"
+    },
+    "config.py": {
+      "experiment_sha256": "a82e82dab37c15d073c1603d75d5e029515136120abd720ae7e2740d5b42c367",
+      "git_blob_sha256": "a62b5dd3fbaf4adcf09c91e32d498208c4643f2746e97ef966c21eafe54c6b54",
+      "lf_normalized_sha256": "a62b5dd3fbaf4adcf09c91e32d498208c4643f2746e97ef966c21eafe54c6b54"
+    },
+    "controllers.py": {
+      "experiment_sha256": "ff2aa72e10467d9183d3d446a70175abca25ea3e7cc52b2d36930c2c75fc81d7",
+      "git_blob_sha256": "fd1a8c3b2ee68d7888d41a4e217e494d600c7effa4d15ba99b4ebf43a68c3b61",
+      "lf_normalized_sha256": "fd1a8c3b2ee68d7888d41a4e217e494d600c7effa4d15ba99b4ebf43a68c3b61"
+    },
+    "experiments.py": {
+      "experiment_sha256": "7c44beeac6fd081ee0cd164d5a21b2c0420e47300a7109739deaecd151c2897f",
+      "git_blob_sha256": "7dd752a419f3d2dcafe596b97a26b76af3a401208c0971e76ca29810cdc9a958",
+      "lf_normalized_sha256": "7dd752a419f3d2dcafe596b97a26b76af3a401208c0971e76ca29810cdc9a958"
+    },
+    "metrics.py": {
+      "experiment_sha256": "9cd1282737b8dbdc69809a4e2cc2ba41513984631051995bea49e5580fdacad2",
+      "git_blob_sha256": "87e9d5e8286058ff3dbf57dc9a1044b0ded0dc04c27a4968f542e368b6b4658d",
+      "lf_normalized_sha256": "87e9d5e8286058ff3dbf57dc9a1044b0ded0dc04c27a4968f542e368b6b4658d"
+    },
+    "plots.py": {
+      "experiment_sha256": "692204be9b5fa95005210edb390f3277ff37f3aa424efd91795d2190dd7b769a",
+      "git_blob_sha256": "6be2633ea2f6e12c2c1e777f520998a6c7ce0e72881acf68e2565c884ee70bd7",
+      "lf_normalized_sha256": "6be2633ea2f6e12c2c1e777f520998a6c7ce0e72881acf68e2565c884ee70bd7"
+    },
+    "sim.py": {
+      "experiment_sha256": "d7d85c3a5a5cb7aab9a266118f06314a86bc1b88e5561f7fd44524c5df996644",
+      "git_blob_sha256": "6f5ddea43e8499c9c8f8020a4de6c3c915f41ad4070184792c2b2e74ad75737a",
+      "lf_normalized_sha256": "6f5ddea43e8499c9c8f8020a4de6c3c915f41ad4070184792c2b2e74ad75737a"
+    },
+    "strategies.py": {
+      "experiment_sha256": "3eba566684f8597959b84f2b63f3990909214af9ee780cb07ed5aaa4dc96bb63",
+      "git_blob_sha256": "138a686ad416978c24aa3da4c04dcbd2fd6ea4e28f21915e72498da7e05cae6c",
+      "lf_normalized_sha256": "138a686ad416978c24aa3da4c04dcbd2fd6ea4e28f21915e72498da7e05cae6c"
+    },
+    "test_motion.py": {
+      "experiment_sha256": "c6c0b0c4110da2152602299a929ec750aeaf850b6d3e34de63372144935f6db4",
+      "git_blob_sha256": "c6c0b0c4110da2152602299a929ec750aeaf850b6d3e34de63372144935f6db4",
+      "lf_normalized_sha256": "c6c0b0c4110da2152602299a929ec750aeaf850b6d3e34de63372144935f6db4"
+    },
+    "traffic.py": {
+      "experiment_sha256": "4f2976ab30af0b9d206615159d4a14e8c6bdb3760735fcd16319130d25b0abcd",
+      "git_blob_sha256": "f4fe33a4386d568c86a8ceebafc61dff47c985154dc8a2cfbe1c049fad626216",
+      "lf_normalized_sha256": "f4fe33a4386d568c86a8ceebafc61dff47c985154dc8a2cfbe1c049fad626216"
+    }
+  }
+}

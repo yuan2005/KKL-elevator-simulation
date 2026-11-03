@@ -1,0 +1,86 @@
+{
+  "case": "Single C0 car: LG2 to LG1, 3.6 m, passenger at t=0, 10 s generation horizon plus original 900 s drain",
+  "original_source_edited": false,
+  "results": [
+    {
+      "dt": 0.25,
+      "board": 3.2,
+      "alight": 12.95,
+      "simulation_stop": 10.25,
+      "remaining_load": 0,
+      "target_drops": []
+    },
+    {
+      "dt": 0.125,
+      "board": 3.2,
+      "alight": 13.2,
+      "simulation_stop": 10.125,
+      "remaining_load": 0,
+      "target_drops": []
+    },
+    {
+      "dt": 0.0625,
+      "board": 3.2,
+      "alight": null,
+      "simulation_stop": 910.0,
+      "remaining_load": 1,
+      "target_drops": [
+        {
+          "t": 8.1875,
+          "x": 1.876953125,
+          "v": 1.9375,
+          "direction": 1,
+          "old_target": 1,
+          "new_target": null,
+          "remaining": 1.723046875,
+          "stopping_distance": 1.876953125,
+          "can_stop": false
+        },
+        {
+          "t": 13.625,
+          "x": 5.323046875,
+          "v": 1.9375,
+          "direction": -1,
+          "old_target": 1,
+          "new_target": null,
+          "remaining": 1.723046875,
+          "stopping_distance": 1.876953125,
+          "can_stop": false
+        },
+        {
+          "t": 19.0625,
+          "x": 1.876953125,
+          "v": 1.9375,
+          "direction": 1,
+          "old_target": 1,
+          "new_target": null,
+          "remaining": 1.723046875,
+          "stopping_distance": 1.876953125,
+          "can_stop": false
+        },
+        {
+          "t": 24.5,
+          "x": 5.323046875,
+          "v": 1.9375,
+          "direction": -1,
+          "old_target": 1,
+          "new_target": null,
+          "remaining": 1.723046875,
+          "stopping_distance": 1.876953125,
+          "can_stop": false
+        },
+        {
+          "t": 29.9375,
+          "x": 1.876953125,
+          "v": 1.9375,
+          "direction": 1,
+          "old_target": 1,
+          "new_target": null,
+          "remaining": 1.723046875,
+          "stopping_distance": 1.876953125,
+          "can_stop": false
+        }
+      ]
+    }
+  ]
+}

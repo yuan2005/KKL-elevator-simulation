@@ -1,0 +1,10 @@
+{
+  "status": "aborted_before_any_result_was_saved",
+  "reason": "New archival helper did not convert a numpy.int64 metric to a JSON scalar. The first result write raised TypeError.",
+  "completed_archived_runs": 0,
+  "simulation_tasks_may_have_executed": true,
+  "interpretation": "Output serialization defect, not evidence of a simulator physical failure. Do not count this attempt as completed validated simulations.",
+  "next_attempt": "s1_s6_repaired_v2",
+  "model_source_change": false,
+  "remedy": "Convert numpy scalar values without changing numbers; add a regression test and preserve this frozen attempt."
+}

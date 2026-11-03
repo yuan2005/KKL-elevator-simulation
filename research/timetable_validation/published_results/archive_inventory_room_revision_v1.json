@@ -1,0 +1,89 @@
+{
+  "as_of": "2026-11-02",
+  "unique_runs": 3720,
+  "batches": [
+    {
+      "path": "s1_s6_original_2026-11-01/raw.json",
+      "runs": 360,
+      "model": "original"
+    },
+    {
+      "path": "linked_pilot_2026-10-26_v1/raw.json",
+      "runs": 120,
+      "model": "original"
+    },
+    {
+      "path": "multiday_2026-10-26_30_v1/raw.json",
+      "runs": 675,
+      "model": "original"
+    },
+    {
+      "path": "adaptive_v1/develop/raw.json",
+      "runs": 225,
+      "model": "original"
+    },
+    {
+      "path": "adaptive_v1/evaluate/raw.json",
+      "runs": 225,
+      "model": "original"
+    },
+    {
+      "path": "headcount_sensitivity_v1/raw.json",
+      "runs": 135,
+      "model": "original"
+    },
+    {
+      "path": "timestep_sensitivity_v1/raw.json",
+      "runs": 270,
+      "model": "original"
+    },
+    {
+      "path": "timestep_third_grid_v2/raw.json",
+      "runs": 135,
+      "model": "original"
+    },
+    {
+      "path": "motion_repair_v1/raw.json",
+      "runs": 135,
+      "model": "repaired"
+    },
+    {
+      "path": "motion_repair_extra_seeds_v1/raw.json",
+      "runs": 270,
+      "model": "repaired"
+    },
+    {
+      "path": "s1_s6_repaired_v2/raw.json",
+      "runs": 360,
+      "model": "repaired"
+    },
+    {
+      "path": "adaptive_repaired_evaluation_v1/raw.json",
+      "runs": 450,
+      "model": "repaired"
+    },
+    {
+      "path": "persistence_three_develop_v1/raw.json",
+      "runs": 90,
+      "model": "repaired"
+    },
+    {
+      "path": "background_rate_repaired_v1/raw.json",
+      "runs": 180,
+      "model": "repaired"
+    },
+    {
+      "path": "room_revision_repaired_v1/raw.json",
+      "runs": 90,
+      "model": "repaired"
+    }
+  ],
+  "excluded_from_count": [
+    "reused_baselines.json",
+    "motion_repair_three_seeds_v1 combined analysis",
+    "repaired_window_diagnosis_v1/v2 analyses",
+    "s1_s6_repaired_v1 incomplete archival attempt"
+  ],
+  "interpretation": "Counts archived simulation runs, including labelled historical failure runs; not a count of successful policy evaluations.",
+  "milestone": "room_revision_repaired_v1"
+}

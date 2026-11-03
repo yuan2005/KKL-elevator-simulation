@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-11-01T04:56:30.244715+00:00",
+  "status": "predeclared_exploratory_sensitivity",
+  "dates": [
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
+  ],
+  "seeds": [
+    6000,
+    6001,
+    6002
+  ],
+  "fractions": [
+    0.4,
+    0.6,
+    0.8
+  ],
+  "controllers": [
+    "C1",
+    "C7",
+    "D10"
+  ],
+  "inputs": 45,
+  "runs": 135,
+  "changed": "Only missing headcounts among already eligible sessions: round(capacity * fraction)",
+  "fixed": {
+    "transfer_fraction": 0.2,
+    "high_share": 0.5,
+    "attendance": 0.8,
+    "background_rate": 12,
+    "through_rate": 6,
+    "top": 16,
+    "background_variant": "mixed",
+    "d10_threshold": 0.1,
+    "timestep_seconds": 0.25
+  },
+  "comparison": "Identical generated passengers across controls within each date/fraction/seed; common seeds across fractions, different demand allowed",
+  "primary": "Equal-date/seed mean AWT; paired D10-C1 and C7-C1",
+  "secondary": [
+    "P90 per-run mean",
+    "LWT >60s percent",
+    "G and non-G AWT",
+    "unserved",
+    "incomplete",
+    "chain conflicts",
+    "late transfers",
+    "switches"
+  ],
+  "uncertainty": "Three seed-level mean paired differences across five fixed dates; t interval is Monte Carlo uncertainty only",
+  "decision": "No retuning or replacement of prior held-out success screen; report ranking and sign stability, including failures",
+  "scope": "Known explored dates, one fixed mixed-background setting; not low/high robustness, missing-class recovery, or real-world calibration",
+  "source_hashes": {
+    "building.py": "9e54af2466fed09c5146cef210e7385aa19a43b7df8c3f641daa5ce7fbc9ff47",
+    "config.py": "a82e82dab37c15d073c1603d75d5e029515136120abd720ae7e2740d5b42c367",
+    "controllers.py": "ff2aa72e10467d9183d3d446a70175abca25ea3e7cc52b2d36930c2c75fc81d7",
+    "experiments.py": "7c44beeac6fd081ee0cd164d5a21b2c0420e47300a7109739deaecd151c2897f",
+    "metrics.py": "9cd1282737b8dbdc69809a4e2cc2ba41513984631051995bea49e5580fdacad2",
+    "plots.py": "692204be9b5fa95005210edb390f3277ff37f3aa424efd91795d2190dd7b769a",
+    "sim.py": "84db73ed92aa13efa905c614b913b8a5967b35ba192b236a7c183f5d7b1a5f96",
+    "strategies.py": "3eba566684f8597959b84f2b63f3990909214af9ee780cb07ed5aaa4dc96bb63",
+    "traffic.py": "4f2976ab30af0b9d206615159d4a14e8c6bdb3760735fcd16319130d25b0abcd"
+  },
+  "data_hashes": {
+    "semester1_kkl_dated_candidates.json": "cb4ae32dd1583624c157db479efc668014f13698d94986e1cec3ab88bff97c6d",
+    "room_registry.json": "fde5957f9802b0fa5c69ae03bc10b026cdff1aceca95c3f1346f44c429261a5d"
+  },
+  "script_hashes": {
+    "run_headcount_sensitivity.py": "81507879a9f7172598b3f956ed37ad9c277f5f3e5ceaf8544d7cccebb7295d26",
+    "run_adaptive.py": "d051390913221a9eb2882a0f0e74c37778fac82b29e54104a3751d95350facdd",
+    "run_linked_pilot.py": "1d2cae84d70dd6e2a0c5dc4f6814e4f64c8196ac2fe8e5b08cc3f6f057ee5c2e",
+    "timetable_demand.py": "8a4f4bd3cc9fadfcf706df9d40194460fc9ffb4f8fb7ca97fcb030bfe1e09339",
+    "linked_demand.py": "aeac79f1a96a1fd0704ef45bbd52cae4d2979243bd3ec67185ef0fa5adcd8d78",
+    "adaptive_policy.py": "d0aeb0e3c792329857cd9cf938ec194851733952c1a7f8912b30709c1583eeb2",
+    "study_paths.py": "575b87fde90f25a91706ee6820c55248c5ac9a0181c9da14be7f67545930a7ad"
+  }
+}
