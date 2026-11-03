@@ -1,6 +1,8 @@
 # S1–S6 and timetable-informed demand experiments
 
-Current research status, 2026-11-02. This extension builds on the group's simulator and the user's authorized HKU timetable download, with AI-assisted implementation and analysis.
+Current research status, 2026-11-03. This extension builds on the group's simulator and the user's authorized HKU timetable download, with AI-assisted implementation and analysis.
+
+The [public schedule review](PUBLIC_SCHEDULE_REVIEW.md) identifies 30 excluded AILT9018 tutorials whose subclass dates are actually disjoint. A paired input correction is prepared for nine affected study dates; no new simulation results are claimed.
 
 The original-registry repaired-model evaluation gives D10 a **0.1309/0.1522-second mean saving versus C1**, below the original 0.25-second benefit screen. Longer persistence reduces switching without a demonstrated waiting benefit. A background-intensity check also gives no evidence for advancing a revised rule. Keep the original D10 as the research reference while the model owner reviews the motion repair.
 

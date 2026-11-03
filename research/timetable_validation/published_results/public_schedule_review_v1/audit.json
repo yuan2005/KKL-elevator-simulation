@@ -1,0 +1,53 @@
+{
+  "source_url": "https://ailt9018.engg.hku.hk/#/schedule",
+  "asset_url": "https://ailt9018.engg.hku.hk/assets/index-CKywM8pk.js",
+  "access_date": "2026-11-03",
+  "source_sha256": "f0e065668f88fa7159f9a844cf6025ed385eead8d34d2d0e317f56d801555828",
+  "input_hashes": {
+    "semester1_kkl_dated_candidates.json": "cb4ae32dd1583624c157db479efc668014f13698d94986e1cec3ab88bff97c6d",
+    "room_registry.json": "cdd14fc492a1a3d70533d1a21f3f393182681c76552fdab1dc311d9d9493fe5b"
+  },
+  "summary": {
+    "public_kkl_tutorials": 30,
+    "already_selected": 0,
+    "crossweek_public_kkl_tutorials": 9,
+    "known_headcount": 0,
+    "exclusion_reasons": {
+      "unresolved_shared_room": 30
+    }
+  },
+  "paired_input_preparation": {
+    "status": "prepared_not_simulated",
+    "affected_dates": [
+      "2026-09-22",
+      "2026-09-23",
+      "2026-09-24",
+      "2026-10-06",
+      "2026-10-07",
+      "2026-10-08",
+      "2026-11-17",
+      "2026-11-18",
+      "2026-11-19"
+    ],
+    "checks": 81,
+    "stable_ids": "Use original merged-session identity for retained and restored sessions",
+    "all_baseline_hashes_match": true,
+    "retained_attendance_matches": true,
+    "background_and_through_match": true,
+    "planned_new_simulations": 486,
+    "reusable_affected_baselines": 486
+  },
+  "filter_audit": {
+    "status": "In-memory audit only; no input files or simulations changed",
+    "before_candidate_rows": 3792,
+    "after_candidate_rows": 3752,
+    "before_selected": 2957,
+    "after_selected": 2987,
+    "unchanged_sessions_with_renumbered_ids": 921,
+    "removed_selected_meetings": 0
+  },
+  "local_audit_script_sha256": "99a05d1ec1f8375455edeb0b3c4b0b6737beb996f70f53de27c60209b8578810",
+  "paired_checks_sha256": "58c21ad31a38ea53eb31a0e847f39619f69a76240389e968deb46b3163da67fe",
+  "private_prepared_coverage_sha256": "43b6bb0cf5c77b9cc511614582ba6d721b8a7e0c72ba6f9099f2cf3a0e7c6357",
+  "new_simulations_run": 0
+}
