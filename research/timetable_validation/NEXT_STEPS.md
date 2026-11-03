@@ -4,13 +4,15 @@ Updated 2026-11-03. Three-grid validation, S1–S6 fixed controls, frozen D10 re
 
 ## 1. Finish the model review and Interim Log
 
+The [486-run tutorial-date correction](SCHEDULE_REVISION.md) is now complete. Savings versus C1 remain below target at 0.1348/0.1223 seconds. Prioritize source-dated headcounts and model review; the preparation below is retained to explain this completed intervention.
+
 The model owner should review the phase integration in `building.py` and arrival/boarding/alighting/dwell timing in `sim.py`, using the short-trip regression and five motion tests. If review changes model behaviour, record a new version and repeat the affected validation and paired comparisons. Otherwise, retain the current results.
 
 For the November 4 Interim Log, use the repaired-model figures and explain the contribution: timetable-based demand construction, reproducibility checks, numerical fault diagnosis, and evaluation of fixed/dynamic policies. The present conclusion is that the tested dynamic rule's mean benefit is below the original target.
 
 ## 2. Resolve the inputs that would change the experiment
 
-The [public schedule audit](PUBLIC_SCHEDULE_REVIEW.md) now supplies a specific next intervention: AILT9018's paired subclasses use disjoint tutorial dates. Thirty currently excluded KKL meetings can be recovered under the current capacity assumption; nine affect the existing cross-week dates. Prepare the fixed-rule schedule correction comparison described there, preserving original session identities to avoid unrelated changes in random draws. The 486 proposed simulations have not been run; existing results remain the reference.
+The [public schedule audit](PUBLIC_SCHEDULE_REVIEW.md) now supplies a specific next intervention: AILT9018's paired subclasses use disjoint tutorial dates. Thirty currently excluded KKL meetings can be recovered under the current capacity assumption; nine affect the existing cross-week dates. Prepare the fixed-rule schedule correction comparison described there, preserving original session identities to avoid unrelated changes in random draws. The 486 simulations are complete; see SCHEDULE_REVISION.md for results.
 
 Prepare an evidence table for the six lifts' served floors, capacity, speed and door timing; for headcount coverage; and for background/through-traffic rates. Each row needs a source date, units and an explicit link to the parameter it supports. Seek available official building/lift specifications, published measurements or enrolment records first. A timetable constrains class times; it does not identify lift use or unrelated background traffic.
 

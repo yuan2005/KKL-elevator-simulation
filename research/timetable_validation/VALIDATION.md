@@ -36,3 +36,7 @@ Protocols freeze source and script hashes before execution. Public JSON preserve
 Exact timetable reruns require the authorized derived inputs and detailed archived pairing inputs described in [DATA.md](DATA.md). Public checks recompute the released aggregate evidence; they do not reopen private passenger traces. [The repaired follow-up](REPAIRED_FOLLOWUP.md) gives the local trace-check commands.
 
 Source calibration and model-owner review are the remaining evidence tasks. Numerical checks establish consistency of this implementation; the empirical adequacy of the KKL assumptions needs building and demand data.
+
+## Latest schedule correction
+
+Run `python research/timetable_validation/scripts/check_schedule_results.py`. This verifies 486 new simulations and exact reuse, taking the inventory to 5,736 (2,145 original and 3,591 repaired). Tests: 36 research plus 5 motion. The preceding counts describe historical milestones.

@@ -1,6 +1,6 @@
 # Public schedule evidence and the next input check
 
-Updated 2026-11-03. This is an input audit and preparation for an experiment; no additional elevator simulations have been run.
+Updated 2026-11-03. The input audit below records the preparation. The 486-run experiment is now complete; see [date-correction results](SCHEDULE_REVISION.md). Prepared audit hashes remain unchanged as provenance.
 
 ## AILT9018 uses distinct dates for the paired subclasses
 
@@ -18,7 +18,7 @@ The prepared comparison retains original merged-session identities and the origi
 
 The proposed experiment covers the nine affected dates, three existing seeds, three background variants, C1/C7/D10 and both existing time steps: **486 new simulations**, compared with the matching **486 archived baseline rows**. The other six dates' 324 rows can be reused to reconstruct a complete 15-date revised comparison. Freeze the model, D10 thresholds and the 60%-of-capacity missing-headcount assumption. Report changes in D10−C1 and D10−C7, all background/week groups, waiting distributions and service/physical checks. This evaluates a schedule correction; it is not new threshold selection.
 
-The experiment is **prepared, not run**. Existing results and their source snapshots remain unchanged, and the archived simulation count remains 5,250. The November 23–27 reserve has not been simulated.
+The experiment was prepared at the 5,250-run milestone and subsequently completed in a separate batch. Existing results and their source snapshots remain unchanged. The November 23–27 reserve has not been simulated.
 
 ## Other review items
 

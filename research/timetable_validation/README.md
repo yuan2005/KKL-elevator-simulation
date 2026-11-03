@@ -2,7 +2,7 @@
 
 Current research status, 2026-11-03. This extension builds on the group's simulator and the user's authorized HKU timetable download, with AI-assisted implementation and analysis.
 
-The [public schedule review](PUBLIC_SCHEDULE_REVIEW.md) identifies 30 excluded AILT9018 tutorials whose subclass dates are actually disjoint. A paired input correction is prepared for nine affected study dates; no new simulation results are claimed.
+The [public schedule correction](SCHEDULE_REVISION.md) is complete: 486 new runs restore nine tutorials across the studied weeks. Revised D10 savings versus C1 are 0.1348/0.1223 seconds, below the target; changes from the previous input have intervals crossing zero. Current inventory: 5,736 unique simulations. Public check: `python research/timetable_validation/scripts/check_schedule_results.py`.
 
 The original-registry repaired-model evaluation gives D10 a **0.1309/0.1522-second mean saving versus C1**, below the original 0.25-second benefit screen. Longer persistence reduces switching without a demonstrated waiting benefit. A background-intensity check also gives no evidence for advancing a revised rule. Keep the original D10 as the research reference while the model owner reviews the motion repair.
 

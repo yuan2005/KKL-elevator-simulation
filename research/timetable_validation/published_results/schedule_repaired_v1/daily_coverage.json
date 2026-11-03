@@ -1,0 +1,197 @@
+[
+  {
+    "date": "2026-09-21",
+    "week": "early",
+    "old_selected": 51,
+    "new_selected": 51,
+    "added_sessions": 0,
+    "old_assumed": 26,
+    "new_assumed": 26,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-09-22",
+    "week": "early",
+    "old_selected": 55,
+    "new_selected": 56,
+    "added_sessions": 1,
+    "old_assumed": 27,
+    "new_assumed": 28,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-09-23",
+    "week": "early",
+    "old_selected": 40,
+    "new_selected": 41,
+    "added_sessions": 1,
+    "old_assumed": 31,
+    "new_assumed": 32,
+    "window": [
+      31500,
+      81300
+    ]
+  },
+  {
+    "date": "2026-09-24",
+    "week": "early",
+    "old_selected": 58,
+    "new_selected": 59,
+    "added_sessions": 1,
+    "old_assumed": 30,
+    "new_assumed": 31,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-09-25",
+    "week": "early",
+    "old_selected": 46,
+    "new_selected": 46,
+    "added_sessions": 0,
+    "old_assumed": 27,
+    "new_assumed": 27,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-05",
+    "week": "middle",
+    "old_selected": 51,
+    "new_selected": 51,
+    "added_sessions": 0,
+    "old_assumed": 26,
+    "new_assumed": 26,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-06",
+    "week": "middle",
+    "old_selected": 56,
+    "new_selected": 57,
+    "added_sessions": 1,
+    "old_assumed": 28,
+    "new_assumed": 29,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-07",
+    "week": "middle",
+    "old_selected": 42,
+    "new_selected": 43,
+    "added_sessions": 1,
+    "old_assumed": 33,
+    "new_assumed": 34,
+    "window": [
+      31500,
+      81300
+    ]
+  },
+  {
+    "date": "2026-10-08",
+    "week": "middle",
+    "old_selected": 58,
+    "new_selected": 59,
+    "added_sessions": 1,
+    "old_assumed": 30,
+    "new_assumed": 31,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-10-09",
+    "week": "middle",
+    "old_selected": 45,
+    "new_selected": 45,
+    "added_sessions": 0,
+    "old_assumed": 26,
+    "new_assumed": 26,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-11-16",
+    "week": "late",
+    "old_selected": 48,
+    "new_selected": 48,
+    "added_sessions": 0,
+    "old_assumed": 23,
+    "new_assumed": 23,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-11-17",
+    "week": "late",
+    "old_selected": 54,
+    "new_selected": 55,
+    "added_sessions": 1,
+    "old_assumed": 26,
+    "new_assumed": 27,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-11-18",
+    "week": "late",
+    "old_selected": 39,
+    "new_selected": 40,
+    "added_sessions": 1,
+    "old_assumed": 30,
+    "new_assumed": 31,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-11-19",
+    "week": "late",
+    "old_selected": 58,
+    "new_selected": 59,
+    "added_sessions": 1,
+    "old_assumed": 30,
+    "new_assumed": 31,
+    "window": [
+      31500,
+      79500
+    ]
+  },
+  {
+    "date": "2026-11-20",
+    "week": "late",
+    "old_selected": 47,
+    "new_selected": 47,
+    "added_sessions": 0,
+    "old_assumed": 28,
+    "new_assumed": 28,
+    "window": [
+      31500,
+      79500
+    ]
+  }
+]
