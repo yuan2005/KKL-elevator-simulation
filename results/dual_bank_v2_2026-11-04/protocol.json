@@ -1,0 +1,1202 @@
+{
+  "version": 2,
+  "created_at": "2026-11-04T02:05:52.913089+00:00",
+  "model_revision": "First dual-bank attempt superseded, not completed: full cars could reopen indefinitely for same-floor repressed calls. Corrected local departure guard, with latches retained. Rerun ALL phases; no old raw outputs or selections reused. Original8541001/8541004 failures are regression cases, not confirmation data. Statistical design unchanged.",
+  "banks": {
+    "0": [
+      0,
+      1,
+      2
+    ],
+    "1": [
+      3,
+      4,
+      5
+    ]
+  },
+  "semantics": "Every physical arrival presses both banks. No cross-bank cancellation or queue/OD observation. Own opening clears own direction latch; remaining passengers re-press. Unique shared physical FIFO queue, car-id tie break.",
+  "settings": {
+    "pickup_uniform_b0": {
+      "dispatch": "pickup",
+      "parking": "uniform",
+      "bypass": false
+    },
+    "pickup_uniform_b1": {
+      "dispatch": "pickup",
+      "parking": "uniform",
+      "bypass": true
+    },
+    "pickup_demand_b0": {
+      "dispatch": "pickup",
+      "parking": "demand",
+      "bypass": false
+    },
+    "pickup_demand_b1": {
+      "dispatch": "pickup",
+      "parking": "demand",
+      "bypass": true
+    },
+    "marginal_uniform_b0": {
+      "dispatch": "marginal",
+      "parking": "uniform",
+      "bypass": false
+    },
+    "marginal_uniform_b1": {
+      "dispatch": "marginal",
+      "parking": "uniform",
+      "bypass": true
+    },
+    "marginal_demand_b0": {
+      "dispatch": "marginal",
+      "parking": "demand",
+      "bypass": false
+    },
+    "marginal_demand_b1": {
+      "dispatch": "marginal",
+      "parking": "demand",
+      "bypass": true
+    }
+  },
+  "levels": [
+    "low",
+    "medium",
+    "high"
+  ],
+  "regimes": [
+    "S1",
+    "S2",
+    "S3",
+    "S5",
+    "S6",
+    "lunch_S3",
+    "lunch_S5"
+  ],
+  "plans": {
+    "low": {
+      "clock": "Seconds from midnight; 00:00=0. Not the original 08:00-relative clock.",
+      "generation_end": 86400.0,
+      "level": "low",
+      "load_multiplier": 0.5,
+      "lessons": [
+        {
+          "start_minute": 540,
+          "end_minute": 590
+        },
+        {
+          "start_minute": 600,
+          "end_minute": 650
+        },
+        {
+          "start_minute": 660,
+          "end_minute": 710
+        },
+        {
+          "start_minute": 720,
+          "end_minute": 770
+        },
+        {
+          "start_minute": 780,
+          "end_minute": 830
+        },
+        {
+          "start_minute": 840,
+          "end_minute": 890
+        },
+        {
+          "start_minute": 900,
+          "end_minute": 950
+        },
+        {
+          "start_minute": 960,
+          "end_minute": 1010
+        },
+        {
+          "start_minute": 1020,
+          "end_minute": 1070
+        },
+        {
+          "start_minute": 1080,
+          "end_minute": 1130
+        }
+      ],
+      "class_arrival_margin_minutes": 3,
+      "class_volume_normalization": "Preserve each former10min class wave's expected volume; multiply its lam5 by10/16 over the expanded16min window.",
+      "lunch": {
+        "start_minute": 690,
+        "end_minute": 810,
+        "entrance_weights": {
+          "LG2": 0.6,
+          "G": 0.4
+        }
+      },
+      "other_entrance_weights": {
+        "LG2": 0.4,
+        "G": 0.6
+      },
+      "pre_stairs_lam5": {
+        "S1": 70.0,
+        "S2": 80.0,
+        "S3": 90.0,
+        "S5": 15.0,
+        "S6": 3.0,
+        "lunch_extra": 120.0
+      },
+      "split": {
+        "S1": [
+          0.8,
+          0.05,
+          0.15
+        ],
+        "S2": [
+          0.05,
+          0.85,
+          0.1
+        ],
+        "S3": [
+          0.35,
+          0.35,
+          0.3
+        ],
+        "S5": [
+          0.3,
+          0.3,
+          0.4
+        ],
+        "S6": [
+          0.45,
+          0.45,
+          0.1
+        ],
+        "lunch_extra": [
+          0.25,
+          0.55,
+          0.2
+        ]
+      },
+      "batch_mean": {
+        "S1": 1.3,
+        "S2": 1.6,
+        "S3": 1.5,
+        "S5": 1.2,
+        "S6": 1.1,
+        "lunch_extra": 2.0
+      },
+      "actual_uncertainty": {
+        "daily_rate_multiplier": [
+          0.85,
+          1.15
+        ],
+        "component_rate_multiplier": [
+          0.9,
+          1.1
+        ],
+        "class_peak_shift_seconds": [
+          -60.0,
+          60.0
+        ]
+      },
+      "segments": [
+        {
+          "start_minute": 0,
+          "end_minute": 450,
+          "regime": "S6",
+          "lunch": false,
+          "base_lam5": 1.5,
+          "total_lam5": 1.5
+        },
+        {
+          "start_minute": 450,
+          "end_minute": 527,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 527,
+          "end_minute": 543,
+          "regime": "S1",
+          "lunch": false,
+          "base_lam5": 21.875,
+          "total_lam5": 21.875
+        },
+        {
+          "start_minute": 543,
+          "end_minute": 587,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 587,
+          "end_minute": 603,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 28.125,
+          "total_lam5": 28.125
+        },
+        {
+          "start_minute": 603,
+          "end_minute": 647,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 647,
+          "end_minute": 663,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 28.125,
+          "total_lam5": 28.125
+        },
+        {
+          "start_minute": 663,
+          "end_minute": 690,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 690,
+          "end_minute": 707,
+          "regime": "S5",
+          "lunch": true,
+          "base_lam5": 7.5,
+          "total_lam5": 67.5
+        },
+        {
+          "start_minute": 707,
+          "end_minute": 723,
+          "regime": "S3",
+          "lunch": true,
+          "base_lam5": 28.125,
+          "total_lam5": 88.125
+        },
+        {
+          "start_minute": 723,
+          "end_minute": 767,
+          "regime": "S5",
+          "lunch": true,
+          "base_lam5": 7.5,
+          "total_lam5": 67.5
+        },
+        {
+          "start_minute": 767,
+          "end_minute": 783,
+          "regime": "S3",
+          "lunch": true,
+          "base_lam5": 28.125,
+          "total_lam5": 88.125
+        },
+        {
+          "start_minute": 783,
+          "end_minute": 810,
+          "regime": "S5",
+          "lunch": true,
+          "base_lam5": 7.5,
+          "total_lam5": 67.5
+        },
+        {
+          "start_minute": 810,
+          "end_minute": 827,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 827,
+          "end_minute": 843,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 28.125,
+          "total_lam5": 28.125
+        },
+        {
+          "start_minute": 843,
+          "end_minute": 887,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 887,
+          "end_minute": 903,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 28.125,
+          "total_lam5": 28.125
+        },
+        {
+          "start_minute": 903,
+          "end_minute": 947,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 947,
+          "end_minute": 963,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 28.125,
+          "total_lam5": 28.125
+        },
+        {
+          "start_minute": 963,
+          "end_minute": 1007,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 1007,
+          "end_minute": 1023,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 28.125,
+          "total_lam5": 28.125
+        },
+        {
+          "start_minute": 1023,
+          "end_minute": 1067,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 1067,
+          "end_minute": 1083,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 28.125,
+          "total_lam5": 28.125
+        },
+        {
+          "start_minute": 1083,
+          "end_minute": 1127,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 1127,
+          "end_minute": 1143,
+          "regime": "S2",
+          "lunch": false,
+          "base_lam5": 25.0,
+          "total_lam5": 25.0
+        },
+        {
+          "start_minute": 1143,
+          "end_minute": 1350,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 7.5,
+          "total_lam5": 7.5
+        },
+        {
+          "start_minute": 1350,
+          "end_minute": 1440,
+          "regime": "S6",
+          "lunch": false,
+          "base_lam5": 1.5,
+          "total_lam5": 1.5
+        }
+      ],
+      "interpretation": "Rates, splits, batch sizes and uncertainty ranges are assumptions; lunch60/40 is entrance choice in both directions, not total traffic share."
+    },
+    "medium": {
+      "clock": "Seconds from midnight; 00:00=0. Not the original 08:00-relative clock.",
+      "generation_end": 86400.0,
+      "level": "medium",
+      "load_multiplier": 1.0,
+      "lessons": [
+        {
+          "start_minute": 540,
+          "end_minute": 590
+        },
+        {
+          "start_minute": 600,
+          "end_minute": 650
+        },
+        {
+          "start_minute": 660,
+          "end_minute": 710
+        },
+        {
+          "start_minute": 720,
+          "end_minute": 770
+        },
+        {
+          "start_minute": 780,
+          "end_minute": 830
+        },
+        {
+          "start_minute": 840,
+          "end_minute": 890
+        },
+        {
+          "start_minute": 900,
+          "end_minute": 950
+        },
+        {
+          "start_minute": 960,
+          "end_minute": 1010
+        },
+        {
+          "start_minute": 1020,
+          "end_minute": 1070
+        },
+        {
+          "start_minute": 1080,
+          "end_minute": 1130
+        }
+      ],
+      "class_arrival_margin_minutes": 3,
+      "class_volume_normalization": "Preserve each former10min class wave's expected volume; multiply its lam5 by10/16 over the expanded16min window.",
+      "lunch": {
+        "start_minute": 690,
+        "end_minute": 810,
+        "entrance_weights": {
+          "LG2": 0.6,
+          "G": 0.4
+        }
+      },
+      "other_entrance_weights": {
+        "LG2": 0.4,
+        "G": 0.6
+      },
+      "pre_stairs_lam5": {
+        "S1": 70.0,
+        "S2": 80.0,
+        "S3": 90.0,
+        "S5": 15.0,
+        "S6": 3.0,
+        "lunch_extra": 120.0
+      },
+      "split": {
+        "S1": [
+          0.8,
+          0.05,
+          0.15
+        ],
+        "S2": [
+          0.05,
+          0.85,
+          0.1
+        ],
+        "S3": [
+          0.35,
+          0.35,
+          0.3
+        ],
+        "S5": [
+          0.3,
+          0.3,
+          0.4
+        ],
+        "S6": [
+          0.45,
+          0.45,
+          0.1
+        ],
+        "lunch_extra": [
+          0.25,
+          0.55,
+          0.2
+        ]
+      },
+      "batch_mean": {
+        "S1": 1.3,
+        "S2": 1.6,
+        "S3": 1.5,
+        "S5": 1.2,
+        "S6": 1.1,
+        "lunch_extra": 2.0
+      },
+      "actual_uncertainty": {
+        "daily_rate_multiplier": [
+          0.85,
+          1.15
+        ],
+        "component_rate_multiplier": [
+          0.9,
+          1.1
+        ],
+        "class_peak_shift_seconds": [
+          -60.0,
+          60.0
+        ]
+      },
+      "segments": [
+        {
+          "start_minute": 0,
+          "end_minute": 450,
+          "regime": "S6",
+          "lunch": false,
+          "base_lam5": 3.0,
+          "total_lam5": 3.0
+        },
+        {
+          "start_minute": 450,
+          "end_minute": 527,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 527,
+          "end_minute": 543,
+          "regime": "S1",
+          "lunch": false,
+          "base_lam5": 43.75,
+          "total_lam5": 43.75
+        },
+        {
+          "start_minute": 543,
+          "end_minute": 587,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 587,
+          "end_minute": 603,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 56.25,
+          "total_lam5": 56.25
+        },
+        {
+          "start_minute": 603,
+          "end_minute": 647,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 647,
+          "end_minute": 663,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 56.25,
+          "total_lam5": 56.25
+        },
+        {
+          "start_minute": 663,
+          "end_minute": 690,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 690,
+          "end_minute": 707,
+          "regime": "S5",
+          "lunch": true,
+          "base_lam5": 15.0,
+          "total_lam5": 135.0
+        },
+        {
+          "start_minute": 707,
+          "end_minute": 723,
+          "regime": "S3",
+          "lunch": true,
+          "base_lam5": 56.25,
+          "total_lam5": 176.25
+        },
+        {
+          "start_minute": 723,
+          "end_minute": 767,
+          "regime": "S5",
+          "lunch": true,
+          "base_lam5": 15.0,
+          "total_lam5": 135.0
+        },
+        {
+          "start_minute": 767,
+          "end_minute": 783,
+          "regime": "S3",
+          "lunch": true,
+          "base_lam5": 56.25,
+          "total_lam5": 176.25
+        },
+        {
+          "start_minute": 783,
+          "end_minute": 810,
+          "regime": "S5",
+          "lunch": true,
+          "base_lam5": 15.0,
+          "total_lam5": 135.0
+        },
+        {
+          "start_minute": 810,
+          "end_minute": 827,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 827,
+          "end_minute": 843,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 56.25,
+          "total_lam5": 56.25
+        },
+        {
+          "start_minute": 843,
+          "end_minute": 887,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 887,
+          "end_minute": 903,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 56.25,
+          "total_lam5": 56.25
+        },
+        {
+          "start_minute": 903,
+          "end_minute": 947,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 947,
+          "end_minute": 963,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 56.25,
+          "total_lam5": 56.25
+        },
+        {
+          "start_minute": 963,
+          "end_minute": 1007,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 1007,
+          "end_minute": 1023,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 56.25,
+          "total_lam5": 56.25
+        },
+        {
+          "start_minute": 1023,
+          "end_minute": 1067,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 1067,
+          "end_minute": 1083,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 56.25,
+          "total_lam5": 56.25
+        },
+        {
+          "start_minute": 1083,
+          "end_minute": 1127,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 1127,
+          "end_minute": 1143,
+          "regime": "S2",
+          "lunch": false,
+          "base_lam5": 50.0,
+          "total_lam5": 50.0
+        },
+        {
+          "start_minute": 1143,
+          "end_minute": 1350,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 15.0,
+          "total_lam5": 15.0
+        },
+        {
+          "start_minute": 1350,
+          "end_minute": 1440,
+          "regime": "S6",
+          "lunch": false,
+          "base_lam5": 3.0,
+          "total_lam5": 3.0
+        }
+      ],
+      "interpretation": "Rates, splits, batch sizes and uncertainty ranges are assumptions; lunch60/40 is entrance choice in both directions, not total traffic share."
+    },
+    "high": {
+      "clock": "Seconds from midnight; 00:00=0. Not the original 08:00-relative clock.",
+      "generation_end": 86400.0,
+      "level": "high",
+      "load_multiplier": 1.5,
+      "lessons": [
+        {
+          "start_minute": 540,
+          "end_minute": 590
+        },
+        {
+          "start_minute": 600,
+          "end_minute": 650
+        },
+        {
+          "start_minute": 660,
+          "end_minute": 710
+        },
+        {
+          "start_minute": 720,
+          "end_minute": 770
+        },
+        {
+          "start_minute": 780,
+          "end_minute": 830
+        },
+        {
+          "start_minute": 840,
+          "end_minute": 890
+        },
+        {
+          "start_minute": 900,
+          "end_minute": 950
+        },
+        {
+          "start_minute": 960,
+          "end_minute": 1010
+        },
+        {
+          "start_minute": 1020,
+          "end_minute": 1070
+        },
+        {
+          "start_minute": 1080,
+          "end_minute": 1130
+        }
+      ],
+      "class_arrival_margin_minutes": 3,
+      "class_volume_normalization": "Preserve each former10min class wave's expected volume; multiply its lam5 by10/16 over the expanded16min window.",
+      "lunch": {
+        "start_minute": 690,
+        "end_minute": 810,
+        "entrance_weights": {
+          "LG2": 0.6,
+          "G": 0.4
+        }
+      },
+      "other_entrance_weights": {
+        "LG2": 0.4,
+        "G": 0.6
+      },
+      "pre_stairs_lam5": {
+        "S1": 70.0,
+        "S2": 80.0,
+        "S3": 90.0,
+        "S5": 15.0,
+        "S6": 3.0,
+        "lunch_extra": 120.0
+      },
+      "split": {
+        "S1": [
+          0.8,
+          0.05,
+          0.15
+        ],
+        "S2": [
+          0.05,
+          0.85,
+          0.1
+        ],
+        "S3": [
+          0.35,
+          0.35,
+          0.3
+        ],
+        "S5": [
+          0.3,
+          0.3,
+          0.4
+        ],
+        "S6": [
+          0.45,
+          0.45,
+          0.1
+        ],
+        "lunch_extra": [
+          0.25,
+          0.55,
+          0.2
+        ]
+      },
+      "batch_mean": {
+        "S1": 1.3,
+        "S2": 1.6,
+        "S3": 1.5,
+        "S5": 1.2,
+        "S6": 1.1,
+        "lunch_extra": 2.0
+      },
+      "actual_uncertainty": {
+        "daily_rate_multiplier": [
+          0.85,
+          1.15
+        ],
+        "component_rate_multiplier": [
+          0.9,
+          1.1
+        ],
+        "class_peak_shift_seconds": [
+          -60.0,
+          60.0
+        ]
+      },
+      "segments": [
+        {
+          "start_minute": 0,
+          "end_minute": 450,
+          "regime": "S6",
+          "lunch": false,
+          "base_lam5": 4.5,
+          "total_lam5": 4.5
+        },
+        {
+          "start_minute": 450,
+          "end_minute": 527,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 527,
+          "end_minute": 543,
+          "regime": "S1",
+          "lunch": false,
+          "base_lam5": 65.625,
+          "total_lam5": 65.625
+        },
+        {
+          "start_minute": 543,
+          "end_minute": 587,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 587,
+          "end_minute": 603,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 84.375,
+          "total_lam5": 84.375
+        },
+        {
+          "start_minute": 603,
+          "end_minute": 647,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 647,
+          "end_minute": 663,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 84.375,
+          "total_lam5": 84.375
+        },
+        {
+          "start_minute": 663,
+          "end_minute": 690,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 690,
+          "end_minute": 707,
+          "regime": "S5",
+          "lunch": true,
+          "base_lam5": 22.5,
+          "total_lam5": 202.5
+        },
+        {
+          "start_minute": 707,
+          "end_minute": 723,
+          "regime": "S3",
+          "lunch": true,
+          "base_lam5": 84.375,
+          "total_lam5": 264.375
+        },
+        {
+          "start_minute": 723,
+          "end_minute": 767,
+          "regime": "S5",
+          "lunch": true,
+          "base_lam5": 22.5,
+          "total_lam5": 202.5
+        },
+        {
+          "start_minute": 767,
+          "end_minute": 783,
+          "regime": "S3",
+          "lunch": true,
+          "base_lam5": 84.375,
+          "total_lam5": 264.375
+        },
+        {
+          "start_minute": 783,
+          "end_minute": 810,
+          "regime": "S5",
+          "lunch": true,
+          "base_lam5": 22.5,
+          "total_lam5": 202.5
+        },
+        {
+          "start_minute": 810,
+          "end_minute": 827,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 827,
+          "end_minute": 843,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 84.375,
+          "total_lam5": 84.375
+        },
+        {
+          "start_minute": 843,
+          "end_minute": 887,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 887,
+          "end_minute": 903,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 84.375,
+          "total_lam5": 84.375
+        },
+        {
+          "start_minute": 903,
+          "end_minute": 947,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 947,
+          "end_minute": 963,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 84.375,
+          "total_lam5": 84.375
+        },
+        {
+          "start_minute": 963,
+          "end_minute": 1007,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 1007,
+          "end_minute": 1023,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 84.375,
+          "total_lam5": 84.375
+        },
+        {
+          "start_minute": 1023,
+          "end_minute": 1067,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 1067,
+          "end_minute": 1083,
+          "regime": "S3",
+          "lunch": false,
+          "base_lam5": 84.375,
+          "total_lam5": 84.375
+        },
+        {
+          "start_minute": 1083,
+          "end_minute": 1127,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 1127,
+          "end_minute": 1143,
+          "regime": "S2",
+          "lunch": false,
+          "base_lam5": 75.0,
+          "total_lam5": 75.0
+        },
+        {
+          "start_minute": 1143,
+          "end_minute": 1350,
+          "regime": "S5",
+          "lunch": false,
+          "base_lam5": 22.5,
+          "total_lam5": 22.5
+        },
+        {
+          "start_minute": 1350,
+          "end_minute": 1440,
+          "regime": "S6",
+          "lunch": false,
+          "base_lam5": 4.5,
+          "total_lam5": 4.5
+        }
+      ],
+      "interpretation": "Rates, splits, batch sizes and uncertainty ranges are assumptions; lunch60/40 is entrance choice in both directions, not total traffic share."
+    }
+  },
+  "development_seeds": [
+    8531001,
+    8531002,
+    8531003,
+    8531004
+  ],
+  "evaluation_seeds": [
+    8551001,
+    8551002,
+    8551003,
+    8551004,
+    8551005,
+    8551006,
+    8551007,
+    8551008
+  ],
+  "dt": 0.5,
+  "fine_dt": 0.25,
+  "drain_time": 3600.0,
+  "reassign_interval": 10.0,
+  "warmup": 600.0,
+  "measure": 1200.0,
+  "night_measure": 7200.0,
+  "transition_horizon": 900.0,
+  "boundaries_minutes": [
+    450,
+    527,
+    543,
+    587,
+    603,
+    690,
+    707,
+    723,
+    810,
+    1127,
+    1143,
+    1350
+  ],
+  "practical_seconds": 0.5,
+  "p90_ratio": 1.05,
+  "lwt_increase_pp": 1.0,
+  "ranking": "Eight symmetric configurations (same recipe in both independent banks; not all64 asymmetric pairs), sustained uniform OD mixtures at the daily model's mean rates. Discard first600s; score next1200s arrivals. S6 scored for7200s to avoid sparse empty windows. Rank equal-day development AWT, tie by configuration name; freeze top2. These are finite-candidate episode rankings, not true universal optima.",
+  "fixed": "Re-evaluate all8 on complete development days; select fixed by load and global equal-load/equal-seed champion. No old empirical result data reused.",
+  "transitions": "At12 representative clock boundaries of each development day under load's frozen fixed champion AND naive clock champion switching, deepcopy identical full state. Keep and change one bank at a time to each of target regime's top2 sustained candidates. Other bank holds incumbent. Truncate future arrivals at boundary+900s, then drain. Score remaining waits of physically waiting plus future arrivals (onboard excluded); an empty transition cohort has explicitly flagged zero waiting opportunity, not an estimated passenger mean. No warm-start reset or future-leaking policy.",
+  "gate": "Group development paired switch-minus-keep by load,target regime,incumbent, bank-local bin(clear/occupied/busy). Average banks/boundaries within seed first. Require >=3 seed replicates, mean<=-.5s, upper simultaneous95% CI<0 across all tested development cells/actions, p90ratio<=1.05 and LWTincrease<=1pp. Choose lowest mean eligible action, otherwise retain. Bins: clear=no latches or riders; busy=at least3 latches or16 onboard; occupied=other.",
+  "daily": "Compare frozen fixed_level,fixed_global,naive regime champions,gated local rule on unseen full24h days. Gated checks only at regime changes, per-bank local observations, retaining when unsupported. No anticipatory parking/lead tuning.",
+  "heldout_transitions": "From independent heldout fixed-policy snapshots compare keep, both-bank naive champion and simultaneous independent local gate. Recreate snapshots separately at both resolutions.",
+  "inference": "Daily primary unit8 seed-days after equal averaging3 levels. Three primary contrasts versus fixed_level (global,naive,gated), Holm p and Bonferroni simultaneous95% CIs per resolution. Verified gain needs at least.5s, simultaneous upper<0 and tail guards at BOTH resolutions. Conditional ranking contrasts use separate147-test family against frozen champion. Transitions average boundaries and levels within seed, separate2-test family. All eight heldout configurations may be described, never retuned.",
+  "expected": {
+    "sustained_dev": 672,
+    "fixed_dev": 96,
+    "transition_dev": 1440,
+    "sustained_eval": 1344,
+    "sustained_fine": 336,
+    "transition_eval": 864,
+    "transition_fine": 864,
+    "daily_eval": 96,
+    "daily_fine": 96,
+    "snapshot_parents": 72,
+    "total": 5880
+  },
+  "testing_strategy": {
+    "appType": "Pure Python discrete-time simulation; no API, DB, browser or external service.",
+    "stack": "unittest plus full CLI pilots, paired raw-record reconstruction and deterministic replay",
+    "journeys": [
+      "both-bank press and ghost response",
+      "unique boarding and conservation",
+      "bank information isolation",
+      "same-state branching and policy continuity",
+      "selection locks and heldout paired statistics"
+    ],
+    "external_dependencies": "Existing numpy/scipy only; temporary directories for test files.",
+    "infra_tier": "N/A: no infrastructure dependency",
+    "browser_tier": "N/A: no rendered UI",
+    "gaps": "Synthetic demand assumptions; finite candidate family; no physical field validation."
+  },
+  "sources": {
+    "config.py": "a62b5dd3fbaf4adcf09c91e32d498208c4643f2746e97ef966c21eafe54c6b54",
+    "traffic.py": "f4fe33a4386d568c86a8ceebafc61dff47c985154dc8a2cfbe1c049fad626216",
+    "building.py": "16e580e2cd8204aeb7c9739e708dfd308b5d57eeb4b0364f588e5f5a5af275bd",
+    "strategies.py": "138a686ad416978c24aa3da4c04dcbd2fd6ea4e28f21915e72498da7e05cae6c",
+    "sim.py": "cddc67b5cb1a102cf316b147fcf371ebc01d8a7137236c0b8029dcc916da0781",
+    "research\\modular_restart\\engine.py": "c16c9a6f90777366ed174f95dede4670a04f696349099fbe73ad9f7e2be1c828",
+    "research\\modular_restart\\policies.py": "90474dc4e77851b4348f271d8bb253278cde74697fb9d502a8f33014e2d69b64",
+    "research\\timetable_cycle\\demand.py": "47a922f2194f1e0c08f02a25a8b058abc8ffd930e1da8546b5e188ddb68502fa",
+    "research\\timetable_cycle\\control.py": "543295b04b2b78de91d02531cae5527d21bf731b655a166c8ca2404e3e6762e6",
+    "research\\dual_bank\\analysis.py": "4a77e5181fab30591f4991ab81e3089b6cab57cef05acae8afd6fb8cd1a973d4",
+    "research\\dual_bank\\audit.py": "b15fa80977781d6dccd6e57edeef4dc1c82b813697ea099455dccd8dd2048fa2",
+    "research\\dual_bank\\control.py": "6e003e4ac1567a6332ad665491b95338a04a3c117cbda0e1abccc2dfde7412b1",
+    "research\\dual_bank\\demand.py": "3795dce75283a13e497f4882efad5737f934823c859615b4deb780b1788f148b",
+    "research\\dual_bank\\engine.py": "a969c580e7cb706752932b5475ef0540cf7e68be5e1ac95488f6d5126dc01937",
+    "research\\dual_bank\\experiment.py": "53af325cad9525f606d42097c766e76982fff293b3e21b1a4b355351acca0f0f",
+    "research\\dual_bank\\test_analysis.py": "6d32941b0ac01aa90c0a43f984395577eabea44c470fd43712aed4259f4db47a",
+    "research\\dual_bank\\test_audit.py": "bd7b50ff7a5451609bbf76f8803b233b111a561be8429ff2990cfd6953e2e162",
+    "research\\dual_bank\\test_engine.py": "14af973004e3be67b7dd38c67dd74bf14d68e77735c5f0d8fa5d4706858ae222",
+    "research\\dual_bank\\test_study.py": "963a6b93e0fe3f52edac74284f1ab294dbc0de9003d02325bd09190fb90c5097"
+  }
+}

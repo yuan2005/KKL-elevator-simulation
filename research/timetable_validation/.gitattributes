@@ -1,5 +1,0 @@
-# Historical byte hashes must survive checkout on Windows and Unix.
-published_results/** -text whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol
-scripts/*.py text eol=lf
-*.md text eol=lf
-port_provenance.json text eol=lf

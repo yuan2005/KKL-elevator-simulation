@@ -1,0 +1,31 @@
+{
+  "passed": true,
+  "counts": {
+    "sustained_dev": 672,
+    "fixed_dev": 96,
+    "transition_dev": 1440,
+    "sustained_eval": 1344,
+    "sustained_fine": 336,
+    "transition_eval": 864,
+    "transition_fine": 864,
+    "daily_eval": 96,
+    "daily_fine": 96,
+    "snapshot_parents": 72
+  },
+  "total": 5880,
+  "reconstructed": {
+    "passengers": 11512386,
+    "decisions": 30501005,
+    "empty_stops": 4723828
+  },
+  "paired_input_days": 288,
+  "paired_snapshots": 864,
+  "full_replays": 21,
+  "snapshot_branch_replays": 72,
+  "sources": 19,
+  "source_hash": "2f6d2b5c11f49f0f107aacde5e1803a91d09111c3d5e40521f05f2c5c942fedd",
+  "ranking_hash": "0ef315770f6757a1c00f2bf2ee623e840991e0d3b265553019a317b36ecbc158",
+  "switching_hash": "9dc523f713f08b3fff27232a28c928623aeb65f6af8f3138eaeb963fb5dea4e5",
+  "raw_hashes_hash": "91f8ed4e2b9719cd16a1b9c420cfc51f4984fb1de25ac396a76a8363f02abc03",
+  "portable_data": "Execution roots anonymized; numerical and event records unchanged."
+}

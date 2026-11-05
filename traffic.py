@@ -1,22 +1,19 @@
-"""人流生成：参数模式（S1–S6 场景）和课表模式（全天）。
-
-同一个随机种子生成的乘客列表与调度策略无关，所以不同策略可以用"相同随机数"公平比较。
-"""
-import csv
+"""Seeded passenger generation with batch arrivals and staircase diversion."""
 from dataclasses import dataclass, field
+
 import numpy as np
 
 import config as C
-from building import IDX, ENTRANCE_IDX, N_FLOORS
+from building import IDX, ENTRANCE_IDX
 
 
 @dataclass
 class Passenger:
     id: int
-    t: float            # 到达电梯厅的时刻
-    o: int              # 出发楼层
-    d: int              # 目的楼层
-    group: int = 0      # 同一批（结伴）到达的编号
+    t: float
+    o: int
+    d: int
+    group: int = 0
     t_board: float = None
     t_alight: float = None
     car: int = None
@@ -29,46 +26,34 @@ class Passenger:
 @dataclass
 class Scenario:
     name: str
-    lam5: float                 # 每 5 分钟想乘梯的人数（楼梯分流之前，含过路）
-    split: tuple                # 非过路乘客中的 (进楼, 离楼, 楼层间) 比例
-    batch_mean: float = 1.3     # 平均每批人数
-    duration: float = 900.0     # 产生乘客的时长（秒）
-    profile: str = "uniform"    # uniform / burst（课前、课后的集中到达）
-    peak_at: float = 0.5        # burst 时到达高峰在时段中的位置（0–1）
+    lam5: float
+    split: tuple
+    batch_mean: float = 1.3
+    duration: float = 900.0
+    profile: str = "uniform"
+    peak_at: float = 0.5
     weights: dict = field(default_factory=lambda: C.FLOOR_WEIGHTS_OFFICE)
     entrances: dict = field(default_factory=lambda: C.ENTRANCE_WEIGHTS)
     stairs: bool = True
-    thru: float = C.THRU_SHARE  # 过路（LG2↔G，不进楼）乘客占"实际乘电梯人数"的比例
-
-
-# S1–S6 预设 [全部为占位值，待实测人流计数后校准]
-SCENARIOS = {
-    "S1": Scenario("S1 课前进楼", 70, (0.80, 0.05, 0.15), 1.3, 900, "burst", 0.7, C.FLOOR_WEIGHTS_CLASS),
-    "S2": Scenario("S2 课后离楼", 80, (0.05, 0.85, 0.10), 1.6, 900, "burst", 0.15, C.FLOOR_WEIGHTS_CLASS),
-    "S3": Scenario("S3 课间换课", 90, (0.35, 0.35, 0.30), 1.5, 900, "burst", 0.4, C.FLOOR_WEIGHTS_CLASS),
-    "S4": Scenario("S4 饭点", 55, (0.40, 0.40, 0.20), 2.0, 1800, "uniform"),
-    "S5": Scenario("S5 平时", 15, (0.30, 0.30, 0.40), 1.2, 1800, "uniform"),
-    "S6": Scenario("S6 节假日/夜间", 3, (0.45, 0.45, 0.10), 1.1, 3600, "uniform"),
-}
+    thru: float = C.THRU_SHARE
 
 
 def _pick(rng, weights_by_idx):
     idxs = list(weights_by_idx)
-    w = np.array([weights_by_idx[i] for i in idxs], dtype=float)
-    return idxs[rng.choice(len(idxs), p=w / w.sum())]
+    weights = np.array([weights_by_idx[i] for i in idxs], dtype=float)
+    return idxs[rng.choice(len(idxs), p=weights/weights.sum())]
 
 
 def _weights_idx(weights):
     return {IDX[f]: w for f, w in weights.items() if w > 0 and IDX[f] not in ENTRANCE_IDX}
 
 
-def _ent_idx(ent):
-    return {IDX[f]: w for f, w in ent.items() if w > 0}
+def _ent_idx(entrances):
+    return {IDX[f]: w for f, w in entrances.items() if w > 0}
 
 
-def _uses_stairs(rng, o, d):
-    p = C.P_STAIRS.get(abs(o - d), 0.0)
-    return rng.random() < p
+def _uses_stairs(rng, origin, destination):
+    return rng.random() < C.P_STAIRS.get(abs(origin-destination), 0.0)
 
 
 def _batch_sizes(rng, n_total, mean):
@@ -76,163 +61,58 @@ def _batch_sizes(rng, n_total, mean):
         return []
     sizes = []
     while sum(sizes) < n_total:
-        sizes.append(int(rng.geometric(1.0 / mean)) if mean > 1 else 1)
-    sizes[-1] -= sum(sizes) - n_total
-    return [s for s in sizes if s > 0]
+        sizes.append(int(rng.geometric(1.0/mean)) if mean > 1 else 1)
+    sizes[-1] -= sum(sizes)-n_total
+    return [size for size in sizes if size > 0]
 
 
 def _thru_od(rng):
-    """过路乘客：LG2→G 或 G→LG2。"""
-    lg2, g = IDX["LG2"], IDX["G"]
-    return (lg2, g) if rng.random() < C.THRU_UP else (g, lg2)
+    lg2, ground = IDX["LG2"], IDX["G"]
+    return (lg2, ground) if rng.random() < C.THRU_UP else (ground, lg2)
 
 
 def generate_scenario(sc: Scenario, seed: int, t0: float = 0.0):
-    """按场景参数生成乘客列表。返回 (乘梯乘客列表, 走楼梯人数)。"""
     rng = np.random.default_rng(seed)
-    w_up = _weights_idx(sc.weights)
-    ent = _ent_idx(sc.entrances)
-    def draw_times(n):
-        if sc.profile == "burst":
-            return rng.triangular(0, sc.peak_at * sc.duration, sc.duration, n)
-        return rng.uniform(0, sc.duration, n)
+    weights = _weights_idx(sc.weights)
+    entrances = _ent_idx(sc.entrances)
 
-    # ① 非过路乘客（进楼 / 离楼 / 楼层间），之后做楼梯分流
-    n_batches = rng.poisson(sc.lam5 * (1 - sc.thru) / 300.0 * sc.duration / sc.batch_mean)
+    def draw_times(count):
+        if sc.profile == "burst":
+            return rng.triangular(0, sc.peak_at*sc.duration, sc.duration, count)
+        return rng.uniform(0, sc.duration, count)
+
+    n_batches = rng.poisson(sc.lam5*(1-sc.thru)/300.0*sc.duration/sc.batch_mean)
     times = draw_times(n_batches)
-    kinds = rng.choice(3, size=n_batches, p=np.array(sc.split) / sum(sc.split))
-    pax, stairs, gid = [], 0, 0
-    for t, k in zip(np.sort(times), kinds):
-        size = int(rng.geometric(1.0 / sc.batch_mean)) if sc.batch_mean > 1 else 1
-        if k == 0:
-            o, d = _pick(rng, ent), _pick(rng, w_up)
-        elif k == 1:
-            o, d = _pick(rng, w_up), _pick(rng, ent)
+    kinds = rng.choice(3, size=n_batches, p=np.array(sc.split)/sum(sc.split))
+    passengers, stairs, group = [], 0, 0
+    for arrival, kind in zip(np.sort(times), kinds):
+        size = int(rng.geometric(1.0/sc.batch_mean)) if sc.batch_mean > 1 else 1
+        if kind == 0:
+            origin, destination = _pick(rng, entrances), _pick(rng, weights)
+        elif kind == 1:
+            origin, destination = _pick(rng, weights), _pick(rng, entrances)
         else:
-            o = _pick(rng, w_up)
-            d = o
-            while d == o:
-                d = _pick(rng, w_up)
-        gid += 1
-        if sc.stairs and _uses_stairs(rng, o, d):
+            origin = _pick(rng, weights)
+            destination = origin
+            while destination == origin:
+                destination = _pick(rng, weights)
+        group += 1
+        if sc.stairs and _uses_stairs(rng, origin, destination):
             stairs += size
             continue
         for _ in range(size):
-            pax.append(Passenger(0, t0 + t + rng.uniform(0, 3.0), o, d, gid))
-
-    # ② 过路乘客（LG2↔G）：人数使其占全部乘梯人数的 sc.thru，时间分布与场景相同
-    if sc.thru > 0 and pax:
-        n_thru = int(round(len(pax) * sc.thru / (1 - sc.thru)))
+            passengers.append(Passenger(0, t0+arrival+rng.uniform(0, 3.0),
+                                        origin, destination, group))
+    if sc.thru > 0 and passengers:
+        n_thru = int(round(len(passengers)*sc.thru/(1-sc.thru)))
         for size in _batch_sizes(rng, n_thru, sc.batch_mean):
-            t = draw_times(1)[0]
-            o, d = _thru_od(rng)
-            gid += 1
+            arrival = draw_times(1)[0]
+            origin, destination = _thru_od(rng)
+            group += 1
             for _ in range(size):
-                pax.append(Passenger(0, t0 + t + rng.uniform(0, 3.0), o, d, gid))
-    pax.sort(key=lambda p: p.t)
-    for i, p in enumerate(pax):
-        p.id = i
-    return pax, stairs
-
-
-# ---------------- 课表模式 ----------------
-DAY_START = 8 * 3600        # 全天仿真从 08:00 开始，时间以秒计（相对 08:00）
-
-
-def _hm(s):
-    h, m = s.split(":")
-    return int(h) * 3600 + int(m) * 60 - DAY_START
-
-
-def load_timetable(path):
-    rows = []
-    with open(path, newline="", encoding="utf-8") as f:
-        for r in csv.DictReader(f):
-            rows.append(dict(room=r["room"], floor=IDX[r["floor"]], start=_hm(r["start"]),
-                             end=_hm(r["end"]), size=int(r["size"])))
-    return rows
-
-
-def background_rate(t):
-    """课表之外的办公、访客客流（每 5 分钟人数, 进/离/楼层间比例）[占位]"""
-    hour = 8 + t / 3600
-    if 8.5 <= hour < 9.5:
-        return 25, (0.75, 0.05, 0.20)       # 上班进楼
-    if 12.0 <= hour < 14.0:
-        return 45, (0.40, 0.40, 0.20)       # 饭点
-    if 17.5 <= hour < 18.5:
-        return 25, (0.05, 0.75, 0.20)       # 下班离楼
-    return 12, (0.30, 0.30, 0.40)
-
-
-def generate_day(timetable, seed, attendance=0.8, thru_share=C.THRU_SHARE, t_end=11 * 3600):
-    """课表 + 背景客流 + 过路人流，生成一整天（08:00 起 t_end 秒）的乘客。
-
-    attendance：出席率；thru_share：过路乘客占全部乘梯人数的比例。
-    过路人流的时间分布跟随楼内其他乘梯人流（上下课、饭点时校园里人多，过路的人也多）。
-    """
-    rng = np.random.default_rng(seed)
-    ent = _ent_idx(C.ENTRANCE_WEIGHTS)
-    w_office = _weights_idx(C.FLOOR_WEIGHTS_OFFICE)
-    raw = []    # (t, o, d, group)
-    gid = 0
-
-    def add_group(times_fn, n, o_fn, d_fn, mean_batch):
-        nonlocal gid
-        for size in _batch_sizes(rng, n, mean_batch):
-            t = times_fn()
-            o, d = o_fn(), d_fn()
-            if o == d:
-                continue
-            gid += 1
-            if _uses_stairs(rng, o, d):
-                continue
-            for _ in range(size):
-                raw.append((t + rng.uniform(0, 3.0), o, d, gid))
-
-    for c in timetable:
-        n = int(round(c["size"] * attendance))
-        f = c["floor"]
-        # 上课：开课前 12 分钟到开课后 2 分钟到达，高峰在开课前 4 分钟；85% 从入口进楼
-        add_group(lambda: rng.triangular(c["start"] - 720, c["start"] - 240, c["start"] + 120),
-                  n, lambda: _pick(rng, ent) if rng.random() < 0.85 else _pick(rng, w_office),
-                  lambda: f, 1.4)
-        # 下课：下课后陆续离开（指数分布，均值 90 秒）；80% 离楼
-        add_group(lambda: c["end"] + min(rng.exponential(90.0), 480.0), n, lambda: f,
-                  lambda: _pick(rng, ent) if rng.random() < 0.8 else _pick(rng, w_office), 1.6)
-
-    # 背景客流：逐分钟按当时的到达率生成
-    for m in range(int(t_end // 60)):
-        lam5, split = background_rate(m * 60)
-        n_b = rng.poisson(lam5 / 5.0 / 1.3)
-        for _ in range(n_b):
-            k = rng.choice(3, p=split)
-            if k == 0:
-                o, d = _pick(rng, ent), _pick(rng, w_office)
-            elif k == 1:
-                o, d = _pick(rng, w_office), _pick(rng, ent)
-            else:
-                o, d = _pick(rng, w_office), _pick(rng, w_office)
-            if o == d:
-                continue
-            gid += 1
-            if _uses_stairs(rng, o, d):
-                continue
-            t = m * 60 + rng.uniform(0, 60)
-            for _ in range(int(rng.geometric(1 / 1.3))):
-                raw.append((t + rng.uniform(0, 3.0), o, d, gid))
-
-    # 过路人流：人数 = 非过路 × thru/(1-thru)；每批的时刻取自某个非过路乘客的时刻 ± 2 分钟
-    if thru_share > 0 and raw:
-        base_t = np.array([r[0] for r in raw])
-        n_thru = int(round(len(raw) * thru_share / (1 - thru_share)))
-        for size in _batch_sizes(rng, n_thru, 1.3):
-            t = base_t[rng.integers(len(base_t))] + rng.uniform(-120, 120)
-            o, d = _thru_od(rng)
-            gid += 1
-            for _ in range(size):
-                raw.append((t + rng.uniform(0, 3.0), o, d, gid))
-
-    raw = [r for r in raw if 0 <= r[0] < t_end]
-    raw.sort()
-    return [Passenger(i, t, o, d, g) for i, (t, o, d, g) in enumerate(raw)]
+                passengers.append(Passenger(0, t0+arrival+rng.uniform(0, 3.0),
+                                            origin, destination, group))
+    passengers.sort(key=lambda p: p.t)
+    for identifier, passenger in enumerate(passengers):
+        passenger.id = identifier
+    return passengers, stairs

@@ -1,0 +1,2 @@
+# Preserve exact source bytes used by the published SHA256 manifest.
+*.py -text

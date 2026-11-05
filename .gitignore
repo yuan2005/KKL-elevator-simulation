@@ -2,3 +2,8 @@ __pycache__/
 *.pyc
 .DS_Store
 ~$*
+
+# Keep raw trajectories and unpublished experiment outputs local.
+/results/*
+!/results/dual_bank_v2_2026-11-04/
+/results/dual_bank_v2_2026-11-04/raw/

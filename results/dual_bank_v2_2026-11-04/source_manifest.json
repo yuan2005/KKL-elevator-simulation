@@ -1,0 +1,30 @@
+{
+  "protocol_hash": "576376b88162681bde505228bd51d06618ac45b02f17bf39aa6895c4262d1e1c",
+  "sources": {
+    "config.py": "349f2273c20d0fa87a728a419e564ef99c6a51141dcfc73bd8826c97beb50189",
+    "building.py": "16e580e2cd8204aeb7c9739e708dfd308b5d57eeb4b0364f588e5f5a5af275bd",
+    "sim.py": "cddc67b5cb1a102cf316b147fcf371ebc01d8a7137236c0b8029dcc916da0781",
+    "traffic.py": "255f88cca36c8223ddd988b240e6288ceed8ca17bd83f617e1c3a3884e0d2e6d",
+    "research\\dual_bank\\analysis.py": "0301c100362ab401a418821f5f7e583f065a6a4360345c222144572aac66229a",
+    "research\\dual_bank\\audit.py": "dce9d7ab1788983004e365f251ab1cf0f9655f9fc81a81648fb273afa1917ef8",
+    "research\\dual_bank\\control.py": "b6928506fd82ca31ef5d2277fbba5dbcf1546aa46a3c50ea4eef0385512c0b84",
+    "research\\dual_bank\\demand.py": "d0a0f9c988bef86b99bd325f5aee8998f861aaf27be052a4ed3e4e1476bf63fd",
+    "research\\dual_bank\\engine.py": "f4e4804568739cd454d36de012bfaa93cb2cf5be1af4ab4ec3bf785835dfa422",
+    "research\\dual_bank\\experiment.py": "9d9d65a44ddbca361d614387f7a9e4ec8aa88c6cff1e0db2f4b79aca471fc40b",
+    "research\\dual_bank\\physics.py": "53192f481f1d5196cbd9ac83ca73fb958ff53c26e621a4717d0d9233fccfea0a",
+    "research\\dual_bank\\policies.py": "a04f096425c03c5a976ac93fec249b1125ee2fd6a2caf81e74606eabe68023e8",
+    "research\\dual_bank\\test_analysis.py": "6d32941b0ac01aa90c0a43f984395577eabea44c470fd43712aed4259f4db47a",
+    "research\\dual_bank\\test_audit.py": "63bdf4f40e76c4ec302c3868d6c8d9599dea6cb2f84b51d22750dc2d3a206fb1",
+    "research\\dual_bank\\test_engine.py": "7d3dc26f01e1145694a667fb110235ad0f720bc6d94216f5f7cfcc519a6ae732",
+    "research\\dual_bank\\test_physics.py": "ccba21a6fec5f9eeb9c112880662b1a3408058b2864c68a812f3ceaad1b10305",
+    "research\\dual_bank\\test_study.py": "963a6b93e0fe3f52edac74284f1ab294dbc0de9003d02325bd09190fb90c5097",
+    "research\\dual_bank\\timetable.py": "b1128e4f0e60e3d56c38c99ea6caaa7c3e65732172be2ffeb5c9c39765928790"
+  },
+  "cleanup_validation": {
+    "unit_tests_passed": 52,
+    "test_exit_code": 0,
+    "exact_replays": 4
+  },
+  "provenance": "Original execution-source hashes remain in protocol.json; this manifest identifies the self-contained reorganized sources. Four representative trajectories matched generated input, service, stops, latches, boardings, and decisions exactly.",
+  "raw_portability": "Only spec.root is replaced by a relative execution root; job signatures exclude root."
+}

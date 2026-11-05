@@ -1,0 +1,227 @@
+{
+  "ranking": {
+    "low": {
+      "S1": [
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1"
+      ],
+      "S2": [
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "marginal_uniform_b0",
+        "marginal_uniform_b1"
+      ],
+      "S3": [
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1"
+      ],
+      "S5": [
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1"
+      ],
+      "S6": [
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1"
+      ],
+      "lunch_S3": [
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1"
+      ],
+      "lunch_S5": [
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1"
+      ]
+    },
+    "medium": {
+      "S1": [
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "marginal_uniform_b0",
+        "marginal_uniform_b1"
+      ],
+      "S2": [
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1"
+      ],
+      "S3": [
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1"
+      ],
+      "S5": [
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1"
+      ],
+      "S6": [
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1"
+      ],
+      "lunch_S3": [
+        "marginal_uniform_b0",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "marginal_uniform_b1",
+        "pickup_demand_b1",
+        "pickup_demand_b0",
+        "pickup_uniform_b1",
+        "pickup_uniform_b0"
+      ],
+      "lunch_S5": [
+        "marginal_demand_b1",
+        "marginal_demand_b0",
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "pickup_uniform_b1",
+        "pickup_uniform_b0"
+      ]
+    },
+    "high": {
+      "S1": [
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1"
+      ],
+      "S2": [
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1"
+      ],
+      "S3": [
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1"
+      ],
+      "S5": [
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "marginal_uniform_b0",
+        "marginal_uniform_b1"
+      ],
+      "S6": [
+        "marginal_uniform_b0",
+        "marginal_uniform_b1",
+        "pickup_uniform_b0",
+        "pickup_uniform_b1",
+        "marginal_demand_b0",
+        "marginal_demand_b1",
+        "pickup_demand_b0",
+        "pickup_demand_b1"
+      ],
+      "lunch_S3": [
+        "marginal_demand_b1",
+        "marginal_uniform_b1",
+        "marginal_uniform_b0",
+        "marginal_demand_b0",
+        "pickup_demand_b1",
+        "pickup_uniform_b1",
+        "pickup_uniform_b0",
+        "pickup_demand_b0"
+      ],
+      "lunch_S5": [
+        "marginal_uniform_b1",
+        "marginal_demand_b1",
+        "marginal_uniform_b0",
+        "marginal_demand_b0",
+        "pickup_demand_b1",
+        "pickup_demand_b0",
+        "pickup_uniform_b1",
+        "pickup_uniform_b0"
+      ]
+    }
+  },
+  "fixed": {
+    "low": "marginal_uniform_b0",
+    "medium": "marginal_uniform_b1",
+    "high": "marginal_demand_b1"
+  },
+  "global_fixed": "marginal_demand_b1",
+  "development_hash": "fe2aee537757927904e86bbc062047250ab72830dd7083a50529ff81546d66e3"
+}
