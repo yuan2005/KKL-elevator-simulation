@@ -3,6 +3,7 @@
 同一个随机种子生成的乘客列表与调度策略无关，所以不同策略可以用"相同随机数"公平比较。
 """
 import csv
+import math
 from dataclasses import dataclass, field
 import numpy as np
 
@@ -153,24 +154,29 @@ def load_timetable(path):
     return rows
 
 
-def background_rate(t):
+def background_rate(t, *, lunch_multiplier=1.0):
     """课表之外的办公、访客客流（每 5 分钟人数, 进/离/楼层间比例）[占位]"""
     hour = 8 + t / 3600
     if 8.5 <= hour < 9.5:
         return 25, (0.75, 0.05, 0.20)       # 上班进楼
     if 12.0 <= hour < 14.0:
-        return 45, (0.40, 0.40, 0.20)       # 饭点
+        return 45*lunch_multiplier, (0.40, 0.40, 0.20)       # 饭点
     if 17.5 <= hour < 18.5:
         return 25, (0.05, 0.75, 0.20)       # 下班离楼
     return 12, (0.30, 0.30, 0.40)
 
 
-def generate_day(timetable, seed, attendance=0.8, thru_share=C.THRU_SHARE, t_end=11 * 3600):
+def generate_day(timetable, seed, attendance=0.8, thru_share=C.THRU_SHARE, t_end=11 * 3600,
+                 *, class_multiplier=1.0, lunch_multiplier=1.0):
     """课表 + 背景客流 + 过路人流，生成一整天（08:00 起 t_end 秒）的乘客。
 
     attendance：出席率；thru_share：过路乘客占全部乘梯人数的比例。
     过路人流的时间分布跟随楼内其他乘梯人流（上下课、饭点时校园里人多，过路的人也多）。
+    class_multiplier scales class headcounts; lunch_multiplier scales only the
+    12:00-14:00 background. Both populations coexist before through-flow generation.
     """
+    if any(not math.isfinite(value) or value < 0 for value in (class_multiplier, lunch_multiplier)):
+        raise ValueError("Demand multipliers must be finite and nonnegative")
     rng = np.random.default_rng(seed)
     ent = _ent_idx(C.ENTRANCE_WEIGHTS)
     w_office = _weights_idx(C.FLOOR_WEIGHTS_OFFICE)
@@ -191,7 +197,7 @@ def generate_day(timetable, seed, attendance=0.8, thru_share=C.THRU_SHARE, t_end
                 raw.append((t + rng.uniform(0, 3.0), o, d, gid))
 
     for c in timetable:
-        n = int(round(c["size"] * attendance))
+        n = int(round(c["size"] * attendance * class_multiplier))
         f = c["floor"]
         # 上课：开课前 12 分钟到开课后 2 分钟到达，高峰在开课前 4 分钟；85% 从入口进楼
         add_group(lambda: rng.triangular(c["start"] - 720, c["start"] - 240, c["start"] + 120),
@@ -203,7 +209,7 @@ def generate_day(timetable, seed, attendance=0.8, thru_share=C.THRU_SHARE, t_end
 
     # 背景客流：逐分钟按当时的到达率生成
     for m in range(int(t_end // 60)):
-        lam5, split = background_rate(m * 60)
+        lam5, split = background_rate(m * 60, lunch_multiplier=lunch_multiplier)
         n_b = rng.poisson(lam5 / 5.0 / 1.3)
         for _ in range(n_b):
             k = rng.choice(3, p=split)

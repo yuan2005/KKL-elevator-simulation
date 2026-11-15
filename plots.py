@@ -8,7 +8,7 @@ import numpy as np
 import pandas as pd
 
 HERE = os.path.dirname(__file__)
-RES = os.path.join(HERE, "results")
+RES = os.path.join(HERE, "results", "two_independent_banks")
 FIG = os.path.join(RES, "figures")
 os.makedirs(FIG, exist_ok=True)
 plt.rcParams["font.sans-serif"] = ["PingFang SC", "Heiti TC", "Arial Unicode MS", "SimHei", "DejaVu Sans"]

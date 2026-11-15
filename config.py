@@ -20,7 +20,7 @@ FLOOR_WEIGHTS_CLASS = dict(FLOOR_WEIGHTS_OFFICE)
 FLOOR_WEIGHTS_CLASS.update({"LG1": 4.0, "1": 4.0, "2": 3.0})
 
 # ---------------- 电梯 ----------------
-N_CARS = 6                  # 2 组 × 3 台（从平面图判读）[待核实]；无障碍电梯不计入
+N_CARS = 6                  # E0–E3研究入口使用两组各三台、独立呼梯；无障碍电梯不计入
 CAPACITY = 16               # 额定人数 [占位，看轿厢铭牌]
 RATED_SPEED = 2.5           # m/s [占位]
 ACCEL = 1.0                 # m/s^2 [占位，常见值 0.8–1.2]

@@ -1,5 +1,44 @@
 # KKL 电梯分场景控制策略仿真（第二版）
 
+## 当前公开版本：独立双梯组模型与最终结果（2026-11-15）
+
+当前实验使用两个独立三车梯组，共享真实乘客但不共享呼梯／分派状态。
+运动和门服务按事件时间处理；合成人流参考HKU课表、观察及团队体验，不代表实测校准。
+六车容量、速度及门时间保持模型设定。原有`results/`及下方旧研究说明保留为历史记录，
+不能作为当前双梯组模型的结果；当前汇总统一位于`results/two_independent_banks/`。
+
+本次公开模拟器、实验驱动脚本、回归测试和13个最终结果／规则文件；
+不公开论文、封面、原始乘客轨迹、逐次运行缓存、进度文件、临时图表或中间实验。
+
+| 入口（相对于`results/two_independent_banks/`） | 内容 |
+|---|---|
+| `complete_original_2p5_v1/e1_points.csv`、`e1_tree.json`、`e1_rules.txt` | 静态组合成本及候选阈值 |
+| `complete_original_2p5_v1/frozen_rule.json` | 开发选择与冻结决策 |
+| `complete_original_2p5_v1/e2_summary.csv`、`e3_summary.csv` | 全天及单车停运汇总 |
+| `complete_original_2p5_v1/robustness_sensitivity.csv` | 信息误差和组件消融对比 |
+| `complete_original_2p5_v1/daily_nominal_5min.csv`、`daily_nominal_summary.json` | 名义日五分钟人流及基本指标 |
+| `threshold_applicability_v1/comparisons.csv` | 校园／办公型迁移对比，含Holm校正 |
+| `map_method_comparison_v2/nested_summary.csv` | 嵌套地图学习比较 |
+| `cost_map_daily_gate_v1/summary.json`、`development_paired.csv` | 丰富地图的新开发日筛查 |
+
+主实验保留开发选定的固定C4，名义日验证AWT为36.33 s。约301人／5 min的C1/C2地图
+未证明优于C4；办公型对C1/C4有条件收益，但未证明优于C2。
+丰富地图开发均值改善约4.32%，区间跨零，未通过采用门槛，不能写成确认收益。
+
+安装及快速检查（在仓库根目录执行）：
+
+```powershell
+python -m pip install -r requirements.txt
+python -m unittest discover -s . -p "test_*.py" -v
+python experiments.py smoke
+python complete_experiments.py --help
+```
+
+完整研究入口为`complete_experiments.py`，补充研究入口为`threshold_applicability.py`、
+`research_map_methods.py`和`validate_cost_map_daily.py`。正式管线会核对前置验证与源文件哈希，
+并生成大量本地数据；公开摘要不是完整运行缓存，不能直接据此执行全量原始轨迹复核。
+如需重做完整研究，须先按脚本重建前置验证及原始运行，使用新输出目录，勿覆盖冻结结果。
+
 > **2026-11-01 新增研究扩展：** [S1–S6 复现、部分真实课表驱动的需求实验与动态规则评价](research/timetable_validation/README.md)。包含独立脚本、测试和 1,605 次已完成仿真的汇总指标，原模拟器及 E0–E3 结果保留。新增实验仍依赖未校准假设；其 D10 规则不同于下文原 E2 的预测地图控制器。数据权限、复现方法及收益较小的后续诊断见扩展目录。
 
 COMP1110 Group 73。用 Python 仿真回答 Project Plan 的研究问题：在课表驱动、多入口的 KKL 里，**人流参数达到什么条件时**值得切换电梯调度组合。目标只有一个：**最小化乘客平均等待时间**（不考虑节能）。

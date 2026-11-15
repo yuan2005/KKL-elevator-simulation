@@ -23,16 +23,18 @@ from scipy.stats import qmc
 
 import config as C
 from building import IDX, HEIGHT, flight_time, ENTRANCE_IDX
-from traffic import (SCENARIOS, Scenario, Passenger, generate_scenario, generate_day,
+from traffic import (SCENARIOS as LEGACY_SCENARIOS, Scenario, Passenger, generate_scenario,
+                      generate_day as generate_legacy_day,
                       load_timetable)
-from sim import Sim
+from banking import DualBankSim as Sim
+from sim import Sim as CoordinatedSim
 from strategies import make_combos, Combo, ETA, EntranceParking
 from controllers import (Static, LabelSwitch, MapSwitch, ForecastMapSwitch, TreePolicy,
                           features, FEATURES)
 from metrics import summarize, mean_ci, paired_test
 
 HERE = os.path.dirname(__file__)
-RES = os.path.join(HERE, "results")
+RES = os.path.join(HERE, "results", "two_independent_banks")
 TIMETABLE = os.path.join(HERE, "data", "timetable_synthetic.csv")
 TREE_PATH = os.path.join(RES, "e1_tree.json")
 os.makedirs(RES, exist_ok=True)
@@ -41,9 +43,23 @@ MAP_COMBOS = ["C0", "C1", "C2", "C3", "C4", "C7"]         # E1 比较的组合�
 SWITCHABLE = ["C1", "C2", "C3", "C4", "C7"]               # 竞争"最优"的组合（C0 是现状，只作参照）
 THRU_MAX = 0.6                                             # E1 地图里过路比例的测试上限
 
+SCENARIOS = {
+    **LEGACY_SCENARIOS,
+    "S3": replace(LEGACY_SCENARIOS["S3"], lam5=LEGACY_SCENARIOS["S3"].lam5*2.5),
+    "S4": replace(LEGACY_SCENARIOS["S4"], lam5=LEGACY_SCENARIOS["S4"].lam5*2.5),
+}
+CLASS_DEMAND_MULTIPLIER = 2.5
+LUNCH_DEMAND_MULTIPLIER = 2.5
+
+
+def generate_day(timetable, seed, attendance=0.8, thru_share=C.THRU_SHARE, t_end=11*3600):
+    return generate_legacy_day(
+        timetable, seed, attendance, thru_share, t_end,
+        class_multiplier=CLASS_DEMAND_MULTIPLIER, lunch_multiplier=LUNCH_DEMAND_MULTIPLIER)
+
 
 def pool_map(fn, tasks, chunksize=4):
-    with Pool(max(1, os.cpu_count() - 1)) as pool:
+    with Pool(min(4, max(1, (os.cpu_count() or 1) - 1))) as pool:
         return pool.map(fn, tasks, chunksize=chunksize)
 
 
@@ -109,7 +125,9 @@ def e0(seeds=10):
     rows = []
     for seed in range(seeds):
         pax, _ = generate_scenario(sc, seed)
-        sim = Sim(pax, Static(combo), gen_end=sc.duration).run()
+        # This analytic benchmark assumes one coordinated group, not two
+        # independent banks with residual calls. E1-E3 use DualBankSim.
+        sim = CoordinatedSim(pax, Static(combo), gen_end=sc.duration).run()
         rtts, loads = [], []
         for car in sim.cars:
             dep = [(t, n) for t, n in car.lobby_departures if 300 <= t <= sc.duration]
@@ -118,7 +136,8 @@ def e0(seeds=10):
                 loads.append(n1)
         P = float(np.mean(loads))
         rtt_f, H, S = barney_rtt(P, 16)
-        rows.append(dict(seed=seed, rtt_sim=np.mean(rtts), P=P, rtt_formula=rtt_f, H=H, S=S))
+        rows.append(dict(seed=seed, rtt_sim=np.mean(rtts), P=P, rtt_formula=rtt_f, H=H, S=S,
+                         model="coordinated_analytic_benchmark"))
     df = pd.DataFrame(rows)
     df["err_pct"] = (df.rtt_sim - df.rtt_formula) / df.rtt_formula * 100
     df.to_csv(os.path.join(RES, "e0_rtt_validation.csv"), index=False)
@@ -195,9 +214,15 @@ def tree_nodes(clf):
 
 
 def regret(points, pred):
-    """用 pred 代替每个点的最优标签，平均多等多少秒（越小越好，0 = 每个点都选对）。"""
-    return np.array([row[f"awt_{k}"] - row[f"awt_{row['label']}"]
-                     for (_, row), k in zip(points.iterrows(), pred)])
+    """相对C1/C2/C3/C4/C7中实测平均等待最小值的逐点后悔，不以显著性筛选标签作基准。"""
+    predictions = list(pred)
+    if len(predictions) != len(points) or any(k not in SWITCHABLE for k in predictions):
+        raise ValueError("Regret predictions must align with points and use eligible strategies")
+    values = points[[f"awt_{k}" for k in SWITCHABLE]].to_numpy(dtype=float)
+    if not np.isfinite(values).all():
+        raise ValueError("Regret requires finite candidate waiting times")
+    chosen = np.array([row[f"awt_{k}"] for (_, row), k in zip(points.iterrows(), predictions)])
+    return chosen-values.min(axis=1)
 
 
 NAMES_CN = {"lam5": "每5分钟乘梯人数", "s_in": "进楼比例", "s_out": "离楼比例", "s_thru": "过路比例",
@@ -305,7 +330,7 @@ def build_controller(name, combos, tt):
 def run_day(args):
     ctrl_name, seed, attendance, thru, broken = args
     tt = load_timetable(TIMETABLE)
-    combos = make_combos([(c["end"], c["floor"], c["size"] * 0.8) for c in tt])
+    combos = make_combos([(c["end"], c["floor"], c["size"] * 0.8 * CLASS_DEMAND_MULTIPLIER) for c in tt])
     pax = generate_day(tt, seed, attendance=attendance, thru_share=thru)
     sim = Sim(pax, build_controller(ctrl_name, combos, tt), gen_end=DAY_LEN, broken_cars=broken).run()
     m = summarize(sim)

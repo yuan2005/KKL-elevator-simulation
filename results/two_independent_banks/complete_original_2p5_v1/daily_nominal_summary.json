@@ -1,0 +1,35 @@
+{
+  "seeds": [
+    938000,
+    938001,
+    938002,
+    938003,
+    938004,
+    938005,
+    938006,
+    938007,
+    938008,
+    938009
+  ],
+  "mean_daily_passengers": 9947.8,
+  "mean_lunch_passengers": 3999.9,
+  "peak_5min": {
+    "start": "12:50",
+    "end": "12:55",
+    "mean_passengers": 382.6
+  },
+  "mean_daily_awt": {
+    "C0": 39.938161314253065,
+    "C1": 36.688252355494875,
+    "C2": 39.6595827910062,
+    "C3": 44.41222775915235,
+    "C4": 36.33394388465049,
+    "C7": 37.400041672949,
+    "label": 36.7646027692274,
+    "realtime": 37.21610425352238,
+    "forecast": 36.606839346450684
+  },
+  "validation_sha256": "c7b03f8b484bd2285871411e335a823aa1efbc0fe8d3a095ca46da4599466015",
+  "flow_band": "P10-P90 across ten days; not a confidence interval",
+  "waiting_ci": "Unadjusted day-paired 95% intervals per arrival bin; exploratory, not causal switch-window benefit"
+}

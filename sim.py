@@ -137,6 +137,9 @@ class Sim:
     def bypass_full(self, car):
         return self.combo.bypass and car.load >= C.BYPASS_FRACTION * C.CAPACITY
 
+    def parking_target(self, car):
+        return self.combo.parking.target(self, car)
+
     def update_car(self, car):
         if car.state == "out":
             return
@@ -165,7 +168,7 @@ class Sim:
                 return
             tgt = self.next_target(car)
             if tgt is None:
-                park = self.combo.parking.target(self, car) if (car.load == 0 and car.active) else None
+                park = self.parking_target(car) if (car.load == 0 and car.active) else None
                 if park is None or park == car.floor:
                     car.dir = 0
                     return

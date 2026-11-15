@@ -22,6 +22,37 @@ def floors_flight_time(f1, f2):
     return flight_time(abs(HEIGHT[f2] - HEIGHT[f1]))
 
 
+def advance_motion(distance, speed, dt):
+    """Integrate a feasible rest-at-target trajectory, including sub-step arrival."""
+    acceleration, limit = C.ACCEL, C.RATED_SPEED
+    if (not all(math.isfinite(x) for x in (distance, speed, dt, acceleration, limit))
+            or acceleration <= 0 or limit <= 0 or dt <= 0 or distance < -1e-8
+            or speed < 0 or speed > limit+1e-8):
+        raise ValueError("Invalid motion parameters or state")
+    if distance+1e-8 < speed*speed/(2*acceleration):
+        raise ValueError("Target is inside the physical stopping distance")
+    distance = max(0., distance)
+    if distance == 0:
+        return distance, 0., True, 0.
+    peak = max(speed, min(limit, math.sqrt(acceleration*distance+speed*speed/2)))
+    accelerating = max(0., (peak-speed)/acceleration)
+    used = (peak*peak-speed*speed)/(2*acceleration)+peak*peak/(2*acceleration)
+    cruise = max(0., distance-used)/peak
+    braking = peak/acceleration
+    duration = accelerating+cruise+braking
+    if dt >= duration-1e-10:
+        return distance, 0., True, duration
+    elapsed, moved, velocity = 0., 0., speed
+    for length, change in ((accelerating, acceleration), (cruise, 0.), (braking, -acceleration)):
+        take = min(length, dt-elapsed)
+        moved += velocity*take+.5*change*take*take
+        velocity += change*take
+        elapsed += take
+        if elapsed >= dt-1e-12:
+            break
+    return min(distance, max(0., moved)), max(0., velocity), False, dt
+
+
 class Car:
     """一台电梯。状态：idle（停着没事）/ moving（运行）/ doors（开门上下客）/ out（停用）。"""
 
